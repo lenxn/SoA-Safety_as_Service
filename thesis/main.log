@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.15)  16 APR 2015 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.4.15)  13 JUL 2015 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,9 +491,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--19
 
 [1
 
- <./images/signature.png>] (./chapters/preface.tex) [2
+ <./images/signature.png>] (./chapters/preface.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
-] (./main.toc
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 14--21
+
+ []
+
+[2
+
+] [3] (./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -504,86 +519,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [3
+ [4
 
-]
-(./chapters/abstract.tex) [4
+] (./chapters/abstract.tex
 
-] (./chapters/kurzfassung.tex
-Overfull \hbox (15.88718pt too wide) in paragraph at lines 3--4
-[]\OT1/cmss/m/n/12 Aus diesem Grund bein-halted dieses Bach-e-lor-pro-jekt die 
-Durchf^^?uhrung einer hoch- aufl^^?osenden
- []
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 1.
 
 ) [5
+
+] (./chapters/kurzfassung.tex) [6
 
 ] (./main.lof)
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [6
+ [7
 
 ] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [7
+ [8
 
-] (./chapters/list_of_abbreviations.tex)
-[1
+]
+(./chapters/list_of_abbreviations.tex) [1
 
 ]
 Chapter 1.
-(./chapters/introduction.tex
+(./chapters/introduction.tex) [2
 
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 6.
-
-) [2
-
-] [3]
+]
 Chapter 2.
-(./chapters/methods.tex) [4
+(./chapters/methods.tex) [3
 
 ]
 Chapter 3.
-(./chapters/results.tex) [5
+(./chapters/results.tex) [4
 
 ]
 Chapter 4.
-(./chapters/discussion.tex
+(./chapters/discussion.tex) [5
 
-LaTeX Warning: Reference `fig:whf_plot' on page 6 undefined on input line 4.
+]
+Chapter 5.
+(./chapters/conclusion.tex
 
+LaTeX Warning: Reference `ss:comparison' on page 6 undefined on input line 6.
 
-LaTeX Warning: Reference `tab:coefficients' on page 6 undefined on input line 4
-.
-
-
-LaTeX Warning: Citation `versteeg' on page 6 undefined on input line 6.
-
-
-LaTeX Warning: Reference `tab:coefficients' on page 6 undefined on input line 8
-.
-
+)
+No file main.bbl.
 [6
 
 ]
-
-LaTeX Warning: Citation `versteeg' on page 7 undefined on input line 14.
-
-
-LaTeX Warning: Citation `frohlich' on page 7 undefined on input line 14.
-
-) [7]
-Chapter 5.
-(./chapters/conclusion.tex)
-No file main.bbl.
-[8
-
-]
 Appendix A.
-(./chapters/appendix.tex) [9
+(./chapters/appendix.tex) [7
 
 ] (./main.aux)
 
@@ -591,21 +581,21 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3340 strings out of 494522
- 51770 string characters out of 6167205
- 113334 words of memory out of 5000000
- 6527 multiletter control sequences out of 15000+600000
- 10650 words of font info for 37 fonts, out of 8000000 for 9000
+ 3332 strings out of 494522
+ 51667 string characters out of 6167205
+ 113322 words of memory out of 5000000
+ 6519 multiletter control sequences out of 15000+600000
+ 10356 words of font info for 36 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 38i,7n,38p,792b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,38p,635b,235s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmss1
 2.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mssbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmssi12.pfb>
-Output written on main.pdf (17 pages, 77703 bytes).
+Output written on main.pdf (16 pages, 73286 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
