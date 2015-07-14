@@ -1,0 +1,67 @@
+\begin{thebibliography}{1}
+
+\bibitem{gleirscher2014}
+Mario Gleirscher, Andreas Vogelsang, and Steffen Fuhrmann.
+\newblock A model-based approach to innovation management of automotive control
+  systems.
+\newblock In {\em Software Product Management (IWSPM), 2014 IEEE IWSPM 8th
+  International Workshop on}, pages 1--10. IEEE, 2014.
+
+\bibitem{elattar2007}
+Ashraf~M El-Attar and Gamal Fahmy.
+\newblock An improved watchdog timer to enhance imaging system reliability in
+  the presence of soft errors.
+\newblock In {\em Signal Processing and Information Technology, 2007 IEEE
+  International Symposium on}, pages 1100--1104. IEEE, 2007.
+
+\bibitem{autosar_glossary}
+AUTOSAR.
+\newblock Glossary, autosar release 4.2.1, 2014.
+
+\bibitem{rodrigues2011}
+Douglas Rodrigues, Rayner15 de~Melo~Pires, J{\'u}lio~C{\'e}zar Estrella,
+  Emerson~Alberto Marconato, Onofre Trindade, and Kalinka Regina Lucas
+  Jaquie~Castelo Branco.
+\newblock Using soa in critical-embedded systems.
+\newblock In {\em Internet of Things (iThings/CPSCom), 2011 International
+  Conference on and 4th International Conference on Cyber, Physical and Social
+  Computing}, pages 733--738. IEEE, 2011.
+
+\bibitem{buckl}
+Christian Buckl, Stephan Sommer, Andreas Scholz, Alois Knoll, Alfons Kemper,
+  J{\"o}rg Heuer, and Anton Schmitt.
+\newblock Services to the field: An approach for resource constrained
+  sensor/actor networks.
+\newblock In {\em The Fourth Workshop on Service Oriented Architectures in
+  Converging Networked Environments (SOCNE 2009) - extended version}. {IEEE},
+  2009.
+
+\bibitem{scholz}
+Andreas Scholz, Stephan Sommer, Christian Buckl, Gerd Kainz, Alfons Kemper,
+  Alois Knoll, J{\"o}rg Heuer, and Anton Schmitt.
+\newblock Towards and adaptive execution of applications in heterogeneous
+  embedded networks.
+\newblock In {\em Software Engineering for Sensor Network Applications (SESENA
+  2010)}. {ACM/IEEE}, 2010.
+
+\bibitem{sommer}
+Stephan Sommer, Christian Buckl, Gerd Kainz, Andreas Scholz, Irina Gaponova,
+  Alois Knoll, Alfons Kemper, J{\"o}rg Heuer, and Anton Schmitt.
+\newblock Service migration scenarios for embedded networks.
+\newblock In {\em The Fifth International Workshop on Service Oriented
+  Architectures in Converging Networked Environments (SOCNE 2010)}. {IEEE},
+  2010.
+
+\bibitem{marwedel}
+Peter Marwedel.
+\newblock {\em Embedded system design: Embedded systems foundations of
+  cyber-physical systems}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{kum}
+Dae-Hyun Kum, Joonwoo Son, Seon-bong Lee, and Ivan Wilson.
+\newblock Automated testing for automotive embedded systems.
+\newblock In {\em SICE-ICASE, 2006. International Joint Conference}, pages
+  4414--4418. IEEE, 2006.
+
+\end{thebibliography}

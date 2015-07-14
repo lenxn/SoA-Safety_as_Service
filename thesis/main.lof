@@ -1,5 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the overall system architecture by Gleirscher and Vogelsang \cite {gleirscher2014}.\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{9}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Classification of various services into safety and security services.\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}.\relax }}{14}{figure.caption.17}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Example architecture for an \emph {error detection service}.\relax }}{16}{figure.caption.20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

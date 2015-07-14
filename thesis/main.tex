@@ -1,6 +1,7 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, width=159mm, top=25mm, bottom=20mm]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[colorlinks=false, pdfborder={0 0 0}, pdfencoding=auto]{hyperref}
 \usepackage{graphicx}
 % \usepackage{helvet}
 \usepackage{setspace}
@@ -10,6 +11,7 @@
 \renewcommand{\baselinestretch}{1.5}
 \graphicspath{ {images/} }
 \pagenumbering{roman}
+
 
 \begin{document}
 \input{chapters/titlepage.tex}
@@ -46,7 +48,7 @@
 \chapter{Conclusion}
 \input{chapters/conclusion}
 
-\bibliography{partials/mybib}{}
+\bibliography{chapters/mybib}{}
 \bibliographystyle{unsrt}
 
 
