@@ -1,46 +1,61 @@
-\contentsline {chapter}{Abstract}{vi}{chapter*.5}
-\contentsline {chapter}{Kurzfassung}{vii}{chapter*.6}
-\contentsline {chapter}{List of Figures}{viii}{chapter*.7}
-\contentsline {chapter}{List of Tables}{ix}{chapter*.8}
+\contentsline {chapter}{Abstract}{vii}{chapter*.5}
+\contentsline {chapter}{Kurzfassung}{viii}{chapter*.6}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.7}
+\contentsline {chapter}{List of Tables}{x}{chapter*.8}
 \contentsline {chapter}{List of Abbreviations}{1}{chapter*.9}
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Related instances}{4}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}ISO 262662 international standard}{4}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}MISRA}{4}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}AUTOSAR}{4}{subsection.1.1.3}
-\contentsline {section}{\numberline {1.2}service}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}System}{4}{section.1.3}
-\contentsline {section}{\numberline {1.4}Component}{4}{section.1.4}
-\contentsline {section}{\numberline {1.5}Service}{4}{section.1.5}
-\contentsline {section}{\numberline {1.6}Architecture}{4}{section.1.6}
-\contentsline {section}{\numberline {1.7}Service oriented architecture}{4}{section.1.7}
-\contentsline {subsection}{\numberline {1.7.1}Definition}{4}{subsection.1.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Historic development}{4}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Structure of SoA}{4}{subsection.1.7.3}
-\contentsline {subsection}{\numberline {1.7.4}Service composition}{4}{subsection.1.7.4}
-\contentsline {section}{\numberline {1.8}Communication in SoA}{4}{section.1.8}
-\contentsline {section}{\numberline {1.9}Dependability}{4}{section.1.9}
-\contentsline {subsection}{\numberline {1.9.1}Reliability}{4}{subsection.1.9.1}
-\contentsline {subsection}{\numberline {1.9.2}Availability}{4}{subsection.1.9.2}
-\contentsline {section}{\numberline {1.10}Functional safety}{4}{section.1.10}
-\contentsline {subsection}{\numberline {1.10.1}Safety related terminology}{4}{subsection.1.10.1}
-\contentsline {subsection}{\numberline {1.10.2}Definition of safety}{4}{subsection.1.10.2}
-\contentsline {subsection}{\numberline {1.10.3}Fault tolerance}{4}{subsection.1.10.3}
-\contentsline {chapter}{\numberline {2}Methods}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}SoA in Embedded Systems (Embedded SoA)}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Correlation of design philosophies}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Difference between Web SoA and Embedded SoA}{6}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}SoA in automotive}{10}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Safety services}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Fault detection service (WDT)}{13}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Error detection service}{14}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Memory Protection Service}{14}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Orchestration Management Service}{15}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Use Case: Error Detection Service}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Service Investigation/Planning}{15}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Service inventory analysis}{15}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Service oriented analysis}{15}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Service oriented design}{15}{subsection.2.3.4}
-\contentsline {chapter}{\numberline {3}Results}{17}{chapter.3}
-\contentsline {chapter}{\numberline {4}Discussion}{18}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}
+\contentsline {section}{\numberline {1.1}Related instances}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}ISO 262662 international standard}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}MISRA}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}AUTOSAR}{3}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}service}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}System}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Definitions}{3}{subsection.1.3.1}
+\contentsline {subsubsection}{System Element}{4}{section*.10}
+\contentsline {subsection}{\numberline {1.3.2}Definition for the EMC2 project}{4}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}System of Systems}{5}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}System Layers}{6}{subsection.1.3.4}
+\contentsline {subsubsection}{System Layers by GENESYS}{6}{section*.12}
+\contentsline {subsubsection}{System Layers by ARROWHEAD}{7}{section*.14}
+\contentsline {subsection}{\numberline {1.3.5}Embedded System}{9}{subsection.1.3.5}
+\contentsline {section}{\numberline {1.4}Component}{10}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Definitions}{10}{subsection.1.4.1}
+\contentsline {subsubsection}{Software Component}{11}{section*.17}
+\contentsline {subsubsection}{Definition for the EMC2 project}{12}{section*.18}
+\contentsline {subsection}{\numberline {1.4.2}Component Interfaces}{13}{subsection.1.4.2}
+\contentsline {subsubsection}{Interfaces by GENESYS}{13}{section*.19}
+\contentsline {subsubsection}{Interfaces by AUTOSAR}{14}{section*.21}
+\contentsline {section}{\numberline {1.5}Service}{17}{section.1.5}
+\contentsline {section}{\numberline {1.6}Architecture}{17}{section.1.6}
+\contentsline {section}{\numberline {1.7}Service oriented architecture}{17}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Definition}{17}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Historic development}{17}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}Structure of SoA}{17}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}Service composition}{17}{subsection.1.7.4}
+\contentsline {section}{\numberline {1.8}Communication in SoA}{17}{section.1.8}
+\contentsline {section}{\numberline {1.9}Dependability}{17}{section.1.9}
+\contentsline {subsection}{\numberline {1.9.1}Reliability}{17}{subsection.1.9.1}
+\contentsline {subsection}{\numberline {1.9.2}Availability}{17}{subsection.1.9.2}
+\contentsline {section}{\numberline {1.10}Functional safety}{17}{section.1.10}
+\contentsline {subsection}{\numberline {1.10.1}Safety related terminology}{17}{subsection.1.10.1}
+\contentsline {subsection}{\numberline {1.10.2}Definition of safety}{17}{subsection.1.10.2}
+\contentsline {subsection}{\numberline {1.10.3}Fault tolerance}{17}{subsection.1.10.3}
+\contentsline {chapter}{\numberline {2}Methods}{18}{chapter.2}
+\contentsline {section}{\numberline {2.1}SoA in Embedded Systems (Embedded SoA)}{18}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Correlation of design philosophies}{18}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Difference between Web SoA and Embedded SoA}{19}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}SoA in automotive}{23}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Safety services}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Relation of Safety and security services}{25}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Fault detection service (WDT)}{26}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Error detection service}{27}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Memory Protection Service}{27}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Orchestration Management Service}{28}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.3}Use Case: Error Detection Service}{28}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Service Investigation/Planning}{28}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Service inventory analysis}{28}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Service oriented analysis}{28}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Service oriented design}{28}{subsection.2.3.4}
+\contentsline {chapter}{\numberline {3}Results}{30}{chapter.3}
+\contentsline {chapter}{\numberline {4}Discussion}{31}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{32}{chapter.5}

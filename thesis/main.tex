@@ -6,11 +6,22 @@
 % \usepackage{helvet}
 \usepackage{setspace}
 \usepackage[font=small]{caption}
+\usepackage{framed}
 
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\baselinestretch}{1.5}
 \graphicspath{ {images/} }
 \pagenumbering{roman}
+
+
+\newenvironment{myquote}{%
+    \begin{framed}
+    \bfseries{}
+    \noindent\leftmargin 5.0em \rightmargin 5.0em
+}{%
+	\end{framed}%
+	\noindent
+}
 
 
 \begin{document}

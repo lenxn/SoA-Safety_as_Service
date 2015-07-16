@@ -1,22 +1,38 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{gleirscher2014}
-Mario Gleirscher, Andreas Vogelsang, and Steffen Fuhrmann.
-\newblock A model-based approach to innovation management of automotive control
-  systems.
-\newblock In {\em Software Product Management (IWSPM), 2014 IEEE IWSPM 8th
-  International Workshop on}, pages 1--10. IEEE, 2014.
+\bibitem{ISO_15288}
+Systems and software engineering - system life cycle processes, 2015.
 
-\bibitem{elattar2007}
-Ashraf~M El-Attar and Gamal Fahmy.
-\newblock An improved watchdog timer to enhance imaging system reliability in
-  the presence of soft errors.
-\newblock In {\em Signal Processing and Information Technology, 2007 IEEE
-  International Symposium on}, pages 1100--1104. IEEE, 2007.
+\bibitem{genesys}
+R.~Omermaisser and H.~Kopetz.
+\newblock {\em GENESYS - A Candidate for an ARTEMIS Cross-Domain Reference
+  Architecture for Embedded Systems}.
+\newblock Vienna University of Technology, 2009.
+
+\bibitem{iso26262:1}
+Iso 26262 road vehicles - functional safety - part 1: Vocabulary, 2011.
+
+\bibitem{arrowhead_inpr}
+Jerker Delsing.
+\newblock Deliverable d1.2 of work package 1, 2015.
 
 \bibitem{autosar_glossary}
 AUTOSAR.
 \newblock Glossary, autosar release 4.2.1, 2014.
+
+\bibitem{iso26262:course1}
+Iso 26262 for safety-related automotive e/e development: Introduction and
+  overview.
+
+\bibitem{wiki_MPSoC}
+Wikipedia.
+\newblock Mpsoc.
+\newblock \url{http://en.wikipedia.org/wiki/MPSoC}.
+\newblock Visited: May 2015.
+
+\bibitem{arrowhead:presentation}
+Lund Ericsson.
+\newblock Emc\textsuperscript{2} service architecture, 2015.
 
 \bibitem{rodrigues2011}
 Douglas Rodrigues, Rayner15 de~Melo~Pires, J{\'u}lio~C{\'e}zar Estrella,
@@ -26,6 +42,61 @@ Douglas Rodrigues, Rayner15 de~Melo~Pires, J{\'u}lio~C{\'e}zar Estrella,
 \newblock In {\em Internet of Things (iThings/CPSCom), 2011 International
   Conference on and 4th International Conference on Cyber, Physical and Social
   Computing}, pages 733--738. IEEE, 2011.
+
+\bibitem{marwedel}
+Peter Marwedel.
+\newblock {\em Embedded system design: Embedded systems foundations of
+  cyber-physical systems}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{alippi}
+Cesare Alippi.
+\newblock {\em Intelligence for Embedded Systems}.
+\newblock Springer, 2014.
+
+\bibitem{kopetz}
+Hermann Kopetz.
+\newblock {\em Real-time systems: design principles for distributed embedded
+  applications}.
+\newblock Springer Science \& Business Media, 2011.
+
+\bibitem{szyperski}
+C.~Szyperski, D.~Gruntz, and S.~Murer.
+\newblock {\em Component Software: Beyond Object-oriented Programming}.
+\newblock ACM Press Series. ACM Press, 2002.
+
+\bibitem{autosar}
+F.~Kirschke-Biller.
+\newblock Autosar - a worldwide standard, current developments, roll-out and
+  outlook.
+\newblock {\em 15th International VDI Congress Electronic Systems for Vehicles
+  2011}, 2011.
+
+\bibitem{arcitura}
+Serviceorientation.com.
+\newblock \url{http://www.serviceorientation.com}.
+\newblock Accessed: 2015-06-29.
+
+\bibitem{autosar_intro}
+An introduction to autosar.
+
+\bibitem{sametinger}
+J.~Sametinger.
+\newblock {\em Software Engineering with Reusable Components}.
+\newblock Springer Berlin Heidelberg, 2013.
+
+\bibitem{ning}
+Jim~Q Ning.
+\newblock Component-based software engineering (cbse).
+\newblock In {\em Assessment of Software Tools and Technologies, 1997.,
+  Proceedings Fifth International Symposium on}, pages 34--43. IEEE, 1997.
+
+\bibitem{gleirscher2014}
+Mario Gleirscher, Andreas Vogelsang, and Steffen Fuhrmann.
+\newblock A model-based approach to innovation management of automotive control
+  systems.
+\newblock In {\em Software Product Management (IWSPM), 2014 IEEE IWSPM 8th
+  International Workshop on}, pages 1--10. IEEE, 2014.
 
 \bibitem{buckl}
 Christian Buckl, Stephan Sommer, Andreas Scholz, Alois Knoll, Alfons Kemper,
@@ -52,16 +123,26 @@ Stephan Sommer, Christian Buckl, Gerd Kainz, Andreas Scholz, Irina Gaponova,
   Architectures in Converging Networked Environments (SOCNE 2010)}. {IEEE},
   2010.
 
-\bibitem{marwedel}
-Peter Marwedel.
-\newblock {\em Embedded system design: Embedded systems foundations of
-  cyber-physical systems}.
-\newblock Springer Science \& Business Media, 2010.
-
 \bibitem{kum}
 Dae-Hyun Kum, Joonwoo Son, Seon-bong Lee, and Ivan Wilson.
 \newblock Automated testing for automotive embedded systems.
 \newblock In {\em SICE-ICASE, 2006. International Joint Conference}, pages
   4414--4418. IEEE, 2006.
+
+\bibitem{elattar2007}
+Ashraf~M El-Attar and Gamal Fahmy.
+\newblock An improved watchdog timer to enhance imaging system reliability in
+  the presence of soft errors.
+\newblock In {\em Signal Processing and Information Technology, 2007 IEEE
+  International Symposium on}, pages 1100--1104. IEEE, 2007.
+
+\bibitem{yamada2008}
+Shimpei Yamada, Yukikazu Nakamoto, Takuya Azumi, Hiroshi Oyama, and Hiroaki
+  Takada.
+\newblock Generic memory protection mechanism for embedded system and its
+  application to embedded component systems.
+\newblock In {\em Computer and Information Technology Workshops, 2008. CIT
+  Workshops 2008. IEEE 8th International Conference on}, pages 557--562. IEEE,
+  2008.
 
 \end{thebibliography}
