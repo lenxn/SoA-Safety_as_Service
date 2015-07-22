@@ -14,7 +14,6 @@ The most important parts of this glossary will be covered within this chapter.
 \subsection{ISO 262662 international standard}
 \subsection{MISRA}
 \subsection{AUTOSAR}
-\section{service}
 
 
 
@@ -25,14 +24,14 @@ The most important parts of this glossary will be covered within this chapter.
 This chapter explores various definitions of the term system, as well as related hierarchies and terminology. Because of its reappearance in later chapters, the term \emph{embedded system} is also covered.
 
 \subsection{Definitions}
-Definition of \emph{system}\index{system} by different sources:
+Definition of \emph{system} by different sources:
 \begin{description}
 \item [ISO/IEC 15288] .
-The ISO/IEC 15288\footnote{The ISO/IEC 15288 standard is a \emph{System Engineering Standard} and defines processes and terminology for systems created by humans \cite{ISO_15288}.} standard states that systems \textit{``are man-made and may be configured with one or more of the following: hardware, software, data, humans, processes (e.g. processes for providing services to users), procedures (e.g. operator instructions), facilities, materials and naturally occurring entities''} \cite{ISO_15288}.
+The ISO/IEC 15288 (a standard for System Engineering) fstates that systems \textit{``are man-made and may be configured with one or more of the following: hardware, software, data, humans, processes (e.g. processes for providing services to users), procedures (e.g. operator instructions), facilities, materials and naturally occurring entities''} \cite{ISO_15288}.
 
 \item [GENESYS architecture].
 Definition of system according to Obermaisser and Kopetz: \emph{``an entity that is capable of interacting with its environment and is sensitive to the progression of time''} \cite[p.7]{genesys}.
-The \emph{environment}\index{environment} is a system itself, which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
+The \emph{environment} is a system itself, which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
 
 \item [ISO 26262].
 The ISO 26262 standard defines a system as a \emph{``set of elements that relates at least a sensor, a controller and an actuator with one another''} \cite{iso26262:1}. This definitions is already a bit more specific with a focus on the automotive industry.
@@ -53,12 +52,12 @@ The sources may differ a bit in terms of specificity, but all in all, there are 
 Throughout this glossary the naming convention of the ISO 26262 standard, which can be seen in figure \ref{fig:26262_disambiguation} is used.
 
 
-\subsubsection{System Element}
+\subsection{System Element}
 \label{sec:system_element}
 \begin{quote}
 \emph{``element - system or part of system including components hardware, software, hardware parts, and software units''}, \cite{iso26262:1}
 \end{quote}
-This definition of \emph{element}\index{system!system element} is taken from the ISO 26262 standard. It is a very generic term and thus it is not advisable to define it for any entities at a specific layer or with a specific characteristic. Instead, according to the quote, it can be more or less any entity of a system, since a system itself is defined as ``set of elements'' \cite{iso26262:1}.
+This definition of \emph{element} is taken from the ISO 26262 standard. It is a very generic term and thus it is not advisable to define it for any entities at a specific layer or with a specific characteristic. Instead, according to the quote, it can be more or less any entity of a system, since a system itself is defined as ``set of elements'' \cite{iso26262:1}.
 
 \begin{figure}[ht]
 \centering
@@ -82,7 +81,7 @@ As stated, the time domain has to be taken into account to describe the behaviou
 For the scope of this paper, the overall system is defined as a \textbf{vehicle} in order to be able to provide some examples. The environment consists therefore of other vehicles or the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one; for example entities like roads, weather conditions and the like.
 
 \subsection{System of Systems}
-Systems are hierarchical and can be composed or decomposed into sets of interacting constituting systems. Often this is referred to by the term \emph{System of Systems (SoS)}\index{system of systems} \cite[p.7]{genesys}. Thus, the SoS is in general the level above a given system and is therefore dependent on the definition of the related systems. With respect to our previous example of a system vehicle, a SoS could be for example the traffic of Graz, with many vehicles participating.
+Systems are hierarchical and can be composed or decomposed into sets of interacting constituting systems. Often this is referred to by the term \emph{System of Systems (SoS)} \cite[p.7]{genesys}. Thus, the SoS is in general the level above a given system and is therefore dependent on the definition of the related systems. With respect to our previous example of a system vehicle, a SoS could be for example the traffic of Graz, with many vehicles participating.
 
 This is in accordance with the definition of system by Arrowhead: \emph{``collaborating, compliant systems become system-of-systems and SoSs can be parts of other, bigger SoSs in turn''} \cite{arrowhead_inpr}. 
 
@@ -99,7 +98,7 @@ Concerning this definition, it has to be stated that \emph{geographic distributi
 
 \subsection{System Layers}
 \label{ch:system_layers}
-The parts of a system can be divided into different layers of implementation, for this kind of abstraction makes it easier for human beings to comprehend the overall relations. Unfortunately each field of research features its own way of fractionising systems and most of the approaches are hardly hardly compatible or even contradicting. The following, a segmentation from the GENESYS architecture\index{architecture!GENESYS architecture}, revealing a quite hardware and embedded systems oriented point of view, and a more abstract view from the ARROWHEAD project, are investigated in more detail.
+The parts of a system can be divided into different layers of implementation, for this kind of abstraction makes it easier for human beings to comprehend the overall relations. Unfortunately each field of research features its own way of fractionising systems and most of the approaches are hardly hardly compatible or even contradicting. The following, a segmentation from the GENESYS architecture, revealing a quite hardware and embedded systems oriented point of view, and a more abstract view from the ARROWHEAD project, are investigated in more detail.
 
 \subsubsection{System Layers by GENESYS}
 The GENESYS architecture by Obermaisser and Kopetz distinguish between three different layers, denoted \emph{chip-level}, \emph{device-level} and \emph{system-level} \cite[p.44]{genesys}. An example of the hardware elements at different levels by means of a system vehicle can be seen in figure \ref{fig:integration_levels}.
@@ -107,9 +106,9 @@ The GENESYS architecture by Obermaisser and Kopetz distinguish between three dif
 \item [System Level] .
 The system level consists of \emph{Devices}, which are themselves logically self-contained apparatus. With respect to a system vehicle this could be for example an ECU, a sensor, an actuator or the like \cite[p.45]{genesys}.
 \item [Device Level] .
-The devices at the system level, contain a certain internal structures themselves. In case of embedded systems these are in most cases \emph{Chips} \cite[p.45]{genesys}, like the the AURIX\textsuperscript{TM} \footnote{The AURIX (Automotive Realtime Integrated NeXt Generation Architecture) is a new family if multi core microcontroller, adjusted to the needs of the automotive industry - \url{http://www.infineon.com/cms/en/product/microcontroller/32-bit-tricore-tm-microcontroller/aurix-tm-family/channel.html?channel=db3a30433727a44301372b2eefbb48d9}} chip, which is frequently used in the automotive industry.
+The devices at the system level, contain a certain internal structures themselves. In case of embedded systems these are in most cases \emph{Chips} \cite[p.45]{genesys}, like the the AURIX\textsuperscript{TM} chip, which is frequently used in the automotive industry.
 \item [Chip Level] .
-According to the implementation layers in the GENESYS architecture, the chip level is the lowest level of implementation. In case of an MPSoC (Multiprocessor System-on-Chip)\footnote{A \emph{Multiprocessor System-on-Chip} is an integrated circuit which uses multiple processors and is often used for embedded applications \cite{wiki_MPSoC}.} this level contains the single IP Cores of the chip \cite[p.46]{genesys}
+According to the implementation layers in the GENESYS architecture, the chip level is the lowest level of implementation. In case of an MPSoC (Multiprocessor System-on-Chip) this level contains the single IP Cores of the chip \cite[p.46]{genesys}
 \end{description}
 
 \begin{figure}[ht]
@@ -124,9 +123,9 @@ According to the implementation layers in the GENESYS architecture, the chip lev
 The Arrowhead Framework provides an hierarchy by means of documentation documents, which are spitted in the three levels \emph{system-of-systems}, \emph{system} and \emph{service} \cite{arrowhead_inpr}. Their involved documents and relations are pictured in figure \ref{fig:sys-arrowhead}.
 
 \begin{description}
-\item [System-of-systems]. The levels features the two documents \emph{SoS Description (SoSD)}\index{system of systems!SoS description} and \emph{SoS Design Description (SoSDD)}\index{system of systems!SoS Design Description}. The differ in the amount of information they are revealing. While the first represents only an abstract view, the second also reveals the implementation of the SoS and its technologies \cite{arrowhead_inpr}.
-\item [System]. The system level comes with the two documents \emph{System Description (SysD)}\index{system!system description} and \emph{System Design Description (SysDD)}\index{system!system design description}. Just as at the SoS level the first one features a kind of black box opacity and the second a white box view (cf. section \ref{sec:blacknwhite}) \cite{arrowhead_inpr}.
-\item [Service]. The service level contains the four documents \emph{Service Description (SD)}\index{service!service description}, \emph{Interface Design Description (IDD)}\index{interface!interface design description}, \emph{Communication Profile (CP)}\index{communication!communication profile} and \emph{Semantic Profile (SP)}\index{semantic profile}. The service description is referred to in \ref{sec:service_structure}.
+\item [System-of-systems]. The levels features the two documents \emph{SoS Description (SoSD)} and \emph{SoS Design Description (SoSDD)}. They differ in the amount of information they are revealing. While the first represents only an abstract view, the second also reveals the implementation of the SoS and its technologies \cite{arrowhead_inpr}.
+\item [System]. The system level comes with the two documents \emph{System Description (SysD)} and \emph{System Design Description (SysDD)}. Just as at the SoS level the first one features a kind of black box opacity and the second a white box view \cite{arrowhead_inpr}.
+\item [Service]. The service level contains the four documents \emph{Service Description (SD)}, \emph{Interface Design Description (IDD)}, \emph{Communication Profile (CP)} and \emph{Semantic Profile (SP)}. The service description is referred to in \ref{sec:service_structure}.
 \end{description}
 
 \begin{figure}[ht]
@@ -138,13 +137,13 @@ The Arrowhead Framework provides an hierarchy by means of documentation document
 
 All the documents exist as templates which should be filled out during the development process of a system. They feature a XML like style in order to be human and machine readable at the same time.
 
-Developed systems can then be constituted to SoS by an underlying cloud, as depicted in figure \ref{fig:arrowhead-framework}. All the system have specified and standardised interfaces and work together by means of three \emph{core services}\index{service!core service}, labeled II, AI and SM.
+Developed systems can then be constituted to SoS by an underlying cloud, as depicted in figure \ref{fig:arrowhead-framework}. All the system have specified and standardised interfaces and work together by means of three \emph{core services}, labeled II, AI and SM.
 \begin{description}
-\item [Information Assurance\index{information assurance} (IA)] .
+\item [Information Assurance (IA)] .
 This service is responsible for providing secure information exchange through authorization and authentication \cite{arrowhead:presentation}.
-\item [Information Infrastructure\index{information infrastructure} (II)] .
-The II service enables the listing of the services in the \emph{service repository}\index{service!service repository} (cf. section \ref{sec:structure_of_soa}) and their discoverability \cite{arrowhead:presentation}.
-\item [System Management\index{system!system management} (SM)] .
+\item [Information Infrastructure (II)] .
+The II service enables the listing of the services in the \emph{service repository} (cf. section \ref{sec:structure_of_soa}) and their discoverability \cite{arrowhead:presentation}.
+\item [System Management (SM)] .
 This is the core service for the system of systems composition and features logging and monitoring abilities \cite{arrowhead:presentation}.
 \end{description}
 
@@ -158,11 +157,11 @@ This is the core service for the system of systems composition and features logg
 \subsection{Embedded System}
 \label{sec:embedded_system}
 
-\emph{Embedded systems}\index{system!embedded system} are computational modules integrated to physical devices and equipment. The have a predefined set of tasks and requirements and are capable of processing information \cite{rodrigues2011} \cite[p.xiii]{marwedel}. 
+\emph{Embedded systems} are computational modules integrated to physical devices and equipment. The have a predefined set of tasks and requirements and are capable of processing information \cite{rodrigues2011} \cite[p.xiii]{marwedel}. 
 
 Compared to general-purpose computation systems they usually dispose of less processing resources and come with narrower operation ranges, but at the same time they feature a high efficiency by optimally managing the available resources \cite[p.283]{alippi} \cite[p.5]{marwedel}. Also, their presence is usually quite unobtrusive, because instead of mice and keyboard the user interface consists of typical input devices like buttons, steering wheel, or pedals.
 
-Embedded systems are \emph{reactive systems}\index{system!reactive system}, what means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. 
+Embedded systems are \emph{reactive systems}, what means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. 
 
 During operation, embedded systems are in a certain state, waiting for input. When provided with that, they perform computations and generate an output, which is handed back to the environment \cite[p.9]{marwedel}.
 
@@ -170,10 +169,10 @@ Embedded systems in safety-critical applications have to care about the issues \
 
 \begin{description}
 	\item [Time constraints].
-	One challenge of Embedded Systems is the meeting of so called \emph{time constraints}\index{time constraint}, which basically means the conduction of a computation within a specified time \cite[p.8-9]{marwedel} \cite{rodrigues2011}. Kopetz states \emph{``A time-constraint is called hard if not meeting that constraint could result in a catastrophe''} \cite{kopetz}.
+	One challenge of Embedded Systems is the meeting of so called \emph{time constraints}, which basically means the conduction of a computation within a specified time \cite[p.8-9]{marwedel} \cite{rodrigues2011}. Kopetz states \emph{``A time-constraint is called hard if not meeting that constraint could result in a catastrophe''} \cite{kopetz}.
 	\item [Dependability].
-	Embedded systems, operating in safety-critical environment, like nuclear power plants, cars, trains or aircraft, must be \emph{dependable}\index{dependability}, for they are directly connected to the environment and have immediate impact on it. The Dependability is split up in further aspects - in detail \emph{Reliability} (cf. section \ref{sec:reliability}), \emph{Maintainability}, \emph{Availability} (cf. section \ref{sec:availability}), \emph{Safety} (cf. chapter \ref{ch:functional_safety}) and \emph{Security} \cite[p.4-5]{marwedel}.
-	\item [Efficiency requirements\index{efficiency requirements}].
+	Embedded systems, operating in safety-critical environment, like nuclear power plants, cars, trains or aircraft, must be \emph{dependable}, for they are directly connected to the environment and have immediate impact on it. The Dependability is split up in further aspects - in detail \emph{Reliability} (cf. section \ref{sec:reliability}), \emph{Maintainability}, \emph{Availability} (cf. section \ref{sec:availability}), \emph{Safety} (cf. chapter \ref{ch:functional_safety}) and \emph{Security} \cite[p.4-5]{marwedel}.
+	\item [Efficiency requirements].
 	Efficiency is a key concept of embedded systems and is concerned with providing a maximum computation performance while minimizing the required energy. The efficiency is measured in ``operations per Joule'' and has been been increasing almost exponentially during the last twenty years.
 \end{description}
 
@@ -186,9 +185,9 @@ Embedded systems in safety-critical applications have to care about the issues \
 
 \label{ch:component}
 
-For the EMC2 project it is crucial to achieve a clear distinction between the term \emph{component}\index{component} and \emph{service}\index{service} (cf. chapter \ref{ch:service}). Due to the historic development of \emph{service oriented architecture} (cf. chapter \ref{ch:soa}), as successor of the \emph{component based software engineering} (cf. chapter \ref{ch:cbse}), those terms have often been put on a level, giving rise to confusion. 
+For the EMC2 project it is crucial to achieve a clear distinction between the term \emph{component} and \emph{service} (cf. chapter \ref{ch:service}). Due to the historic development of \emph{service oriented architecture} (cf. chapter \ref{ch:soa}), as successor of the \emph{component based software engineering}, those terms have often been put on a level, giving rise to confusion. 
 
-Another issue is the term \emph{software component}\index{component!software component}, which leads to the question, whether components are pure software elements.
+Another issue is the term \emph{software component}, which leads to the question, whether components are pure software elements.
 
 In the following some definitions from different relevant resources are presented and discussed, with the aim to eliminate those ambiguities. The relation of component to service is investigated in section \ref{sec:relation_service_component}, subsequent to the definition of service.
 
@@ -218,12 +217,13 @@ The following sources refer explicitly to \emph{software components}.
 	AUTOSAR defines a \emph{Software Component} as encapsulation for parts of the automotive functionality, but it dictates no specific ``granularity'', meaning that an AUTOSAR software component might be either a \emph{``a small, reusable piece of functionality (such as a filter) or a larger block encapsulating an entire sybsystem. \cite{autosar}''}
 	
 	\item [Software Engineering Institute].
-	In software engineering a component is usually considered as a piece of software with specific functionality. The \emph{Software Engineering Institute\footnote{\emph{``The Software Engineering Institute (SEI) is a non-for-profit Federally Funded Research and Development Center (FFRDC) at Carnegie Mellon University, specifically established by the U.S. Department of Defense (DoD) to focus on software and cybersecurity.''} - \url{http://www.sei.cmu.edu/about/organisation/index.cfm}}} describes a component by means of another definition by Szyperski:
+	In software engineering a component is usually considered as a piece of software with specific functionality. The \emph{Software Engineering Institute} describes a component by means of another definition by Szyperski:
 	\begin{quote}
 	\emph{``A software component is a unit of composition with contractually specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties''} \cite{szyperski}.
 	\end{quote}
 
-	\item [ARCITURA]\footnote{Arcitura\textsuperscript{TM} Education Inc. is a global provider of progressive, vendor-neutral training and certification programs. It is also the owner of \url{http://www.serviceorientation.com} \cite{arcitura}, which served as valuable sources and is also the located of the related citation - \url{http://arcitura.com/about}}.
+	\item [ARCITURA].
+	Arcitura\textsuperscript{TM} Education Inc. is a global provider of progressive, vendor-neutral training and certification programs and has conducted a lot of research related to SoA.
 	\emph{``A component is a unit of logic that exists as a standalone software program as part of a distributed computing architecture''} \cite{arcitura}.
  \end{description}
 
@@ -237,9 +237,9 @@ A component is a logical and technical separable hardware or software unit that 
 It offers an abstraction that simplifies the understanding of complex systems. Therefore they have to be hierarchical, meaning that components can be composed to other, larger, components.
 \end{myquote}
 
-As suggested by this definition the term component should be used for both, software hardware. If not denoted specifically as \emph{software component}\index{component!software component} or \emph{hardware component}\index{component!hardware component}, the term can be referred to both throughout this glossary.
+As suggested by this definition the term component should be used for both, software hardware. If not denoted specifically as \emph{software component} or \emph{hardware component}, the term can be referred to both throughout this glossary.
 
-A component can be seen as \emph{black box} (cf. chapter \ref{sec:blacknwhite}), meaning that the more or less complex internal structure is invisible or not of concern for the user. Therefore, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unaffected \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}.
+A component can be seen as \emph{black box}, meaning that the more or less complex internal structure is invisible or not of concern for the user. Therefore, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unaffected \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}.
 
 As a self-contained subsystem, it can be developed and tested independently, and latter be used as building block for systems or higher level components. In other words, the components are the basic building blocks of a system \cite{ning}. 
 
@@ -258,20 +258,20 @@ The interfaces are necessary for any interaction with other components. In the f
 Following the definition from Obermaisser and Kopetz, each component may dispose of up to four interfaces for communication with other entities. The \emph{Linking Interface}, the \emph{Local Interfaces} and the \emph{Technology Independent-} or \emph{Technology Dependent Interface}. They are illustrated in figure \ref{fig:component_interfaces} \cite[p.40-41]{genesys}.
 
 \begin{description}
-\item [Linking Interface (LIF)\index{interface!linking interface}]. 
+\item [Linking Interface (LIF)]. 
 The \emph{Linking Interface} is a message based interface and responsible for offering the component's services. The LIF is dependent on the level of integration, e.g. Inter-IP Core LIF at chip level or Inter-Chip LIF at device level. Nevertheless, it is used only for communication to other components at the same layer and also the only place, where a component may provide its services to other components \cite[p.9]{genesys}.
 
 The \emph{Linking Interfaces} are always technology agnostic, which means that they do not expose details on their implementation or \emph{Local Interfaces}. Accordingly, the implementation can be modified, without other components noticing, as long as the specification at the LIF remains unchanged \cite[p.9, 40-41]{genesys}.
 
-\item [Local Interface\index{interface!local interface}]. 
+\item [Local Interface]. 
 The \emph{Local Interfaces} establish the connection between a component and its local environment, which could consist of sensors, actuators and the like. If the environment is modified, the semantics and timing of the data should stay the same in order to do not violate the specification. A \emph{Local Interface} could also be mapped to a \emph{LIF} of a component at the next-higher level - this is known \emph{gateway component} (cf. chapter \ref{ch:communication}) and enables different layers to communicate with each other.
 
-Components do not necessarily require local interfaces. Such are denoted \emph{Closed Components}\index{component!closed component} \cite[p.40-41]{genesys}.
+Components do not necessarily require local interfaces. Such are denoted \emph{Closed Components} \cite[p.40-41]{genesys}.
 
-\item [Technology Independent Interface (TII)\index{interface!technology independent interface}].
-The \emph{TII} is the instrument for configuring and reconfiguring a component, e.g. assigning a name, configuring input and output ports or monitoring the resource management. Starting, restarting and resetting the component is also executed through this interface. The TII communicates with the hardware, the operating system and the middleware, but not with the \emph{application software (service)}\index{application software}, which is reserved for the LIF \cite[p.40-41]{genesys}.
+\item [Technology Independent Interface (TII)].
+The \emph{TII} is the instrument for configuring and reconfiguring a component, e.g. assigning a name, configuring input and output ports or monitoring the resource management. Starting, restarting and resetting the component is also executed through this interface. The TII communicates with the hardware, the operating system and the middleware, but not with the \emph{application software (service)}, which is reserved for the LIF \cite[p.40-41]{genesys}.
 
-\item [Technology Dependent Interface (TDI)\index{interface!technology dependent interface}]. 
+\item [Technology Dependent Interface (TDI)]. 
 The \emph{Technology Dependent Interface} enables a look inside the component and allows to inspect internal variables and processes. Thus, it is reserved for people who bring a deep understanding of the components internals and is of no relevance for the user of the LIF services \cite[p.40-41]{genesys}. 
 \end{description}
 
@@ -285,15 +285,15 @@ The \emph{Technology Dependent Interface} enables a look inside the component an
 
 \subsubsection{Interfaces by AUTOSAR}
 
-AUOSAR follows a slightly more abstract approach concerning the interfaces of a component. According to their definition, a component may dispose of a number of \emph{ports}\index{port}. A port belongs to one component only and is the interface a component uses to communicate with other components.
+AUOSAR follows a slightly more abstract approach concerning the interfaces of a component. According to their definition, a component may dispose of a number of \emph{ports}. A port belongs to one component only and is the interface a component uses to communicate with other components.
 
-Within this context, the term \emph{interface}\index{interface} specifies a kind of contract or specification, on which services can be called at this port, and the format of the data emitted at this port.
+Within this context, the term \emph{interface} specifies a kind of contract or specification, on which services can be called at this port, and the format of the data emitted at this port.
 
 There are four different types of interfaces, belonging to the two different communication patterns \textbf{Client-Server} and \textbf{Sender-Receiver}: \cite{autosar_intro}
 
 \begin{description}
 \item [Client-Server Communication].
-When this kind of communication is performed the \emph{client-component}\index{component!client component} requests the a specific service from the \emph{server-component}\index{component!server component} and sends necessary parameters. The server then processes the incoming request and returns a response. A single component can be a server and a client at the same time \cite{autosar_intro}. A schematic illustration of this type of communication is pictured in figure \ref{fig:autosar_client-server}, where SW-C denotes \emph{software component}\index{component!software component}.
+When this kind of communication is performed the \emph{client-component} requests the a specific service from the \emph{server-component} and sends necessary parameters. The server then processes the incoming request and returns a response. A single component can be a server and a client at the same time \cite{autosar_intro}. A schematic illustration of this type of communication is pictured in figure \ref{fig:autosar_client-server}, where SW-C denotes \emph{software component}.
 
 \item [Sender-Receiver Communication].
 The \emph{Sender-Receiver} approach is a bit different. The task of the sender is to distribute his information to one or more receivers, without ever getting a response in form of data or control flow. In fact he does not even know the number or identity of the receivers. Those have to decide on themselves, how to deal with the received data (cf. figure \ref{fig:autosar_sender-receiver}) \cite{autosar_intro}.
@@ -322,15 +322,513 @@ The different ports and their properties are visualized in figure \ref{fig:autos
 \label{fig:autosar_ports}
 \end{figure}
 
+
+
+
+
+
+
+
+
 \section{Service}
+\label{ch:service} 
+The perception of the term \emph{service} is quite wide spread and influenced by a persons experience and environment (e.g. related research area, industries, etc.). Unsurprisingly, this lead to numerous different definitions, supporting various, even contradicting statements.
+
+Accordingly, definitions from several different sources from various fields of research are investigated in the following. The, apparently, most important characteristics, stated in those, have then been concatenated in a rather generic definition, which should be suitable for, more or less, anyone.
+
+\subsection{Definitions}
+
+\begin{description}
+\item [GENESYS Reference Architecture].
+The definition by Obermaisser and Kopetz:
+\begin{quote}
+\emph{``A service is what a system delivers to its environment according to the specification. Through its service, a system can support the environment, i.e., other systems that use the service''} \cite[p.8]{genesys}.
+\end{quote}
+This definition deals with the terms service from a system point of view. The concepts of \emph{system} and \emph{environment} are referred to in chapter \ref{ch:system}. 
+
+\item [Arcitura].
+\begin{quote}
+\emph{``Each service is assigned its own distinct context and is comprised of a set of capabilities related to this context. Therefore, a service can be considered a container of capabilities associated with a common purpose (or functional context)''} \cite{arcitura}.
+\end{quote}
+
+\item [Erl, Bennett et al.] . 
+\begin{quote}
+\emph{``A service is a unit of logic to which service-orientation has been applied to a meaningful extent. It is the application of service-orientation design principles that distinguishes a unit of logic as a service compared to units of logic that may exist solely as objects, components, Web services, REST services, and/or cloud-based services''} \cite[p.27]{erl2011}.
+
+The Representational State Transfer (REST) is a software architecture style, consisting of guidelines and best practices for building scalable web services.
+\end{quote}
+
+\item [Arrowhead].
+\begin{quote}
+\emph{``A service is the core building block of SOA, and is basically a software application performing some task, with a formal interface described using a standard description framework.''} \cite{arrowhead}
+\end{quote}
+An important concept, which comes with this quote is, that service have certain interfaces (cf. section \ref{sec:service_structure}).
+
+\item [AUTOSAR].
+There are two quotes by AUTOSAR. The first one deals with service in general, while the second describes an \emph{AUTOSAR service}, the kind of service that could be applied in an AUTOSAR system.
+\begin{quote}
+\emph{``A service is a type of operation that has a published specification of interface and behaviour, involving a contract between the provider of the capability and the potential clients''} \cite{autosar_glossary}.
+\end{quote}
+
+\begin{quote}
+\emph{``An AUTOSAR Service is a logical entity of the basic software offering general functionality to be used by various software components. The functionality is accessed via standardized AUTOSAR Interfaces''} \cite{autosar_glossary}.
+\end{quote}
+
+\item [ISO 26262 Standard].
+The ISO 26262 international standard is a safety standard, which issues requirements, but is not prescriptive on how they should be fulfilled.
+
+\item [ACROSS].
+Although the term \emph{service} is used in several documents there is no actual definition of service either.
+\end{description}
+
+A term, which appears in in connection with services, and frequently leads to misunderstandings is \emph{business function}, with some sources setting it on a level with service. In order to avoid any difficulties in terms of understanding the term \emph{business function} should generally be avoided.
+
+\subsubsection{Definition for the EMC2 project}
+The presented quotes show various different approaches and options, emphasising the various different understandings.
+
+The following definition is a collection of the relevant aspects from various sources and should serve as unified knowledge base for the scope of the EMC2 project.
+
+\begin{myquote}
+	As part of a system, a service is an independent logical unit with at least one capability and well defined interfaces, which have to be fully described by the service contract.
+
+	Services are the building blocks of a service oriented architecture and the containers for the functionalities a service provider offers to its consumers.
+
+	In order to be applied in a service oriented architecture, a service must comply with certain key concepts.
+\end{myquote}
+
+The terms \emph{service provider} and \emph{service consumer} are described in detail in chapter \ref{ch:soa}. The required key concepts are the subject of the next section.
+
+\subsection{Key concepts of a service}
+\label{sec:service-concepts}
+Erl, Bennett et al. \cite[p.27]{erl2011} state eight specific characteristics any service should posses. Those have been altered and extended with some attributes from other sources, resulting in the following listing with a total of nine characteristics. In some occasions there have been different nominations of equal characteristics. In this cases all alternative labels are stated.
+
+\begin{description}
+\item [Opacity/ Encapsulation/ Abstraction] .
+According to Erl, \emph{abstraction} means to \emph{``hide information about a program not absolutely required for others to effectively use that program''} \cite[ch.8.1.]{erl2008}.
+Services hide an internal logic, which could be implemented by means of any suitable programming language or operating system. This allows the logic and implementation of the service to evolve over time, while still providing the functionality as it was originally published \cite[ch.8.1]{erl2008}.
+
+From the service consumer's point of view the service appears as a black box, which does not impart anything of the underlying implementation or how the returned information is generated \cite{opengroup} \cite{breivold} \cite{arrowhead} \cite[p.27]{erl2011}.
+
+This black box encapsulation disables any modification of the service by the user and is often referred to as \emph{service interface level abstraction} \cite{breivold}.
+
+\item [Reusability].
+The idea of software \emph{reuse} exists since the early days of software engineering. In SoAs it is the key concept of a service and a necessary basis for many of the other concepts would not even be possible without it \cite[ch.9.1.]{erl2008} \cite[p.27]{erl2011}.
+
+Basically, this design principle aims at making a service applicable for more than just one specific use case. Usually, this means that the programming logic becomes more generic, allowing a wider range of application.
+
+At this point, it should be noted, that the terms \emph{reusability} and \emph{reuse} are not equal. The former is the design principle, while the latter denotes the result which should be achieved by applying the concept of reusability.
+
+\item [Composability]. 
+Service are building blocks and thus existing services can be used in order to compose other, possibly more advanced, services through \emph{service orchestration} or \emph{service choreography} (cf. section \ref{sec:service-composition}). 
+
+With orchestration, one service acts as a coordinator between all services involved, in contrast to choreography, where all composed services work independently with each other in a completely distributed manner \cite{opengroup} \cite{arrowhead} \cite{breivold} \cite[p.27]{erl2011}.
+
+In SoAs (cf. section \ref{ch:soa}) the composing may take place at runtime (cf. section \ref{sec:binding}) \cite{breivold}.
+
+\item [Loose coupling].
+If two or more artifacts are somehow connected within a technical context, this is referred to by the term \emph{coupling}. It indicates that two or more of ``something'' exists and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
+
+SoAs should feature a \emph{loose coupling}, which means that dependencies should be reduced as far as possible \cite{erl2008}. This is achieved by using standardised interfaces, what offers the service providers great flexibility in choosing design and deployment environment for offering their services \cite{breivold} \cite{arrowhead}. Well defined interfaces also allows a simple exchange of components by components from different vendors \cite{scholz}.
+
+An example for this concept are web browsers. The service, a web browser provides to the end user, could be described as ``interpret the HTML files and illustrate them in a user friendly way''. No matter which web browser is used, the end result will stay almost unaffected, thanks to the well specified applied protocols.
+
+\item [Discoverability]. 
+The concept of \emph{discoverability} comes with certain requirements:
+	\begin{itemize}
+	\item services have to constantly communicate the meta information they want to make public and all alternations,
+	\item this information should be centrally stored and maintained in consistent format and
+	\item the meta information must be accessible and searchable by those who want to use this resource \cite[ch.12.]{erl2008}.
+	\end{itemize}
+The artifact that stores the service information in SoAs is the \emph{service repository} (cf. section \ref{sec:structure_of_soa}).
+
+The discoverability of a service is not only critical during the runtime of a SoA, but also during the development process, where it provides answer to the question whether a certain functionality already exists or has to be built. Thereby redundancies are reduced or prevented altogether \cite[ch.12]{erl2008} \cite{arrowhead} \cite{breivold} \cite[p.27]{erl2011}.
+
+\item [Self-description].
+Service provider have to provide their clients with all the relevant information in form of a service description. This includes syntax, semantic and behaviour \cite{breivold}.
+
+\item [Statelessness].
+A \emph{state} is referred to as the general condition of something. In computational systems a state can be represented by temporary data, describing the state. SoA services are frequently required to hold a certain amount of \emph{state information} through the lifespan of a service composition in order to fulfill their functionality \cite[ch.11]{erl2008}. 
+
+Nevertheless, services can also be stateless and in order to optimize reusability services should aim at minimizing their state information and their holding time for messages \cite{breivold} \cite[p.27]{erl2011}.
+
+\item [Technology neutrality].
+Services should be independent from used technology in order to allow different platforms to use them \cite{breivold}. 
+
+This concept is questionable in connection with automotive, because in a car most of the implemented technology is given by certain standards and cannot be changed easily.
+
+\item [Standardised Service Contract].
+According to \cite{erl2011}, \emph{``Service within the same service inventory are in compliance with the same contract design standards''} \cite[p.27]{erl2011}. In other words, the service contract should be created by means of a given templates. The term \emph{service inventory} is referred to in \ref{sec:structure_of_soa}.
+\end{description}
+
+
+
+\subsection{Structure of a Service}
+\label{sec:service_structure}
+Concerning the structure, Krafzig describes a service as it can be seen in figure \ref{fig:service} with the artifacts \emph{service contract}, \emph{interface}, \emph{implementation}, \emph{business logic} and \emph{data} \cite[p.44]{krafzig}.
+
+\begin{description}
+\item [Service contract]. 
+``SOA Principles of Service Design'' by Erl provides the following definition:
+\begin{quote}
+\emph{``A contract for a service (or a service contract) establishes the terms of engagement, providing technical constraints and requirements as well as any semantic information the service owner wishes to make public''} 
+\cite[ch.6.1]{erl2008}.
+\end{quote}
+The service contract is, more or less, the core part of every service, for it is the complete specification of the service between a provider and a consumer. It provides all the meta information concerning functionality, capabilities, expected \emph{behaviour}, constraints, service owner, access rights, functional and non functional qualities and information about intended performance and scalability of the service \cite[p.44]{krafzig} \cite[p.26]{josuttis} \cite{breivold}.
+
+Physically, it is represented by one or more \emph{service description documents}, which should be human- and machine readable at the same time. This is the reason, why web services are usually represented by WSDL documents \cite[p.43]{erl2011}. There is no dedicated language standard concerning automotive yet, but a XML based language would be an appropriate choice.
+
+Erl \cite{erl2008} distinguishes between technical and non-technical service description documents. If a \emph{consumer} connects to a \emph{provider}, for example a database, the technical contract could contain information like the database protocol and the query syntax or language, while the non-technical contract could contain related meta information like required safety measures or the physical location of the database \cite[ch.6.1]{erl2008}.
+
+\item [Interface]. 
+The \emph{interface} is described in the \emph{service contract} and specifies the access points and the functionality of the service to the customers, which are connected via a network \cite[p.44]{krafzig} \cite{breivold}. A service may dispose of multiple interfaces.
+
+\item [Implementation]. 
+The \emph{implementation} is represented by programs, configuration data and databases, which are necessary to provide the functionality specified in the contract. The term business logic in figure \ref{fig:service} is a bit misleading. This should be seen as the algorithms encapsulated in the implementation \cite[p.44]{krafzig}.
+
+\item [Data].
+As stated in \ref{sec:service-concepts}, a service may dispose of some state data for the time of its application. However, this is no necessary requirement for a service and the amount of stored data should be kept as low as possible \cite[p.44]{krafzig}.
+\end{description}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{service_structure.png}
+\caption{Structure of a service with the relations of the particular artifacts \cite[p.45]{krafzig}.}
+\label{fig:service}
+\end{figure}
+
+
+
+
+
+\subsection{Services at different layers of implementation}
+\label{ch:service_layers}
+For the assignment of services to different system layers serve the layers defined in section \ref{ch:system_layers} by \cite{genesys}: \emph{system-level}, \emph{device-level} and \emph{chip-level}. In connection with segmentation, the terms ``level'' and ``layer'' are used equally by various sources. To prevent confusion, the term \emph{layer} is applied throughout this glossary.
+
+Figure \ref{fig:service_levels} features an example of which hardware parts may belong to which integration layer with respect to the considered system vehicle. In accordance with that, table \ref{tab:services} gives an example of which services may be provided by the particular elements.
+
+\subsubsection{Chip Layer}
+The \emph{chip layer} is the lowest layer of implementation and contains very generic services which are used by higher layers in order to create more advanced services. In various sources this layer is referred to as the \emph{core-}, or \emph{platform layer}, which is why the services at this layer are denoted as \emph{core services} \cite[p.44]{genesys}.
+
+Typical examples for services located at this level are message based 
+\emph{communication services} for the interaction of \emph{system elements} (cf. section \ref{sec:system_element}), \emph{global time base services} or mechanisms to compose the overall system out of the independently developed components. Such mechanisms include fault isolation services and clock synchronization services \cite[p.7-12]{genesys}.
+
+In other words, it provides a platform, where recurring problems can be dealt with once and for all.
+
+\subsubsection{Device Layer}
+The \emph{device layer} contains more advanced hardware parts. With respect to figure \ref{fig:service_levels} these might be sensors, actuators, ADCs (Analog-to-digital converters), AURIX chips, the CAN bus (Controller area network) or a WDT (Watchdog Timer). Since there is no consistent denomination for the services located at this layer, they are referred to as \emph{device services within this glossary}.
+
+They make use of the underlying \emph{core services} and other services at the device layer in order to provide their intended functionality. 
+An acceleration sensor, for example, could make use of an ADC, which in turn operates with a platform service for the time, for generating periodic sampling points.
+
+\subsubsection{System Layer}
+The highest layer is the \emph{system layer}, containing the most advanced services, which are usually provided to the end user. Like it is the case with the \emph{device services} there exists no uniform denomination throughout literature. Therefore they are denoted \emph{system services}.
+
+System services emerge by binding together services of lower layers. An example for a system service could be a passive safety service for breaking or searing, which bases on an acceleration measurement service and other device services.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{service_levels.pdf}
+\caption{Examples of hardware parts at different levels \cite{avl}}
+\label{fig:service_levels}
+\end{figure}
+
+\begin{table}
+\begin{threeparttable}[b]
+\caption{Example of which services could operate at different levels}
+\label{tab:services}
+	\begin{tabular}{ p{4cm} p{3cm} p{8cm} }
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Integration Level}} & 
+		\multicolumn{1}{|c|}{\textbf{ID}} & 
+		\multicolumn{1}{|c|}{\textbf{Description}} \\ 
+	\hline
+	\multirow{3}{*}{System Level Services} & Powertrain & Enable the vehicle  to drive. \\
+		\cline{2-3}
+		& Vehicle & Passive safety service. \\
+		\cline{2-3}
+		& HMI & Services for user input and output. \\ \hline
+	\multirow{6}{*}{Device Level Services} & Sensor & Acceleration measurement service. \\
+		\cline{2-3}
+		& Actuator & Providing a certain degree of acceleration, when triggered. \\
+		\cline{2-3}
+		& ECU\tnote{1} & Control of an electronic subsystem. \\
+		\cline{2-3}
+		& ADC\tnote{2} & Transform an analog signal to a discrete-time, digital signal. \\
+		\cline{2-3}
+		& CAN\tnote{3} & Enable communication between devices. \\
+		\cline{2-3}
+		& WDT\tnote{4} & Detect and recover from malfunction. \\ \hline
+	\multirow{3}{*}{Chip Level Service} && Basic time services, \\
+		& Chip 0-2 & component execution services, \\
+		&& basic communication services. \\ \hline
+	\end{tabular}
+	\begin{tablenotes}
+		\item [1] According to AUTOSAR an ECU is a \emph{``microcontroller plus peripherals and the according software/configuration. Therefore, each microcontroller requires its own ECU Configuration''}.
+		\item [2] An \emph{ADC} (Analog-to-digital converter) is a device for transforming a continuous analog signal into a time sampled discrete digital signal. - \url{http://en.wikipedia.org/wiki/Analog-to-digital_converter}
+		\item [3] The \emph{CAN} (controller area network) bus is a vehicle bus standard that allows devices to communicate with each others by means of a message-based protocol. - \url{http://en.wikipedia.org/wiki/CAN\_bus}
+		\item [4] The \emph{Watch Dog Timer} is an electronic timer for detecting computer malfunctions and recovering. It is usually applied for embedded systems, where humans cannot easily configure the internal logic. - \url{http:en/wikipedia.org/wiki/Watchdog\_timer}
+	\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Architecture}
 
+\label{ch:architecture}
+
+The term \emph{architecture} is very generic and related to various different domains, e.g. \emph{hardware architecture}, \emph{software architecture}, \emph{system architecture} or \emph{enterprise architecture}. 
+
+In general, independent from any considered domain, architecture is concerned with how the components of a system can be arranged and interrelated in order to assemble an overall system \cite{ISO_42010} \cite{ning}. 
+
+
+
+\subsection{Definitions}
+The following definitions of architecture, are domain independent or can be referred to multiple domains.
+
+\begin{description}
+\item [ISO/IEEE 42010].
+The ISO/IEC/IEEE standard defines requirements for the description of system, software and enterprise architectures. Within the standard, the term architecture is referred to by \emph{``fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''} \cite{ISO_42010}. What is ``fundamental'' is described in more detail as:
+	\begin{description}
+		\item [elements]. (cf. section \ref{sec:system_element})
+		\item [relationships]. This denotes the relationships inside the system as well as the relationships to its environment
+		\item [principles of design and evolution].
+	\end{description}
+This definition applies for any kind of architecture, but the emphases on the fundamental concepts (elements, relationships, principles of design and evolution) vary with respect to the considered domain. The \emph{software architecture} usually focuses very much on the elements, while the \emph{enterprise architecture} is more concerned with the principles \cite{ISO_42010}.
+
+\item [Rodrigues, Melo Pires et al.].
+Rodrigues, Melo Pires et al. feature the following description in their document ``Using SOA in Critical-Embedded Systems'' from 2011:
+\emph{``Architecture is a structure that identifies, defines and organizes components. The relationship and principles of design of the components, functions and the interface established between subsystems can also be defined by architecture''} \cite{rodrigues2011}.
+
+\item [AUTOSAR].
+\begin{quote}
+\emph{``The fundamental organization of a system embodied in its components, their static and dynamic relationships to each other, and to the environment, and the principles guiding its design and evolution''} \cite{autosar_glossary}.
+\end{quote}
+\end{description}
+
+\subsubsection{Definition of Software Architecture}
+\emph{Software architecture} is one specific subdiscipline of \emph{architecture}, which focuses on the structure and relations of software systems. 
+
+\begin{description}
+\item [Wikipedia (Software Architecture)].
+The Wikipedia article on software architecture states:
+\begin{quote}
+\emph{``Software architecture refers to the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures''} - \url{http://en.wikipedia.org/wiki/Software_architecture}.
+\end{quote}
+
+\item [Software Engineering Institute].
+Definition of software architecture according to the Software Engineering Institute:
+\begin{quote}
+\emph{``The software architecture of a program or computing system is a depiction of the system that aids in the understanding of how the system will behave''} \cite{sei2}.
+\end{quote}
+\end{description}
+
+
+
+\subsubsection{Definition for the EMC2 Project}
+Although EMC2 project is mostly concerned with system- and software architecture, the definition presented below is compatible with all kinds of architecture design, for they share the same basic principles.
+
+It also supports the concept that a system consists of one or more components, as pictured in figure \ref{fig:26262_disambiguation}.
+
+\begin{myquote}
+An architecture is a systematic description of the structure of a system by means of its involved components and their relations to each other, and specifies also the connections and interactions of a system to its environment.
+
+At the same time, architecture is also responsible for determining the principles of design and evolution.
+\end{myquote}
+
+
+\subsection{Placement of Architecture}
+The placement of \emph{architecture} in relation to other entities like system or environment (cf. chapter \ref{ch:system}) is pictured in figure \ref{fig:architecture_ontology}. 
+
+\begin{description}
+\item [Architecture description].
+	Many sources mix up the definitions of \emph{architecture} and \emph{architecture description}, what is a recurring source of confusion. In contrast to the actual architecture of a system, the term \emph{architecture description} denotes the artifacts which document this architecture \cite{ISO_42010}. Their relation is also pictured in figure \ref{fig:architecture_ontology}.
+
+	According to the ISO/IEC/IEEE 42010 standard, the \emph{architecture description} is used to express the architecture of a system of interest by means of the following elements:
+	\begin{itemize}
+	\item Specification of the purposes of the system,
+	\item Suitability for achieving these purposes,
+	\item Feasibility of construction and applicability,
+	\item Maintainability,
+	\item Evolvability and
+	\item Association of these concerns with the \emph{stakeholders} having these concerns \cite{ISO_42010}.
+	\end{itemize}
+	One and the same architecture can be described by several different architecture descriptions, and at the same time an architecture description can also characterise multiple architectures \cite{ISO_42010}.
+
+\item [Stakeholder].
+	The \emph{stakeholders} are all people, which are somehow related to the system and have any interest in the system. Those include users, operators, owners, developers, maintainers and others \cite{ISO_42010}.
+
+\item [System concern].
+	A specific \emph{system concern} can be held by one more more stakeholders and can appear in various different forms, e.g. expectations, responsibilities, requirements, assumptions, dependencies and more \cite{ISO_42010}. 
+
+\item [Purpose].
+	\emph{Purposes} are one kind of \emph{system concerns}, which are issued by the stakeholders \cite{ISO_42010}.
+\end{description}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.35]{architecture_ontology.png}
+\caption{Relations of architecture to other entities \cite{ISO_42010}}
+\label{fig:architecture_ontology}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
 \section{Service oriented architecture}
-\subsection{Definition}
-\subsection{Historic development}
-\subsection{Structure of SoA}
-\subsection{Service composition}
+\label{ch:soa}
+
+The term \emph{service oriented architecture} has been widely used for marketing and praising new products. Unfortunately, this resulted in various misinterpretations of the term, because some vendors suggested that a SoA is something that can be bought or installed on an existing system, missing the point that SoA is not a product, but a set of design paradigms that can be applied on architectures.
+
+The driving factor for the application of this design paradigm are certain benefits that come with the modularization of software. Those are not only reduction of development costs, but, with respect to embedded systems, also a saving in hardware components \cite{sommer}. Furthermore it increases flexibility, scalability and fault tolerance, enabling the system to run, even if parts are erroneous or down \cite[p.33]{rosen} \cite[p.17-18]{josuttis}.
+
+
+\subsection{Definitions}
+The following definitions reveal the wide range of different views and understandings.
+
+\begin{description}
+	\item [Oasis].
+	OASIS is a nonprofit consortium that drives the development, convergence and adoption of open standards for the global information society.
+	\begin{quote}
+	\emph{``A paradigm for organizing distributed capabilities that may be under the control of different ownership domains. It provides a uniform means to offer, discover, interact with and use capabilities to produce desired effects consistent with measurable preconditions and expectations''} \cite{oasis2006}.
+	\end{quote}
+
+	\item [Papazoglou].
+	\begin{quote}
+	\emph{``Service-oriented architectures (SOA) is an emerging approach that addresses the requirements of loosely coupled, standards-based, and protocol independent distributed computing''} \cite{papazoglou2007}.
+	\end{quote}
+
+	\item [Donini, Marrone et al.].
+	\begin{quote}
+	\emph{``SOA is an architectural style for building software applications that use services available in a network such as the web and it represents the widest accepted model to design geographical distributed systems.''} - \cite{donini2008}
+	\end{quote}
+
+	\item [Arcitura].
+	\begin{quote}
+	\emph{``Service-oriented architecture is a technology architectural model for service-oriented solutions with distinct characteristics in support of realizing service-orientation and the strategic goals associated with service-oriented computing''} \cite{arcitura}.
+	\end{quote}
+\end{description}
+
+Many sources feature terms like \emph{enterprise} or \emph{business function}. This is because they refer to SoAs in enterprises or web application. In these environments, a timeout or failure (cf. section \ref{sec:fault,error,failure}) is presumably not safety critical.
+
+
+
+\subsubsection{Definition for the EMC2 project}
+
+The EMC2 project aims at implementing the SoA design paradigm into safety critical embedded systems, which comes with various additional challenges. Thus, the definition below was created with regard to embedded systems. However, it is quite generic and fits also for SoAs in web applications.
+
+\begin{myquote}
+	The service oriented architecture is no actual design, which can be simply implemented or installed, but a collection of design principles for distributed systems.
+
+	Originating from the object oriented- and component based engineering, it pushes the concept of software reuse to a new level by using technology independent and loosely coupled services.
+
+	Accordingly, a SoA disposes of an arbitrary number of services, which are interconnected by means of an underlying network and predefined protocols.
+\end{myquote}
+
+As stated, SoA is no specific implementation but a set of rules to achieve a certain target state. The final implementation can therefore consist of multiple technologies, products, Application Programmers Interfaces (APIs) and supporting infrastructures \cite[p.29]{erl2011}. This enables an unproblematical exchange of components by components of other vendors, as long as the provided services remain unaffected.
+
+A SoA is not just a simple collection of services, but offers also \emph{composition mechanisms} (cf. section \ref{sec:service-composition}) for services, enabling the creation of agile, higher-level services with a more sophisticated functionality, without having to build everything from scratch. \cite[p.12]{josuttis}.
+
+
+
+\subsection{Historic Development}
+The service-oriented architecture (the term first appeared in 1996 \cite[p.7]{rosen}) emerged from the CBSE and was, so to say, an improvement, for it allowed the components to be wider distributed and looser coupled. However, since both approaches feature certain advantages, both of them have been developed in parallel ever since, resulting in many similarities, but also many differences \cite{breivold}. The advance of the software reuse concepts from 1960 to nowadays is illustrated in figure \ref{fig:software_reuse}.
+
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{software_reuse.pdf}
+\caption{Development of software reuse from the 1960 to present \cite{clements}.}
+\label{fig:software_reuse}
+\end{figure}
+
+
+\subsection{Structure of a SoA}
+\label{sec:structure_of_soa}
+The four main artefacts of a SoA are \emph{service provider}, \emph{service consumer}, \emph{service repository} and the \emph{service contract} \cite{arrowhead} \cite{breivold} \cite{rodrigues2011}. There are also alternative terms for those, which are mentioned here, but throughout this document and the related documents, the previously stated terms will be used.
+
+The relations of the terms is illustrated in figure \ref{fig:soa_overview}.
+
+\begin{description}
+\item [Service provider/ service owner]. 
+The task of the \emph{service provider} is to provide a service and its functionality. Additionally he should formulate the service description in form of a contract (cf. section \ref{sec:service_structure}), which is then handed over to the \emph{service repository} in order to make the service discoverable \cite{breivold}.
+
+\item [Service Repository/ Service Registry].
+In some sources this entity is referred to as \emph{service registry} or \emph{service directory}.
+
+The \emph{service repository} is, more or less, a database of services, which may be distributed. It disposes of certain publishing mechanisms in order to make services discoverable by the \emph{service consumers}. Therefore it contains all the information from the \emph{service contract} (of every version of the service), as well as additional information like physical location, provider information, technical constraints, security issues and of course the link to the registered service. \cite[p.60-61]{krafzig} \cite{breivold} \cite{converge}.
+
+Services can be added to, or taken from, the \emph{service repository} dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
+
+\item [Service Consumer/ Service Client/ Service Requester] .
+The \emph{service consumer} (or \emph{service client}, \emph{service requester}) is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the \emph{service repository} for specific services by the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the \emph{service consumer} creates a dynamic binding (cf. section \ref{sec:binding}) with the \emph{service provider} in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
+
+\item [Service Contract] .
+The \emph{service contract} is described in detail in section \ref{sec:service_structure}. It is handed over to the \emph{service repository} from the \emph{service provider}.
+
+\item [Service Inventory] .
+Erl, Bennett et al. mention this additional term in connection with SoA. According to their definition, \emph{``A service inventory is an independently standardized and governed collection of complementary services within a boundary that represents an enterprise or a meaningful segment of an enterprise''} \cite[p.41]{erl2011}. 
+
+The term enterprise in this definition appears a bit bizarre and is a result of the research area related with this source. For the scope of EMC2 project the boundary is defined as the vehicle. Thus, the service inventory includes all services which could be provided by the vehicle. The difference to the service repository is that the service do not need to be available, or even implemented, but it is a static list of possible services.
+\end{description}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{soa-architecture.pdf}
+\caption{Relation of \emph{service provider}, \emph{service consumer} and \emph{service repository} \cite{arrowhead} \cite{converge}}
+\label{fig:soa_overview}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.8]{soa_process.pdf}
+\caption{Chronology of how a service is used in a SoA \cite{converge}.}
+\label{fig:service_cronology}
+\end{figure}
+
+
+
+
+
+
+\subsection{Service Composition}
+\label{sec:service-composition}
+\emph{Service composition} is the key concept of any SoA and denotes the generation of (more) capable services from existing services. In \cite{erl2011} it is stated that \emph{``at least two participating services plus one composition initiator need to be present''} \cite[p.40]{erl2011}. In other words, the resulting service of a service composition requires at least two underlying services. Otherwise it would be just a point-to-point exchange \cite[p.40]{erl2011}.
+
+There are two different methods for composing services, which are denoted \emph{service orchestration} and \emph{service choreography}.
+
+Figure \ref{fig:service-composition} shows the service A as composition of service B to D.
+
+\begin{description}
+	\item [Service Orchestration] .
+	With this method of aggregating services, the new service has control over the other services \cite{josuttis}.
+	\item [Service Choreography] .
+	In contrast to service orchestration, non of the related services has control over the others. Instead, there are certain rules and policies, which regulate the collaboration \cite{josuttis}.
+\end{description}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{service-composition.pdf}
+\caption{Service A is composed of service B, C and D. The arrows denote their communication routes. The communication from service A to service D (arrow 5) is just ``one-way'' which is also valid variant \cite[p.40]{erl2011}.}
+\label{fig:service-composition}
+\end{figure}
 
 \section{Communication in SoA}
 

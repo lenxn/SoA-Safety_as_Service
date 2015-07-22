@@ -1,13 +1,63 @@
 \begin{thebibliography}{10}
 
-\bibitem{ISO_15288}
-Systems and software engineering - system life cycle processes, 2015.
+\bibitem{iso26262:course1}
+Iso 26262 for safety-related automotive e/e development: Introduction and
+  overview.
+
+\bibitem{arrowhead:presentation}
+Lund Ericsson.
+\newblock Emc\textsuperscript{2} service architecture, 2015.
 
 \bibitem{genesys}
 R.~Omermaisser and H.~Kopetz.
 \newblock {\em GENESYS - A Candidate for an ARTEMIS Cross-Domain Reference
   Architecture for Embedded Systems}.
 \newblock Vienna University of Technology, 2009.
+
+\bibitem{autosar_intro}
+An introduction to autosar.
+
+\bibitem{krafzig}
+D.~Krafzig, K.~Banke, and D.~Slama.
+\newblock {\em Enterprise SOA: service-oriented architecture best practices}.
+\newblock Prentice Hall PTR, Prentice Hall Professional Technical Reference,
+  Upper Saddle River, NJ, Indianapolis, first edition, 2005.
+
+\bibitem{avl}
+K.~Küpper, P.~Teufelberger, R.~Ellinger, and E.~Korsunsky.
+\newblock From vehicle requirements to modular hybrid software.
+\newblock {\em ATZ worldwide eMagazine}, pages 46--49, 2011.
+
+\bibitem{ISO_42010}
+Iso/iec/ieee systems and software engineering - architecture description, 2011.
+
+\bibitem{clements}
+P.~Clements and L.~Northrop.
+\newblock Software product lines, 2003.
+
+\bibitem{arrowhead}
+F.~Blomstedt, L.~Ferreira, and et~al.
+\newblock The arrowhead approach for soa application development and
+  documentation, 2014.
+
+\bibitem{converge}
+Architecture of the car2x systems network.
+
+\bibitem{erl2011}
+Thomas Erl, Stephen~G Bennett, Benjamin Carlyle, Clive Gee, Robert Laird,
+  Anne~Thomas Manes, Robert Moores, and Andre Tost.
+\newblock {\em SOA Governance}.
+\newblock Pearson Education, 2011.
+
+\bibitem{elattar2007}
+Ashraf~M El-Attar and Gamal Fahmy.
+\newblock An improved watchdog timer to enhance imaging system reliability in
+  the presence of soft errors.
+\newblock In {\em Signal Processing and Information Technology, 2007 IEEE
+  International Symposium on}, pages 1100--1104. IEEE, 2007.
+
+\bibitem{ISO_15288}
+Systems and software engineering - system life cycle processes, 2015.
 
 \bibitem{iso26262:1}
 Iso 26262 road vehicles - functional safety - part 1: Vocabulary, 2011.
@@ -19,20 +69,6 @@ Jerker Delsing.
 \bibitem{autosar_glossary}
 AUTOSAR.
 \newblock Glossary, autosar release 4.2.1, 2014.
-
-\bibitem{iso26262:course1}
-Iso 26262 for safety-related automotive e/e development: Introduction and
-  overview.
-
-\bibitem{wiki_MPSoC}
-Wikipedia.
-\newblock Mpsoc.
-\newblock \url{http://en.wikipedia.org/wiki/MPSoC}.
-\newblock Visited: May 2015.
-
-\bibitem{arrowhead:presentation}
-Lund Ericsson.
-\newblock Emc\textsuperscript{2} service architecture, 2015.
 
 \bibitem{rodrigues2011}
 Douglas Rodrigues, Rayner15 de~Melo~Pires, J{\'u}lio~C{\'e}zar Estrella,
@@ -77,9 +113,6 @@ Serviceorientation.com.
 \newblock \url{http://www.serviceorientation.com}.
 \newblock Accessed: 2015-06-29.
 
-\bibitem{autosar_intro}
-An introduction to autosar.
-
 \bibitem{sametinger}
 J.~Sametinger.
 \newblock {\em Software Engineering with Reusable Components}.
@@ -91,12 +124,78 @@ Jim~Q Ning.
 \newblock In {\em Assessment of Software Tools and Technologies, 1997.,
   Proceedings Fifth International Symposium on}, pages 34--43. IEEE, 1997.
 
-\bibitem{gleirscher2014}
-Mario Gleirscher, Andreas Vogelsang, and Steffen Fuhrmann.
-\newblock A model-based approach to innovation management of automotive control
-  systems.
-\newblock In {\em Software Product Management (IWSPM), 2014 IEEE IWSPM 8th
-  International Workshop on}, pages 1--10. IEEE, 2014.
+\bibitem{erl2008}
+Thomas Erl.
+\newblock {\em Soa: principles of service design}, volume~1.
+\newblock Prentice Hall Upper Saddle River, 2008.
+
+\bibitem{opengroup}
+The~Open Group.
+\newblock The soa source book.
+\newblock \url{http://www.opengroup.org/soa/source-book/intro/}.
+\newblock Visited: April 2015.
+
+\bibitem{breivold}
+H.~Breivold and M.~Larsson.
+\newblock Component-based and service-oriented software engineering: Key
+  concepts and principles.
+\newblock {\em Software Engineering and Advanced Applications, 2007. 33rd
+  EUROMICRO Conference}, pages 13--20, 2007.
+
+\bibitem{scholz}
+Andreas Scholz, Stephan Sommer, Christian Buckl, Gerd Kainz, Alfons Kemper,
+  Alois Knoll, J{\"o}rg Heuer, and Anton Schmitt.
+\newblock Towards and adaptive execution of applications in heterogeneous
+  embedded networks.
+\newblock In {\em Software Engineering for Sensor Network Applications (SESENA
+  2010)}. {ACM/IEEE}, 2010.
+
+\bibitem{josuttis}
+N.~Josuttis.
+\newblock {\em SOA in Practice}.
+\newblock O'Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol, CA
+  95472, 2007.
+
+\bibitem{sei2}
+Software~Engineering Institute.
+\newblock Defining software architectures.
+\newblock \url{http://www/sei.cmu.edu/architecture/}.
+\newblock Visited: May 2015.
+
+\bibitem{sommer}
+Stephan Sommer, Christian Buckl, Gerd Kainz, Andreas Scholz, Irina Gaponova,
+  Alois Knoll, Alfons Kemper, J{\"o}rg Heuer, and Anton Schmitt.
+\newblock Service migration scenarios for embedded networks.
+\newblock In {\em The Fifth International Workshop on Service Oriented
+  Architectures in Converging Networked Environments (SOCNE 2010)}. {IEEE},
+  2010.
+
+\bibitem{rosen}
+M.~Rosen, B.~Lublinsky, and K.~Smith.
+\newblock {\em Applied SOA: SERVICE-ORIENTED ARCHITECTURE AND DESIGN
+  STRATEGIES}.
+\newblock Wiley Publishing, Inc., Indianapolis, 2008.
+
+\bibitem{oasis2006}
+OASIS.
+\newblock Oasis reference model for service oriented architecture 1.0,
+  committee specification 1.
+\newblock
+  \url{http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=soa-rm},
+  2006.
+
+\bibitem{papazoglou2007}
+Mike~P Papazoglou and Willem-Jan Van Den~Heuvel.
+\newblock Service oriented architectures: approaches, technologies and research
+  issues.
+\newblock {\em The VLDB journal}, 16(3):389--415, 2007.
+
+\bibitem{donini2008}
+Renato Donini, Stefano Marrone, Nicola Mazzocca, Antonio Orazzo, Domenico Papa,
+  and Salvatore Venticinque.
+\newblock Testing complex safety-critical systems in soa context.
+\newblock In {\em Complex, Intelligent and Software Intensive Systems, 2008.
+  CISIS 2008. International Conference on}, pages 87--93. IEEE, 2008.
 
 \bibitem{buckl}
 Christian Buckl, Stephan Sommer, Andreas Scholz, Alois Knoll, Alfons Kemper,
@@ -107,34 +206,27 @@ Christian Buckl, Stephan Sommer, Andreas Scholz, Alois Knoll, Alfons Kemper,
   Converging Networked Environments (SOCNE 2009) - extended version}. {IEEE},
   2009.
 
-\bibitem{scholz}
-Andreas Scholz, Stephan Sommer, Christian Buckl, Gerd Kainz, Alfons Kemper,
-  Alois Knoll, J{\"o}rg Heuer, and Anton Schmitt.
-\newblock Towards and adaptive execution of applications in heterogeneous
-  embedded networks.
-\newblock In {\em Software Engineering for Sensor Network Applications (SESENA
-  2010)}. {ACM/IEEE}, 2010.
-
-\bibitem{sommer}
-Stephan Sommer, Christian Buckl, Gerd Kainz, Andreas Scholz, Irina Gaponova,
-  Alois Knoll, Alfons Kemper, J{\"o}rg Heuer, and Anton Schmitt.
-\newblock Service migration scenarios for embedded networks.
-\newblock In {\em The Fifth International Workshop on Service Oriented
-  Architectures in Converging Networked Environments (SOCNE 2010)}. {IEEE},
-  2010.
-
 \bibitem{kum}
 Dae-Hyun Kum, Joonwoo Son, Seon-bong Lee, and Ivan Wilson.
 \newblock Automated testing for automotive embedded systems.
 \newblock In {\em SICE-ICASE, 2006. International Joint Conference}, pages
   4414--4418. IEEE, 2006.
 
-\bibitem{elattar2007}
-Ashraf~M El-Attar and Gamal Fahmy.
-\newblock An improved watchdog timer to enhance imaging system reliability in
-  the presence of soft errors.
-\newblock In {\em Signal Processing and Information Technology, 2007 IEEE
-  International Symposium on}, pages 1100--1104. IEEE, 2007.
+\bibitem{turek2011}
+Thomas Turek, Tayyaba Anees, and Simon-Alexander Zerawa.
+\newblock Towards safety and security critical communication systems based on
+  soa paradigm.
+\newblock In {\em Industrial Electronics (ISIE), 2011 IEEE International
+  Symposium on}, pages 1248--1253. IEEE, 2011.
+
+\bibitem{iso26262:course2}
+Iso 26262 for safety-related automotive e/e development: Concept phase.
+
+\bibitem{wiki_tmr}
+Wikipedia.
+\newblock Triple modular redundancy.
+\newblock \url{http://en.wikipedia.org/wiki/Triple_modular_redundancy}.
+\newblock Visited: May 2015.
 
 \bibitem{yamada2008}
 Shimpei Yamada, Yukikazu Nakamoto, Takuya Azumi, Hiroshi Oyama, and Hiroaki
@@ -144,5 +236,21 @@ Shimpei Yamada, Yukikazu Nakamoto, Takuya Azumi, Hiroshi Oyama, and Hiroaki
 \newblock In {\em Computer and Information Technology Workshops, 2008. CIT
   Workshops 2008. IEEE 8th International Conference on}, pages 557--562. IEEE,
   2008.
+
+\bibitem{yamada2014}
+Shigeru Yamada and Yukikazu Nakamoto.
+\newblock Protection mechanism in privileged memory space for embedded systems,
+  real-time os.
+\newblock In {\em Distributed Computing Systems Workshops (ICDCSW), 2014 IEEE
+  34th International Conference on}, pages 161--166. IEEE, 2014.
+
+\bibitem{autosar_system_modelling}
+Sw-c and system modelling guide.
+\newblock \url{http://www.autosar.org}.
+
+\bibitem{rehner2013}
+Dipl-Math~Ute Rehner et~al.
+\newblock Naming issues in autosar.
+\newblock {\em ATZextra worldwide}, 18(9):57--59, 2013.
 
 \end{thebibliography}
