@@ -1,3 +1,7 @@
+\label{ch:introduction}
+- about soa in embedded systems
+- related projects (epsilon soa, sira)
+
 Due to the very different comprehension of certain terms by different people from different fields of research 
 The first part of my work during the internship was the creation of a glossary describing certain given terms
 ... in order to unify the understanding of these terms and create a basis for discussions ans researches.
@@ -14,6 +18,9 @@ The most important parts of this glossary will be covered within this chapter.
 \subsection{ISO 262662 international standard}
 \subsection{MISRA}
 \subsection{AUTOSAR}
+
+The remains of chapter \ref{ch:introduction} contains a definition of the most important terms related to SoA (with respect to automotive) with an extensive description of each term. Those terms are \emph{system}, \emph{component}, \emph{service}, \emph{architecture}, \emph{service oriented architecture}, \emph{dependability} and \emph{functional safety}.
+
 
 
 
@@ -189,7 +196,7 @@ For the EMC2 project it is crucial to achieve a clear distinction between the te
 
 Another issue is the term \emph{software component}, which leads to the question, whether components are pure software elements.
 
-In the following some definitions from different relevant resources are presented and discussed, with the aim to eliminate those ambiguities. The relation of component to service is investigated in section \ref{sec:relation_service_component}, subsequent to the definition of service.
+In the following some definitions from different relevant resources are presented and discussed, with the aim to eliminate those ambiguities.
 
 \subsection{Definitions}
 
@@ -264,7 +271,7 @@ The \emph{Linking Interface} is a message based interface and responsible for of
 The \emph{Linking Interfaces} are always technology agnostic, which means that they do not expose details on their implementation or \emph{Local Interfaces}. Accordingly, the implementation can be modified, without other components noticing, as long as the specification at the LIF remains unchanged \cite[p.9, 40-41]{genesys}.
 
 \item [Local Interface]. 
-The \emph{Local Interfaces} establish the connection between a component and its local environment, which could consist of sensors, actuators and the like. If the environment is modified, the semantics and timing of the data should stay the same in order to do not violate the specification. A \emph{Local Interface} could also be mapped to a \emph{LIF} of a component at the next-higher level - this is known \emph{gateway component} (cf. chapter \ref{ch:communication}) and enables different layers to communicate with each other.
+The \emph{Local Interfaces} establish the connection between a component and its local environment, which could consist of sensors, actuators and the like. If the environment is modified, the semantics and timing of the data should stay the same in order to do not violate the specification. A \emph{Local Interface} could also be mapped to a \emph{LIF} of a component at the next-higher level - this is known \emph{gateway component} and enables different layers to communicate with each other.
 
 Components do not necessarily require local interfaces. Such are denoted \emph{Closed Components} \cite[p.40-41]{genesys}.
 
@@ -423,7 +430,7 @@ Service are building blocks and thus existing services can be used in order to c
 
 With orchestration, one service acts as a coordinator between all services involved, in contrast to choreography, where all composed services work independently with each other in a completely distributed manner \cite{opengroup} \cite{arrowhead} \cite{breivold} \cite[p.27]{erl2011}.
 
-In SoAs (cf. section \ref{ch:soa}) the composing may take place at runtime (cf. section \ref{sec:binding}) \cite{breivold}.
+In SoAs (cf. section \ref{ch:soa}) the composing may take place at runtime \cite{breivold}.
 
 \item [Loose coupling].
 If two or more artifacts are somehow connected within a technical context, this is referred to by the term \emph{coupling}. It indicates that two or more of ``something'' exists and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
@@ -778,7 +785,7 @@ The \emph{service repository} is, more or less, a database of services, which ma
 Services can be added to, or taken from, the \emph{service repository} dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
 
 \item [Service Consumer/ Service Client/ Service Requester] .
-The \emph{service consumer} (or \emph{service client}, \emph{service requester}) is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the \emph{service repository} for specific services by the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the \emph{service consumer} creates a dynamic binding (cf. section \ref{sec:binding}) with the \emph{service provider} in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
+The \emph{service consumer} (or \emph{service client}, \emph{service requester}) is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the \emph{service repository} for specific services by the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the \emph{service consumer} creates a dynamic binding with the \emph{service provider} in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
 
 \item [Service Contract] .
 The \emph{service contract} is described in detail in section \ref{sec:service_structure}. It is handed over to the \emph{service repository} from the \emph{service provider}.
@@ -830,13 +837,167 @@ Figure \ref{fig:service-composition} shows the service A as composition of servi
 \label{fig:service-composition}
 \end{figure}
 
-\section{Communication in SoA}
 
 \section{Dependability}
+
+The terms \emph{Availability} and \emph{Reliability}, which can be found at any level of implementation, are closely tied and usually come together. Often, they are also coupled with the term \emph{Maintenance}, which also plays an important role in the design of any system \cite[p.116]{genesys} \cite{lessner}.
+
 \subsection{Reliability}
+
+\label{sec:reliability}
+
+\emph{Reliability} denotes the time an entity need to fail while its operating. In other words it is ``the probability of the failure-free operation of a system for a specific period of time in a specific environment'' \cite[p.116]{genesys}. Nelson describes this also in a very comprehensible way as ``Reliability, $R(t)$, is the conditional probability that a system can perform its designed function at time $t$, given that it was operable at time $t=0$'' \cite{nelson}.
+
+When it comes to services, \emph{Reliability} can also include the ability to recover state information after an interruption and continue the service as it has never been interrupted \cite{genesys}.
+
+Obviously the reliability of higher level entities is based on the reliability of its sub entities.
+
+
 \subsection{Availability}
 
+\label{sec:availability}
+The definition of \emph{availability} by various sources slightly differs.
+
+The ISO 26262 standard defines the availability as the \emph{``capability of a product to be in a state to execute the function required under given conditions, at a certain time or a given period, supposing the required external resources are available''} \cite{iso26262:1}. Obermaisser and Kopetz, however, describe it as the \emph{``probability of a software service or system being available when needed''} \cite[p.116]{genesys}, which is very similar to the definition found in \cite{lessner} and \cite{nelson}.
+
+The difference between the definitions is obviously that the first one denotes \emph{Availability} as the availability of an entity at this very moment, while the other one defines it as a probability of an entity to be operational and ready to use.
+\\
+\\
+For the purpose of this project the term should be referred to as the \emph{probability} of a system of being operational at a given time.
+
+Two important terms which come in connection with availability are \emph{MTTF} (Mean Time To Failure), the expected time until the system fails, and \emph{MTTR} (Mean Time To Repair), the necessary time to restore a failed system to normal operation. The availability $A$ can then be expressed as $A = MTTF/(MTTF + MTTR)$ \cite{nelson}. 
+
+Thus, the availability characteristics of a system are represented by its reliability and maintainability. Accordingly, even highly reliable entities can have a poor availability if the repair time of its sub entities takes very long \cite{lessner}. The availability can be improved by the application of dedicated \emph{fault tolerance} mechanisms (cf. section \ref{ch:fault_tolerance}) \cite{nelson}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Functional safety}
-\subsection{Safety related terminology}
+\label{ch:functional_safety}
+
+
 \subsection{Definition of safety}
+
+\begin{description}
+\item [Zeilinger, Sevcik et al. (2009)].
+\begin{quote}
+\emph{``The term safety describes the ability of a system not to cause environmentally harming effects, due to loss of mission critical information''} 
+\cite[p.1]{zeilinger2009}.
+\end{quote}
+
+\item [ISO 26262]. 
+\begin{quote}
+\emph{``absence of unreasonable risk''} \cite{iso26262:1}.
+\end{quote}
+
+\item [AUTOSAR].
+AUTOSAR has adopted the definition of the ISO standard:
+\emph{``Absence of unreasonable risk''} \cite{autosar_glossary}.
+\end{description}
+
+\subsection{Definition of functional safety}
+
+\begin{description}
+\item [Zhang, Lia and Qin (2010)].
+\emph{``Functional Safety processes are necessary to fulfill certain safety requirements (non functional requirements) in addition to functional requirements.''} \cite{zhang}.
+
+This definition is not entirely wrong, but its important to note that in automotive \emph{normal functions} cannot be separated from \emph{safety function} and accordingly their respective requirements are also interrelated \cite{iso26262:course1}.
+
+\item [ISO 26262].
+\emph{Functional safety} means the \emph{``absence of unreasonable risk due to hazards caused by malfunctioning behaviour of E/E systems''} \cite{iso26262:1}. An unreasonable \emph{risk} is thereby a risk judged to be \emph{``unacceptable according to valid societal moral concepts''} \cite{iso26262:1}.
+
+Risk, in turn, is defined as the product of the \emph{probability of occurrence} and the \emph{severity of harm} \cite{iso26262:1}.
+\end{description}
+
+The definition by the ISO standard seems quite promising and should be used as foundation for the scope of this project.
+
+As mentioned in the introduction, the term \emph{functional safety} only addresses the absence of risk due to equipment malfunction. It does not care about possible risks due to malicious events caused by other people, or just inappropriate operation of the user.
+
+
+\subsection{Safety related terminology}
+
+\label{sec:fault,error,failure}
+\emph{Fault}, \emph{error} and \emph{failure} are terms with are often mixed up and used in the same context, since they seem to be very similar in their meaning. Nevertheless, they stand for different things and its important to be aware of their disambiguation.
+
+
+\begin{description}
+\item [Fault] .
+In ISO 26262 standard a \emph{fault} is listed as an \emph{``abnormal condition that can cause an element or an item to fail''} \cite{iso26262:1} \cite{autosar_glossary}. 
+
+Faults come in different forms. An \emph{intermittent faults} occurs from time to time and disappears without any repair measures taken place. This is typical for hardware components which are worn out and almost breaking down. \emph{Transient faults}, on the other hand, appear once, and do not recur afterwards. This is for example the case if there is some electromagnetic interference. \emph{Permanent faults} naturally remain until the faulty component is exchanged or repaired \cite{iso26262:1}.
+
+A term related to \emph{fault}, is \emph{fault coverage}. It denotes ``the number of the faults detected as a percentage of the total number of faults affecting the system'' \cite{elattar2007}.
+
+
+\item [Error] .
+An \emph{error} is the deviation of a computed, observed or measured value or condition and the expected, theoretically correct value. An error occurs as consequence of unexpected operating conditions or a fault.
+Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
+
+If the \emph{error} exceeds a certain threshold it can cause a \emph{failure} \cite{autosar_glossary}.
+
+There are two different classifications of errors. They can be divided into soft- and hard errors or data- and control flow errors \cite{israr2014} \cite{elattar2007}.
+	\begin{description}
+	\item [Soft Error] .
+	\emph{Soft errors} occur when a temporary extra charge is induced into the electric circuit, usually due to cosmic radiation. This causes a flip of the data state in a memory element \cite{israr2014} \cite{elattar2007}.
+
+	This kind of error will become even more severe in the future, due to the decreasing size of electronic logic, as well as their increasing complexity \cite{elattar2007}.
+
+	\item [Hard Error] .
+	In contrast to \emph{soft errors}, \emph{hard errors} are caused by a constant property change of an electric component. This could happen either because of a change in the input temperature, or input voltage \cite{israr2014}.
+	\end{description}
+
+	\begin{description}
+	\item [Data Error] .
+	This error means a change of the data stored any memory location or register \cite{elattar2007}.
+
+	\item [Control Flow Error] .
+	A \emph{control flow error} leads to wrong execution sequence of instructions. This is the case, when the memory storing the address of the next execution instruction is changed \cite{elattar2007}.
+	\end{description}
+
+\item [Failure] .
+\emph{Failure} denotes that an element is not able to provide it's functionality any longer. This happens usually due to errors in the element or the environment, which are in turn caused by various faults \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
+
+The averaged frequency of occurrence of a failure is denoted by \emph{failure rate}, which is counted in hours of operation until a serious fault - e.g. 10e5 to 10e9 hours of operation \cite{rodrigues2011}.
+
+Another term which frequently comes up in connection with failure, is \emph{failure mode}. This denotes, depending on the consulted source, either the manner in which the component fails \cite{international2006analysis}, or the manner by which a occurred fault is observed \cite{mil1980}.
+\end{description}
+
+
 \subsection{Fault tolerance}
+
+\label{ch:fault_tolerance}
+
+The key concept of a \emph{fault tolerant} design is to enable a system to provide its intended functionality in the presence of a given number of faults \cite{nelson}.
+
+The \emph{fault tolerance} mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not lead directly to the violation of the safety goal(s), which maintain the system in a safe state \cite{iso26262:1}.
+
+Electric system suffer from numerous different possible faults, which increase with the complexity of the system. They include not only internal faults like design-faults or hardware wear-outs, but also external ones - for example misuse by the user or cosmic radiation.
+
+Due to the billions of transistors present in advanced electric systems and the various circumstances that lead to faults, faultless systems remain an utopian dream \cite{genesys}.
+
+Thus, the \emph{fault tolerance} mechanisms are not actually concerned with the prevention of faults, but assure that a fault does not lead directly to the violation of the safety goal(s), which maintain the system in a safe state \cite{iso26262:1}.
+
+\section{Design of \emph{fault tolerant} Systems}
+The prerequisite for designing a fault tolerant system is a so called \emph{fault hypothesis}, which is an assumption regarding the type and frequency of faults the system is supposed to handle.
+
+These can include
+\begin{itemize}
+\item \emph{Software error} - Especially for complex software it can be assumed that there are a certain amount of bugs and imprecisions.
+\item \emph{Delay and disruption error} - This is relevant for all networking systems.
+\item \emph{Transient faults} - This means a possible corruption of Flip-Flops or memory cells with the progression of time.
+\end{itemize}
+
+A way to deal with all these scenarios \emph{ECRs} (Error Containment Regions) are required. An error which occurs within this specific subsystem will not propagate outside the subsystem without being detected. 
+
+Another possibility is redundancy, where multiple subsystems are responsible for the same task and are able to detect faults by comparing their results and validating them by means of dedicated voting mechanisms \cite{genesys}.

@@ -197,6 +197,45 @@ Renato Donini, Stefano Marrone, Nicola Mazzocca, Antonio Orazzo, Domenico Papa,
 \newblock In {\em Complex, Intelligent and Software Intensive Systems, 2008.
   CISIS 2008. International Conference on}, pages 87--93. IEEE, 2008.
 
+\bibitem{lessner}
+E.~Lessner and P.~Ostroumov.
+\newblock Reliability and availability studies in the ria driver linac, 2005.
+
+\bibitem{nelson}
+V.~Nelson.
+\newblock Fault-tolerant computing: fundamental concepts, 1990.
+
+\bibitem{zeilinger2009}
+Heimo Zeilinger, Berndt Sevcik, Thomas Turek, and Gerhard Zucker.
+\newblock Communication in change--voice over ip in safety and security
+  critical communication networks.
+\newblock In {\em IT Revolutions}, pages 186--193. Springer, 2009.
+
+\bibitem{zhang}
+H.~Zhang, W.~Li, and J.~Qin.
+\newblock Model-based functional safety analysis method for automotive embedded
+  system application, 2010.
+
+\bibitem{israr2014}
+Amber Israr, Sorin Huss, et~al.
+\newblock Reliable system design using decision diagrams in presence of hard
+  and soft errors.
+\newblock In {\em Applied Sciences and Technology (IBCAST), 2014 11th
+  International Bhurban Conference on}, pages 1--9. IEEE, 2014.
+
+\bibitem{international2006analysis}
+International~Electrotechnical Commission, International~Electrotechnical
+  Commission, et~al.
+\newblock {\em Analysis Techniques for System Reliability: Procedure for
+  Failure Mode and Effects Analysis (FMEA)}.
+\newblock International Electrotechnical Commission, 2006.
+
+\bibitem{mil1980}
+United States.~Department of~Defense.
+\newblock {\em Mil-Std-1629a: 1980: Procedures for Performing a Failure Mode,
+  Effects and Criticality Analysis}.
+\newblock Department of Defense, 1980.
+
 \bibitem{buckl}
 Christian Buckl, Stephan Sommer, Andreas Scholz, Alois Knoll, Alfons Kemper,
   J{\"o}rg Heuer, and Anton Schmitt.

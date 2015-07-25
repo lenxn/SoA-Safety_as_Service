@@ -1,11 +1,13 @@
-This chapter is structured in the three main section, labeled \emph{SoA in Embedded System (Embedded SoA)}, \emph{Safety services} and \emph{Use Case: Error Detection Service}. 
+\label{ch:methods}
+
+This chapter is structured in the four main section, entitled \emph{SoA in embedded systems (Embedded SoA)}, \emph{SoA in automotive}, \emph{safety services} and \emph{service development process}. 
 
 The first section deals extensively with the possible application of the service oriented design paradigm in embedded system and deals with the challenges this approach has to face when approached with safety-critical requirements. Moreover, the differences to conventional SoAs, as Web application is investigated in detail. 
-The second section presents xx services, which are relevant for \emph{functional safety} in detail and presents their intended functionality, as well as possible implementations in terms of an architecture.
+The second section presents various examples of services, which are relevant for \emph{functional safety} in detail and presents their intended functionality, as well as possible implementations in terms of an architecture.
 
-The final part consists of a simplified use case, dealing with the design of an error detection service with respect to the design phases \emph{service investigation/planning}, \emph{service inventory analysis}, \emph{service oriented analysis} and \emph{service oriented design}.
+The final part consists of a simplified use case, dealing with the design of an error detection service with respect to the design phases \emph{service investigation/ planning}, \emph{service inventory analysis}, \emph{service oriented analysis} and \emph{service oriented design}.
 
-Most of the findings and concepts in this chapter is ``not yet'' covered in literature, but is the result of numerous meetings and discussions.
+Most of the findings and concepts in this chapter is (not yet) covered in literature, but is the result of numerous meetings and discussions at VIRTUAL VEHICLE during May to July 2015.
 
 
 
@@ -318,46 +320,11 @@ This initial phase is concerned with the initial layout of the service. It is th
 \end{itemize}
 
 
-\begin{mdframed}
-\begin{description}
-\item [Scope of the service].
-The service should be capable of detecting an error within a given ECR and act accordingly. Therefore he needs the signal of all the sensors he should mirror, as well as clock signal for creating sampling times.
-\item [Required capabilities].
-	\begin{itemize}
-	\item Detection an error in one of the sensors.
-	\item Restart of an erroneous sensor.
-	\item Purging the service from the service repository if more than two sensors fail and errors can no longer be detected.
-	\end{itemize}
-\item [Non-required capabilities].
-	\begin{itemize}
-	\item Detection of a fault.
-	\item Detection of a failure.
-	\end{itemize}
-\end{description}
-\end{mdframed}
-
-
-
-
-
-
 
 \subsection{Service inventory analysis}
 The service inventory includes all services which could be provided by the vehicle. The difference to the service repository is that the service do not need to be available, or even implemented, but it is a static list of possible services.
 
 During the \emph{service inventory analysis} the inventory is searched for services which are required in order to build up the desired service. This simplifies the development, because much of the required functionality is already provided by other services and at the same time this step is responsible for preventing redundancies.
-
-\begin{mdframed}
-The error detection service will require:
-\begin{itemize}
-\item A clock service for creating sampling times,
-\item A fault detection service for detecting a fault in one of the mirrored services,
-\item An management service of the service repository, to update the repository in case of an erroneous service, and additionally perhaps
-\item A service for restarting another service, which is erroneous.
-\end{itemize}
-
-During operation, it will also need three services providing the measurement, which shall be checked for errors. These could be for example acceleration measurement services. Of course they should feature different implementation on independent hardware components.
-\end{mdframed}
 
 
 
@@ -388,14 +355,6 @@ During the \emph{service oriented analysis} the service candidate is reviewed an
 \end{description}
 
 
-\begin{mdframed}
-Concerning the naming, the example service should be in accordance with the AUTOSAR naming conventions \cite{autosar_system_modelling}. Accordingly, a suitable candidate would be \textbf{error\_detection}.
-
-The \emph{service normalisation} and \emph{service candidate review} are not really doable just theoretically. Therefore, it shall be assumed that the example service has no overlapping functionality and has passed the review.
-\end{mdframed}
-
-
-
 
 
 \subsection{service oriented design}
@@ -406,17 +365,4 @@ Erl, Bennett at al. describe this phase as:
 \end{quote}
 
 
-The aim of the \emph{service oriented design} is to physically establish the service contract by filling out the corresponding templates. It is initiated when sufficient analysis has been conducted. 
-
-
-
-\begin{mdframed}
-A possible architecture resulting from the service of this use case is depicted in figure \ref{fig:error-detection-service}. 
-\end{mdframed}
-
-\begin{figure}[ht]
-\centering
-\caption{Architecture of the example service (error detection service).}
-\label{fig:example-service-architecture}
-\includegraphics[width=\textwidth]{error-detection-service.pdf}
-\end{figure}
+The aim of the \emph{service oriented design} is to physically establish the service contract by filling out the corresponding templates. It is initiated when sufficient analysis has been conducted.
