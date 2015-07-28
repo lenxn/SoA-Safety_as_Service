@@ -18,6 +18,7 @@ Most of the findings and concepts in this chapter is (not yet) covered in litera
 
 
 \section{SoA in Embedded Systems (Embedded SoA)}
+\label{sec:soa-in-embedded-systems}
 
 The service oriented design paradigm was originally designed for the application in the web, which offered ideal prerequisites for this kind of architectural style: An underlying network for interconnection is already present and \emph{time constraints} are no concern, for delays are unlikely to cause a disaster. Thus, it is no surprise that web services are the application area, where SoA has scored the highest market penetration \cite{rodrigues2011} \cite{buckl}.
 
@@ -97,13 +98,14 @@ Regarding the ISO 26262 standard, the ESoA can be related to \textbf{Part 3: Con
 
 
 \section{SoA in automotive}
+\label{sec:soa-in-automotive}
 
 This chapter is dedicated to the investigation of the applicability of the SoA concepts for automotive.
 
 In the future of automotive all vehicles will, most likely, be interconnected with each other and also with the environment. This could give them opportunities like automatically detecting whether the traffic lights are green at a crossing and driving autonomous. Within this document those futuristic vehicles are referred to as \emph{connected cars}.
 
 
-The opportunities and advantages of the SoA approach are described extensively in \ref{ch:soa-in-embedded-systems}. In terms of vehicles, the major advantage would be the possibility to reduce the quantity of computation hardware. At present time, each component disposes of his own dedicated hardware for conducting computations, which is unused for the majority of time. Nevertheless, it comes with a lot of extra weight. As stated in \cite[p.7]{marwedel}, \emph{``Embedded systems should exploit the available hardware architecture as much as possible.s''}
+The opportunities and advantages of the SoA approach are described extensively in \ref{sec:soa-in-embedded-systems}. In terms of vehicles, the major advantage would be the possibility to reduce the quantity of computation hardware. At present time, each component disposes of his own dedicated hardware for conducting computations, which is unused for the majority of time. Nevertheless, it comes with a lot of extra weight. As stated in \cite[p.7]{marwedel}, \emph{``Embedded systems should exploit the available hardware architecture as much as possible.s''}
 
 The SoA approach might reduce not only the weight, but also the complexity and costs of the overall vehicle. So far, it is frequently the case that each vendor uses his own proprietary network and additional hardware, prohibiting the application of hardware components from another vendors \cite{sommer}.
 
@@ -293,6 +295,7 @@ According to ARROWHEAD, the lifecycle of a system can be divided coarsely in the
 
 
 \section{Service development process (use case scenario)}
+\label{sec:service-development-process}
 
 The preceding chapters analysed the concepts of SoA in embedded systems and safety services from a theoretical point of view. This final chapter investigates the design process of a safety-critical service by means of a simple use case. In detail, an \emph{error detection service}, based on triple modular redundancy, as it is presented in section \ref{sec:error-detection-service}, serves as example.
 

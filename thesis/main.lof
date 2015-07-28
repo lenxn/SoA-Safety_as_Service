@@ -1,29 +1,28 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Relation of \emph {system}, \emph {component} and \emph {element} according to ISO 26262 \cite {iso26262:course1}.\relax }}{3}{figure.caption.10}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces The hierarchy of the integration levels of the system ``vehicle'' with examples\relax }}{6}{figure.caption.12}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Relation of System, SoS and Service to one another \cite {arrowhead:presentation}.\relax }}{7}{figure.caption.14}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Relation of \emph {system}, \emph {component} and \emph {element} according to ISO 26262 \cite {iso26262:course1}. Throughout this thesis the naming convention according to this scheme is applied.\relax }}{3}{figure.caption.10}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The hierarchy of the integration levels of the system ``vehicle'' with examples\relax }}{5}{figure.caption.12}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Relation of System, SoS and Service to one another \cite {arrowhead:presentation}.\relax }}{6}{figure.caption.14}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Implementation example of an ARROWHEAD framework \cite {arrowhead:presentation}.\relax }}{7}{figure.caption.15}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The interfaces of a component, with respect to the \textbf {GENESYS architecture} \cite [p.40]{genesys}\relax }}{12}{figure.caption.19}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Illustration of the client-server communication \cite {autosar_intro}.\relax }}{13}{figure.caption.21}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{14}{figure.caption.22}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Illustration of the different ports at a single component \cite {autosar_intro}.\relax }}{14}{figure.caption.23}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Structure of a service with the relations of the particular artifacts \cite [p.45]{krafzig}.\relax }}{21}{figure.caption.25}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Examples of hardware parts at different levels \cite {avl}\relax }}{22}{figure.caption.29}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Relations of architecture to other entities \cite {ISO_42010}\relax }}{27}{figure.caption.34}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Development of software reuse from the 1960 to present \cite {clements}.\relax }}{29}{figure.caption.36}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Relation of \emph {service provider}, \emph {service consumer} and \emph {service repository} \cite {arrowhead} \cite {converge}\relax }}{31}{figure.caption.37}
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Chronology of how a service is used in a SoA \cite {converge}.\relax }}{37}{figure.caption.38}
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Service A is composed of service B, C and D. The arrows denote their communication routes. The communication from service A to service D (arrow 5) is just ``one-way'' which is also valid variant \cite [p.40]{erl2011}.\relax }}{38}{figure.caption.39}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The interfaces of a component, with respect to the \textbf {GENESYS architecture} \cite [p.40]{genesys}\relax }}{12}{figure.caption.18}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Illustration of the client-server communication \cite {autosar_intro}.\relax }}{13}{figure.caption.20}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{13}{figure.caption.21}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Illustration of the different ports at a single component \cite {autosar_intro}.\relax }}{14}{figure.caption.22}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Structure of a service with the relations of the particular artifacts \cite [p.45]{krafzig}.\relax }}{20}{figure.caption.24}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Examples of hardware parts at different levels \cite {avl}\relax }}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Relations of architecture to other entities \cite {ISO_42010}\relax }}{25}{figure.caption.31}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Development of software reuse from the 1960 to present \cite {clements}.\relax }}{28}{figure.caption.32}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Relation of \emph {service provider}, \emph {service consumer} and \emph {service repository} \cite {arrowhead} \cite {converge}\relax }}{30}{figure.caption.33}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Chronology of how a service is used in a SoA \cite {converge}.\relax }}{36}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{42}{figure.caption.40}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example hierarchy of safety services in a vehicle.\relax }}{47}{figure.caption.42}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{48}{figure.caption.43}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}.\relax }}{49}{figure.caption.44}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{50}{figure.caption.45}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Resulting architecture of the \emph {Error detection service}.\relax }}{51}{figure.caption.46}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{52}{figure.caption.47}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{44}{figure.caption.36}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example hierarchy of safety services in a vehicle.\relax }}{45}{figure.caption.37}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}.\relax }}{47}{figure.caption.39}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{48}{figure.caption.40}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Resulting architecture of the \emph {Error detection service}.\relax }}{49}{figure.caption.41}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{50}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{57}{figure.caption.48}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{55}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

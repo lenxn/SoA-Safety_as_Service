@@ -19,9 +19,7 @@ The most important parts of this glossary will be covered within this chapter.
 \subsection{MISRA}
 \subsection{AUTOSAR}
 
-The remains of chapter \ref{ch:introduction} contains a definition of the most important terms related to SoA (with respect to automotive) with an extensive description of each term. Those terms are \emph{system}, \emph{component}, \emph{service}, \emph{architecture}, \emph{service oriented architecture}, \emph{dependability} and \emph{functional safety}.
-
-
+The remains of chapter \ref{ch:introduction} contains a definition of the most important terms related to SoA (with respect to automotive) with an extensive description of each term. Those terms are \emph{system}, \emph{component}, \emph{service}, \emph{architecture}, \emph{service oriented architecture}, \emph{dependability} and \emph{functional safety}. Each of these sections starts with definitions from different sources. The relevant points of those are united in a ``self-created'' definition, marked by a box. Subsequently follows some additional information related to the specific term.
 
 
 
@@ -31,10 +29,8 @@ The remains of chapter \ref{ch:introduction} contains a definition of the most i
 This chapter explores various definitions of the term system, as well as related hierarchies and terminology. Because of its reappearance in later chapters, the term \emph{embedded system} is also covered.
 
 \subsection{Definitions}
-Definition of \emph{system} by different sources:
+
 \begin{description}
-\item [ISO/IEC 15288] .
-The ISO/IEC 15288 (a standard for System Engineering) fstates that systems \textit{``are man-made and may be configured with one or more of the following: hardware, software, data, humans, processes (e.g. processes for providing services to users), procedures (e.g. operator instructions), facilities, materials and naturally occurring entities''} \cite{ISO_15288}.
 
 \item [GENESYS architecture].
 Definition of system according to Obermaisser and Kopetz: \emph{``an entity that is capable of interacting with its environment and is sensitive to the progression of time''} \cite[p.7]{genesys}.
@@ -43,20 +39,23 @@ The \emph{environment} is a system itself, which produces input for other system
 \item [ISO 26262].
 The ISO 26262 standard defines a system as a \emph{``set of elements that relates at least a sensor, a controller and an actuator with one another''} \cite{iso26262:1}. This definitions is already a bit more specific with a focus on the automotive industry.
 
-\item [ARROWHEAD].
-Arrowhead has a bit slightly different notion of the concept \emph{system}. With respect to their view, a system is simply an artifact which provides and/or consumes \emph{services} (cf. chapter \ref{ch:service}) \cite{arrowhead_inpr}, what implies that systems are directly related to service oriented architectures (cf. chapter \ref{ch:soa}).
-
 \item [AUTOSAR].
-\begin{quote}
-\emph{``An integrated composite that consists of one or more of the processes, hardware, software, facilities and people, that provides a capability to satisfy a stated need or objective''} \cite{autosar_glossary}.
-\end{quote}
+According to AUTOSAR, a system is \emph{``an integrated composite that consists of one or more of the processes, hardware, software, facilities and people, that provides a capability to satisfy a stated need or objective''} \cite{autosar_glossary}.
 
 There is no indication that system have any internal structure, or that services are exchanged inside of them, which is the case according to the other sources. In this definition the is more like a component (cf. \emph{``It may also be referred to as Component or Device''} \cite{arrowhead_inpr}).
 \end{description}
 
-The sources may differ a bit in terms of specificity, but all in all, there are no critical contradictions or discordances. 
 
-Throughout this glossary the naming convention of the ISO 26262 standard, which can be seen in figure \ref{fig:26262_disambiguation} is used.
+As result of extensive investigation the following definition emerged:
+
+\begin{myquote}
+A system is a hierarchical composed, time sensitive element, which interacts with the environment by processing input and providing output in turn.
+
+It is concerned with satisfying a specific need or purpose and disposes of a, more or less complex, internal structure, which may include hardware, software and data.
+\end{myquote}
+
+For the scope of this thesis, the overall system is assumed to be a vehicle, if not stated otherwise. The environment consists therefore of other vehicles or the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one; for example entities like roads, weather conditions and the like.
+
 
 
 \subsection{System Element}
@@ -70,22 +69,10 @@ This definition of \emph{element} is taken from the ISO 26262 standard. It is a 
 \centering
 \includegraphics[scale=0.5]{26262_disambiguation_system_etc.pdf}
 
-\caption{Relation of \emph{system}, \emph{component} and \emph{element} according to ISO 26262 \cite{iso26262:course1}.}
+\caption{Relation of \emph{system}, \emph{component} and \emph{element} according to ISO 26262 \cite{iso26262:course1}. Throughout this thesis the naming convention according to this scheme is applied.}
 \label{fig:26262_disambiguation}
 \end{figure}
 
-\subsection{Definition for the EMC2 project}
-The most crucial aspects are combined and emphasised in the following definition.
-
-\begin{myquote}
-A system is a hierarchical composed, time sensitive element, which interacts with the environment by processing input and providing output in turn.
-
-It is concerned with satisfying a specific need or purpose and disposes of a, more or less complex, internal structure, which may include hardware, software and data.
-\end{myquote}
-
-As stated, the time domain has to be taken into account to describe the behaviour of a system. Thus, a time model is required. Distributed systems usually deploy physical clocks for splitting the time in equally spaced intervals \cite[p.7-8]{genesys}.
-
-For the scope of this paper, the overall system is defined as a \textbf{vehicle} in order to be able to provide some examples. The environment consists therefore of other vehicles or the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one; for example entities like roads, weather conditions and the like.
 
 \subsection{System of Systems}
 Systems are hierarchical and can be composed or decomposed into sets of interacting constituting systems. Often this is referred to by the term \emph{System of Systems (SoS)} \cite[p.7]{genesys}. Thus, the SoS is in general the level above a given system and is therefore dependent on the definition of the related systems. With respect to our previous example of a system vehicle, a SoS could be for example the traffic of Graz, with many vehicles participating.
@@ -206,13 +193,7 @@ In the following some definitions from different relevant resources are presente
 
 	\item [ISO26262] .
 	The ISO 26262 standard supports this concept by its definition of a component as a \emph{``non-system level element that is logically and technically separable and is comprised of more than one hardware part or one or more software units''} \cite{iso26262:1}.
-\end{description}
 
-
-\subsubsection{Software Component}
-The following sources refer explicitly to \emph{software components}.
-
-\begin{description}
 	\item [Szyperski].
 	Szyperski features a definition with emphasis on the software oriented point of view: \emph{``Software components are binary units of independent production, acquisition, and deployment that interact to form a functioning system''} \cite[p.xxi]{szyperski}.
 
@@ -222,12 +203,6 @@ The following sources refer explicitly to \emph{software components}.
 	\end{quote}
 
 	AUTOSAR defines a \emph{Software Component} as encapsulation for parts of the automotive functionality, but it dictates no specific ``granularity'', meaning that an AUTOSAR software component might be either a \emph{``a small, reusable piece of functionality (such as a filter) or a larger block encapsulating an entire sybsystem. \cite{autosar}''}
-	
-	\item [Software Engineering Institute].
-	In software engineering a component is usually considered as a piece of software with specific functionality. The \emph{Software Engineering Institute} describes a component by means of another definition by Szyperski:
-	\begin{quote}
-	\emph{``A software component is a unit of composition with contractually specified interfaces and explicit context dependencies only. A software component can be deployed independently and is subject to composition by third parties''} \cite{szyperski}.
-	\end{quote}
 
 	\item [ARCITURA].
 	Arcitura\textsuperscript{TM} Education Inc. is a global provider of progressive, vendor-neutral training and certification programs and has conducted a lot of research related to SoA.
@@ -381,11 +356,6 @@ There are two quotes by AUTOSAR. The first one deals with service in general, wh
 \emph{``An AUTOSAR Service is a logical entity of the basic software offering general functionality to be used by various software components. The functionality is accessed via standardized AUTOSAR Interfaces''} \cite{autosar_glossary}.
 \end{quote}
 
-\item [ISO 26262 Standard].
-The ISO 26262 international standard is a safety standard, which issues requirements, but is not prescriptive on how they should be fulfilled.
-
-\item [ACROSS].
-Although the term \emph{service} is used in several documents there is no actual definition of service either.
 \end{description}
 
 A term, which appears in in connection with services, and frequently leads to misunderstandings is \emph{business function}, with some sources setting it on a level with service. In order to avoid any difficulties in terms of understanding the term \emph{business function} should generally be avoided.
@@ -622,27 +592,9 @@ Rodrigues, Melo Pires et al. feature the following description in their document
 \emph{``The fundamental organization of a system embodied in its components, their static and dynamic relationships to each other, and to the environment, and the principles guiding its design and evolution''} \cite{autosar_glossary}.
 \end{quote}
 \end{description}
-
-\subsubsection{Definition of Software Architecture}
-\emph{Software architecture} is one specific subdiscipline of \emph{architecture}, which focuses on the structure and relations of software systems. 
-
-\begin{description}
-\item [Wikipedia (Software Architecture)].
-The Wikipedia article on software architecture states:
-\begin{quote}
-\emph{``Software architecture refers to the high level structures of a software system, the discipline of creating such structures, and the documentation of these structures''} - \url{http://en.wikipedia.org/wiki/Software_architecture}.
-\end{quote}
-
-\item [Software Engineering Institute].
-Definition of software architecture according to the Software Engineering Institute:
-\begin{quote}
-\emph{``The software architecture of a program or computing system is a depiction of the system that aids in the understanding of how the system will behave''} \cite{sei2}.
-\end{quote}
-\end{description}
+ 
 
 
-
-\subsubsection{Definition for the EMC2 Project}
 Although EMC2 project is mostly concerned with system- and software architecture, the definition presented below is compatible with all kinds of architecture design, for they share the same basic principles.
 
 It also supports the concept that a system consists of one or more components, as pictured in figure \ref{fig:26262_disambiguation}.
@@ -655,7 +607,7 @@ At the same time, architecture is also responsible for determining the principle
 
 
 \subsection{Placement of Architecture}
-The placement of \emph{architecture} in relation to other entities like system or environment (cf. chapter \ref{ch:system}) is pictured in figure \ref{fig:architecture_ontology}. 
+The placement of \emph{architecture} in relation to other entities like system or environment (cf. chapter \ref{ch:system}) is illustrated in figure \ref{fig:architecture_ontology}. 
 
 \begin{description}
 \item [Architecture description].
@@ -705,8 +657,6 @@ The term \emph{service oriented architecture} has been widely used for marketing
 
 The driving factor for the application of this design paradigm are certain benefits that come with the modularization of software. Those are not only reduction of development costs, but, with respect to embedded systems, also a saving in hardware components \cite{sommer}. Furthermore it increases flexibility, scalability and fault tolerance, enabling the system to run, even if parts are erroneous or down \cite[p.33]{rosen} \cite[p.17-18]{josuttis}.
 
-
-\subsection{Definitions}
 The following definitions reveal the wide range of different views and understandings.
 
 \begin{description}
@@ -732,11 +682,6 @@ The following definitions reveal the wide range of different views and understan
 	\end{quote}
 \end{description}
 
-Many sources feature terms like \emph{enterprise} or \emph{business function}. This is because they refer to SoAs in enterprises or web application. In these environments, a timeout or failure (cf. section \ref{sec:fault,error,failure}) is presumably not safety critical.
-
-
-
-\subsubsection{Definition for the EMC2 project}
 
 The EMC2 project aims at implementing the SoA design paradigm into safety critical embedded systems, which comes with various additional challenges. Thus, the definition below was created with regard to embedded systems. However, it is quite generic and fits also for SoAs in web applications.
 
@@ -821,8 +766,6 @@ The term enterprise in this definition appears a bit bizarre and is a result of 
 
 There are two different methods for composing services, which are denoted \emph{service orchestration} and \emph{service choreography}.
 
-Figure \ref{fig:service-composition} shows the service A as composition of service B to D.
-
 \begin{description}
 	\item [Service Orchestration] .
 	With this method of aggregating services, the new service has control over the other services \cite{josuttis}.
@@ -830,12 +773,12 @@ Figure \ref{fig:service-composition} shows the service A as composition of servi
 	In contrast to service orchestration, non of the related services has control over the others. Instead, there are certain rules and policies, which regulate the collaboration \cite{josuttis}.
 \end{description}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\linewidth]{service-composition.pdf}
-\caption{Service A is composed of service B, C and D. The arrows denote their communication routes. The communication from service A to service D (arrow 5) is just ``one-way'' which is also valid variant \cite[p.40]{erl2011}.}
-\label{fig:service-composition}
-\end{figure}
+
+
+
+
+
+
 
 
 \section{Dependability}
