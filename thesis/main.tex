@@ -16,6 +16,14 @@
 \graphicspath{ {images/} }
 \pagenumbering{roman}
 
+\makeatletter
+\newcommand*{\toccontents}{\@starttoc{toc}}
+\newcommand*{\tocdotfill}{%
+  \leaders\hbox{%
+    $\m@th \mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$%
+  }\hfill\kern\z@
+}
+\makeatother
 
 \newenvironment{myquote}{%
     \begin{framed}

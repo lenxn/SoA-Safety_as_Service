@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  28 JUL 2015 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  29 JUL 2015 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,22 +712,22 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -763,7 +763,7 @@ LaTeX Font Info:    ... okay on input line 30.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -772,9 +772,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -813,7 +813,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (./chapters/titlepage.tex
-<images/university.png, id=273, 227.4096pt x 91.0602pt>
+<images/university.png, id=277, 227.4096pt x 91.0602pt>
 File: images/university.png Graphic file (type png)
 
 <use images/university.png>
@@ -831,49 +831,49 @@ File: se-pdfdoc.def 2011/12/02 v1.10 stringenc: PDFDocEncoding
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/university.png>])
 
 (./chapters/declaration_of_academic_honesty.tex
-<images/signature.png, id=283, 145.2627pt x 96.8418pt>
+<images/signature.png, id=287, 145.2627pt x 96.8418pt>
 File: images/signature.png Graphic file (type png)
 
 <use images/signature.png>
 Package pdftex.def Info: images/signature.png used on input line 16.
 (pdftex.def)             Requested size: 116.2103pt x 77.47351pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--35
+Underfull \hbox (badness 10000) in paragraph at lines 2--43
 
  []
 
@@ -881,7 +881,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 \chapter
+l.43 \chapter
              *{Preface} [1
 
  <./images/signature.png>] (./chapters/preface.tex
@@ -895,7 +895,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--13
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 14--37
+Underfull \hbox (badness 10000) in paragraph at lines 14--45
 
  []
 
@@ -937,14 +937,18 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
  [11
 
 ] (./chapters/list_of_abbreviations.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--60
+
+ []
+
 [12
 
-]
+] [13] [14]
 Chapter 1.
 (./chapters/introduction.tex [1
 
 ] [2]
-<images/26262_disambiguation_system_etc.pdf, id=507, 734.745pt x 291.0875pt>
+<images/26262_disambiguation_system_etc.pdf, id=520, 734.745pt x 291.0875pt>
 File: images/26262_disambiguation_system_etc.pdf Graphic file (type pdf)
 
 <use images/26262_disambiguation_system_etc.pdf>
@@ -966,14 +970,14 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 84.
 
-[4] <images/system_levels.pdf, id=568, 575.40973pt x 377.8115pt>
+[4] <images/system_levels.pdf, id=581, 575.40973pt x 377.8115pt>
 File: images/system_levels.pdf Graphic file (type pdf)
 
 <use images/system_levels.pdf>
 Package pdftex.def Info: images/system_levels.pdf used on input line 110.
 (pdftex.def)             Requested size: 452.3988pt x 297.04387pt.
  [5 <./images/system_levels.pdf>]
-<images/arrowhead-documentation-relationship.png, id=594, 792.9625pt x 592.2125
+<images/arrowhead-documentation-relationship.png, id=607, 792.9625pt x 592.2125
 pt>
 File: images/arrowhead-documentation-relationship.png Graphic file (type png)
  <use images/arrowhead-documentation-relationship.png>
@@ -981,7 +985,7 @@ Package pdftex.def Info: images/arrowhead-documentation-relationship.png used o
 n input line 127.
 (pdftex.def)             Requested size: 317.17938pt x 236.8808pt.
 
-<images/arrowhead-framework.pdf, id=602, 529.98pt x 288.07625pt>
+<images/arrowhead-framework.pdf, id=615, 529.98pt x 288.07625pt>
 File: images/arrowhead-framework.pdf Graphic file (type pdf)
 
 <use images/arrowhead-framework.pdf>
@@ -990,7 +994,7 @@ Package pdftex.def Info: images/arrowhead-framework.pdf used on input line 146.
 (pdftex.def)             Requested size: 423.98456pt x 230.4613pt.
  [6 <./images/arrowhead-documentation-relationship.png>] [7 <./images/arrowhead
 -framework.pdf>] [8] [9] [10]
-<images/component_interfaces.png, id=986, 980.91469pt x 539.76656pt>
+<images/component_interfaces.png, id=999, 980.91469pt x 539.76656pt>
 File: images/component_interfaces.png Graphic file (type png)
 
 <use images/component_interfaces.png>
@@ -998,7 +1002,7 @@ Package pdftex.def Info: images/component_interfaces.png used on input line 262
 .
 (pdftex.def)             Requested size: 392.35892pt x 215.9028pt.
  [11]
-<images/autosar_client-server.png, id=1000, 856.19875pt x 458.71375pt>
+<images/autosar_client-server.png, id=1013, 856.19875pt x 458.71375pt>
 File: images/autosar_client-server.png Graphic file (type png)
 
 <use images/autosar_client-server.png>
@@ -1006,7 +1010,7 @@ Package pdftex.def Info: images/autosar_client-server.png used on input line 28
 8.
 (pdftex.def)             Requested size: 342.47343pt x 183.48224pt.
 
-<images/autosar_sender-receiver.png, id=1003, 994.71625pt x 474.77374pt>
+<images/autosar_sender-receiver.png, id=1016, 994.71625pt x 474.77374pt>
 File: images/autosar_sender-receiver.png Graphic file (type png)
 
 <use images/autosar_sender-receiver.png>
@@ -1014,7 +1018,7 @@ Package pdftex.def Info: images/autosar_sender-receiver.png used on input line
 295.
 (pdftex.def)             Requested size: 397.87946pt x 189.90613pt.
 
-<images/autosar_ports.png, id=1006, 1006.76125pt x 691.58376pt>
+<images/autosar_ports.png, id=1019, 1006.76125pt x 691.58376pt>
 File: images/autosar_ports.png Graphic file (type png)
 
 <use images/autosar_ports.png>
@@ -1023,14 +1027,14 @@ Package pdftex.def Info: images/autosar_ports.png used on input line 302.
  [12 <./images/component_interfaces.png>]
 [13 <./images/autosar_client-server.png> <./images/autosar_sender-receiver.png>
 ] [14 <./images/autosar_ports.png>] [15] [16] [17] [18]
-<images/service_structure.png, id=1111, 290.7663pt x 199.947pt>
+<images/service_structure.png, id=1123, 290.7663pt x 199.947pt>
 File: images/service_structure.png Graphic file (type png)
 
 <use images/service_structure.png>
 Package pdftex.def Info: images/service_structure.png used on input line 471.
 (pdftex.def)             Requested size: 452.3988pt x 311.1106pt.
  [19] [20 <./images/service_structure.png>]
-<images/service_levels.pdf, id=1133, 614.57957pt x 361.35pt>
+<images/service_levels.pdf, id=1145, 614.57957pt x 361.35pt>
 File: images/service_levels.pdf Graphic file (type pdf)
 
 <use images/service_levels.pdf>
@@ -1042,7 +1046,7 @@ Overfull \hbox (10.39252pt too wide) in paragraph at lines 514--550
  []
 
 [21 <./images/service_levels.pdf>] [22] [23] [24]
-<images/architecture_ontology.png, id=1242, 1140.26pt x 632.3625pt>
+<images/architecture_ontology.png, id=1254, 1140.26pt x 632.3625pt>
 File: images/architecture_ontology.png Graphic file (type png)
 
 <use images/architecture_ontology.png>
@@ -1050,21 +1054,21 @@ Package pdftex.def Info: images/architecture_ontology.png used on input line 63
 9.
 (pdftex.def)             Requested size: 399.09698pt x 221.33018pt.
  [25 <./images/architecture_ontology.png>] [26] <images/software_reuse.pdf, id=
-1272, 410.53375pt x 197.73875pt>
+1284, 410.53375pt x 197.73875pt>
 File: images/software_reuse.pdf Graphic file (type pdf)
 
 <use images/software_reuse.pdf>
 Package pdftex.def Info: images/software_reuse.pdf used on input line 709.
 (pdftex.def)             Requested size: 452.3988pt x 217.90251pt.
  [27] [28 <./images/software_reuse.pdf>]
-<images/soa-architecture.pdf, id=1333, 474.77374pt x 418.56375pt>
+<images/soa-architecture.pdf, id=1346, 474.77374pt x 418.56375pt>
 File: images/soa-architecture.pdf Graphic file (type pdf)
 
 <use images/soa-architecture.pdf>
 Package pdftex.def Info: images/soa-architecture.pdf used on input line 746.
 (pdftex.def)             Requested size: 284.86644pt x 251.14018pt.
 
-<images/soa_process.pdf, id=1338, 526.37596pt x 637.34174pt>
+<images/soa_process.pdf, id=1351, 526.37596pt x 637.34174pt>
 File: images/soa_process.pdf Graphic file (type pdf)
 
 <use images/soa_process.pdf>
@@ -1085,102 +1089,99 @@ Chapter 2.
 (./chapters/methods.tex [37
 
 ] [38] [39]
-<images/soa-and-esoa.pdf, id=1486, 491.8375pt x 244.915pt>
+<images/soa-and-esoa.pdf, id=1496, 491.8375pt x 244.915pt>
 File: images/soa-and-esoa.pdf Graphic file (type pdf)
 
 <use images/soa-and-esoa.pdf>
-Package pdftex.def Info: images/soa-and-esoa.pdf used on input line 89.
+Package pdftex.def Info: images/soa-and-esoa.pdf used on input line 87.
 (pdftex.def)             Requested size: 393.47052pt x 195.93225pt.
  [40 <./images/soa-and-esoa.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 120--124
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 [41] [42]
-<images/safety-and-security-services.pdf, id=1521, 500.87125pt x 402.50375pt>
+<images/safety-and-security-services.pdf, id=1531, 500.87125pt x 402.50375pt>
 File: images/safety-and-security-services.pdf Graphic file (type pdf)
 
 <use images/safety-and-security-services.pdf>
 Package pdftex.def Info: images/safety-and-security-services.pdf used on input 
-line 165.
+line 163.
 (pdftex.def)             Requested size: 300.52505pt x 241.5041pt.
-
-<images/use-case-overview.pdf, id=1522, 775.89874pt x 524.96124pt>
-File: images/use-case-overview.pdf Graphic file (type pdf)
-
-<use images/use-case-overview.pdf>
-Package pdftex.def Info: images/use-case-overview.pdf used on input line 172.
-(pdftex.def)             Requested size: 452.3988pt x 306.0878pt.
  [43]
-<images/fault-detection-service.pdf, id=1529, 654.445pt x 446.66875pt>
+<images/fault-detection-service.pdf, id=1538, 654.445pt x 446.66875pt>
 File: images/fault-detection-service.pdf Graphic file (type pdf)
 
 <use images/fault-detection-service.pdf>
 Package pdftex.def Info: images/fault-detection-service.pdf used on input line 
-189.
+180.
 (pdftex.def)             Requested size: 452.3988pt x 308.76746pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
+Underfull \hbox (badness 10000) in paragraph at lines 185--189
 
  []
 
-[44 <./images/safety-and-security-services.pdf>]
-<images/windowed-watchdog-timer.pdf, id=1548, 533.995pt x 231.86626pt>
+[44 <./images/safety-and-security-services.pdf> <./images/fault-detection-servi
+ce.pdf>]
+<images/windowed-watchdog-timer.pdf, id=1575, 533.995pt x 231.86626pt>
 File: images/windowed-watchdog-timer.pdf Graphic file (type pdf)
 
 <use images/windowed-watchdog-timer.pdf>
 Package pdftex.def Info: images/windowed-watchdog-timer.pdf used on input line 
-218.
-(pdftex.def)             Requested size: 373.79395pt x 162.30525pt.
- [45 <./images/use-case-overview.pdf>]
-<images/sequenced-watchdog-timer.pdf, id=1575, 239.89626pt x 306.14375pt>
+207.
+(pdftex.def)             Requested size: 320.39948pt x 139.12082pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 208.
+ [45]
+<images/sequenced-watchdog-timer.pdf, id=1585, 239.89626pt x 306.14375pt>
 File: images/sequenced-watchdog-timer.pdf Graphic file (type pdf)
 
 <use images/sequenced-watchdog-timer.pdf>
 Package pdftex.def Info: images/sequenced-watchdog-timer.pdf used on input line
- 231.
+ 220.
 (pdftex.def)             Requested size: 287.87405pt x 367.37065pt.
+ [46 <./images/windowed-watchdog-timer.pdf> <./images/sequenced-watchdog-timer.
+pdf>] [47]
 
-<images/error-detection-service.pdf, id=1577, 645.41125pt x 340.27126pt>
-File: images/error-detection-service.pdf Graphic file (type pdf)
+Package caption Warning: \label without proper \caption on input line 272.
+See the caption package documentation for explanation.
 
-<use images/error-detection-service.pdf>
-Package pdftex.def Info: images/error-detection-service.pdf used on input line 
-248.
-(pdftex.def)             Requested size: 452.3988pt x 238.51016pt.
- [46 <./images/fault-detection-service.pdf>] [47 <./images/windowed-watchdog-ti
-mer.pdf>] [48 <./images/sequenced-watchdog-timer.pdf>]
-<images/safety-services-system-lifecycle.pdf, id=1633, 529.98pt x 436.63126pt>
+
+LaTeX Warning: Reference `fig:safety-services-system-lifecycle' on page 48 unde
+fined on input line 267.
+
+
+<images/safety-services-system-lifecycle.pdf, id=1623, 529.98pt x 436.63126pt>
 File: images/safety-services-system-lifecycle.pdf Graphic file (type pdf)
 
 <use images/safety-services-system-lifecycle.pdf>
 Package pdftex.def Info: images/safety-services-system-lifecycle.pdf used on in
-put line 288.
+put line 271.
 (pdftex.def)             Requested size: 370.98346pt x 305.63979pt.
- [49 <./images/error-detection-service.pdf>] [50 <./images/safety-services-syst
-em-lifecycle.pdf>] [51])
-[52]
+ [48] [49 <./images/safety-services-system-lifecycle.pdf>] [50]) [51]
 Chapter 3.
 (./chapters/results.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--5
 
  []
 
-[53
+[52
 
-]
+] [53]
+<images/error-detection-service.pdf, id=1673, 645.41125pt x 340.27126pt>
 File: images/error-detection-service.pdf Graphic file (type pdf)
- <use images/error-detection-service.pdf>
+
+<use images/error-detection-service.pdf>
 Package pdftex.def Info: images/error-detection-service.pdf used on input line 
-65.
+74.
 (pdftex.def)             Requested size: 452.3988pt x 238.51016pt.
-) [54] [55]
+) [54 <./images/error-detection-service.pdf>]
 Chapter 4.
-(./chapters/discussion.tex) [56
+(./chapters/discussion.tex) [55
 
 ]
 Chapter 5.
-(./chapters/conclusion.tex) (./main.bbl [57
+(./chapters/conclusion.tex) (./main.bbl [56
 
 ]
 Underfull \hbox (badness 1642) in paragraph at lines 47--51
@@ -1188,7 +1189,7 @@ Underfull \hbox (badness 1642) in paragraph at lines 47--51
 e, Robert Laird,
  []
 
-[58
+[57
 
 ]
 Underfull \hbox (badness 1038) in paragraph at lines 133--137
@@ -1196,43 +1197,48 @@ Underfull \hbox (badness 1038) in paragraph at lines 133--137
 ttp : / / www . opengroup . org / soa /
  []
 
-[59] [60] [61])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
- [62]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
+[58] [59] [60])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+ [61]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 799CF4F7DAC96629A2ADDE16ACEE14E1;4963.
+(rerunfilecheck)             Checksum: 6E13F23C1C181514F1B8148036F6F598;5036.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
  17769 strings out of 493105
- 297762 string characters out of 6137072
- 362617 words of memory out of 5000000
- 20815 multiletter control sequences out of 15000+600000
- 12074 words of font info for 42 fonts, out of 8000000 for 9000
+ 297652 string characters out of 6137072
+ 362517 words of memory out of 5000000
+ 20816 multiletter control sequences out of 15000+600000
+ 12990 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,17n,45p,10389b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (75 pages, 2426069 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt12.pfb>
+Output written on main.pdf (76 pages, 2424461 bytes).
 PDF statistics:
- 1839 PDF objects out of 2073 (max. 8388607)
- 1460 compressed objects within 15 object streams
+ 1837 PDF objects out of 2073 (max. 8388607)
+ 1464 compressed objects within 15 object streams
  232 named destinations out of 1000 (max. 500000)
- 657 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 660 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,7 +7,7 @@ The second section presents various examples of services, which are relevant for
 
 The final part consists of a simplified use case, dealing with the design of an error detection service with respect to the design phases \emph{service investigation/ planning}, \emph{service inventory analysis}, \emph{service oriented analysis} and \emph{service oriented design}.
 
-Most of the findings and concepts in this chapter is (not yet) covered in literature, but is the result of numerous meetings and discussions at VIRTUAL VEHICLE during May to July 2015.
+Most of the findings and concepts in this chapter are (not yet) covered in literature, but is the result of numerous meetings and discussions at VIRTUAL VEHICLE during May to July 2015.
 
 
 
@@ -53,9 +53,7 @@ Embedded systems are \emph{time-critical}, meaning that computation must be cond
 \end{description}
 
 
-These obstacles are the reason why web services and safety-critical embedded systems are often considered as non-related areas \cite{rodrigues2011}.
-
-Nevertheless, the application of the service oriented architecture style in embedded systems offers numerous benefits: 
+These obstacles are the reason why web services and safety-critical embedded systems are often considered as non-related areas \cite{rodrigues2011}. Nevertheless, the application of the service oriented architecture style in embedded systems offers numerous benefits: 
 \begin{itemize}
 \item Decoupling configuration from environment, 
 \item Improvement of reusability,
@@ -79,12 +77,12 @@ The Embedded SoA works at a lower, very hardware oriented level, with a predefin
 The conventional SoA is located above the embedded SoA and connected through various interfaces.
 \end{myquote}
 
-With respect to the example of a vehicle, the ESoA operates on elements like a power train, various devices (sensors, actuators, etc.), while the SoA level contains the vehicle as overall system, but also other vehicles, which can be referred to as the \emph{System of Systems}.
+With respect to the example of a vehicle, the ESoA operates on elements like a power-train, various devices (sensors, actuators, controllers, etc.), while the SoA level contains the vehicle as overall system, but also other vehicles, which can be referred to as the \emph{System of Systems}.
 
 Regarding the ISO 26262 standard, the ESoA can be related to \textbf{Part 3: Concept phase}, and the SoA to \textbf{Part 4: Product development at the system level}.
 
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.8]{soa-and-esoa.pdf}
 \caption{Relation of service oriented architecture to service oriented architecture in embedded systems.}
@@ -160,18 +158,11 @@ Since future vehicles are planed to be always connected to the outside world, \e
 
 However, some services cannot be assigned to any of the disciplines, but have overlapping responsibilities, as depicted in figure \ref{fig:safety-and-security-services}. According to our findings this effects especially the services for \emph{authentication}, \emph{memory protection} and \emph{failure detection}.s
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.6]{safety-and-security-services.pdf}
 \caption{Classification of various services into safety and security services.}
 \label{fig:safety-and-security-services}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{use-case-overview.pdf}
-\caption{Example hierarchy of safety services in a vehicle.}
-\label{fig:safety-services}
 \end{figure}
 
 
@@ -184,7 +175,7 @@ Technically, the FDS can be implemented as simple timer circuit with a specified
 The advantages of the FDS are the simple design, which reduces the additional complexity of the overall system, as well as the costs. Concerning the functional principle, there different designs with increasing complexity, which can provide, for example, a certain time window for the response [7].
 
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{fault-detection-service.pdf}
 \caption{Example architecture for an \emph{fault detection service}, like a WDT.}
@@ -211,11 +202,11 @@ In case of an \emph{control flow error} this signal is a bit ahead or past in ti
 
 The advantage of this design is clearly that it allows the detection of more errors, but on the other hand the implementation is slightly more complex.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
-\caption{Schematic design of a windowed watchdog timer \cite{elattar2007}.}
+\includegraphics[scale=0.6]{windowed-watchdog-timer.pdf}
+\caption{Schematic design of a windowed watchdog timer \cite{elattar2007}. The time windows is the result of $T2 - T1$.}
 \label{fig:windowed-watchdog-timer}
-\includegraphics[scale=0.7]{windowed-watchdog-timer.pdf}
 \end{figure}
 
 \item [Sequenced Watchdog Timer] . 
@@ -224,14 +215,16 @@ The whole proce ss is illustrated in figure \ref{fig:sequenced-watchdog-timer}.
 
 The disadvantage of this design is the clearly higher complexity, for the \emph{Sequenced Watchdog Timer} must be capable of holding and modifying state information as well as comparing it to received information.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
+\includegraphics[scale=1.2]{sequenced-watchdog-timer.pdf}
 \caption{Schematic illustration of the working process of a \emph{Sequenced Watchdog Timer} \cite{elattar2007}.}
 \label{fig:sequenced-watchdog-timer}
-\includegraphics[scale=1.2]{sequenced-watchdog-timer.pdf}
 \end{figure}
 
 \end{description}
+
+
 
 
 
@@ -243,21 +236,13 @@ Most of the errors, especially those which do not alter the timing, remain unnot
 
 In advance, another service can be triggered for restarting the service in question, or other actions.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{error-detection-service.pdf}
-\caption{Resulting architecture of the \emph{Error detection service}.}
-\label{fig:error-detection-service}
-\end{figure}
-
 The very same implementation is also capable of performing \emph{error masking}, because due to the redundancy and the voting system the service could also hide an error in one of the mirrored elements, without the service consumer noticing.
 
 
 \subsection{Memory Protection}
 \emph{Memory protection} is related to \emph{safety} as well as \emph{security}. It is a method for preventing processes or users from accessing memory that is not allocated to them.
 
-Former embedded systems, or such that are small in size, do not necessarily require memory protection mechanisms, because all related programs have a very specific purpose and an unintended behaviour is rather unlikely. In such cases the overhead in runtime, when using memory protection just does no pay off. 
-
+Former embedded systems, or such that are small in size, do not necessarily require memory protection mechanisms, because all related programs have a very specific purpose and an unintended behaviour is rather unlikely. In such cases the overhead in runtime, when using memory protection just does no pay off \cite{yamada2008}. 
 
 However, modern, large scale system, have numerous third-party components are used to interact with the user and the environment. At the same time, the overhead in computing is no longer crucial, due to the increase of computing power  \cite{yamada2008}. Especially, if the system is connected to a public network like the Internet, memory protection becomes also a big issue for the prevention of malicious attacks.
 
@@ -279,13 +264,13 @@ According to its specification the requirements validation service could either 
 
 \subsection{Allocation of safety services to system lifecycle phases}
 
-According to ARROWHEAD, the lifecycle of a system can be divided coarsely in the phases engineering, commissioning, operation, maintenance, de-commission [8]. In the following, a mapping of the various safety services to the different phases is proposed.
+According to ARROWHEAD, the lifecycle of a system can be divided coarsely in the phases engineering, commissioning, operation, maintenance, de-commission [8]. In figure \ref{fig:safety-services-system-lifecycle}, a mapping of the various safety services to the different phases is proposed. The phases engineering and commission, as well as the phases maintenance and decommission are grouped, because there is no notable difference concerning the related services.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
+\includegraphics[scale=0.7]{safety-services-system-lifecycle.pdf}
 \label{fig:safety-services-system-lifecycle}
 \caption{Allocation of the safety service to the different system lifecycle phases.}
-\includegraphics[scale=0.7]{safety-services-system-lifecycle.pdf}
 \end{figure}
 
 

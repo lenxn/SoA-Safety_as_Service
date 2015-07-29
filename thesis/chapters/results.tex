@@ -51,11 +51,20 @@ The \emph{service normalisation} and \emph{service candidate review} are not rea
 
 
 
+
+
 \section{Service oriented design}
 
+Unfortunately, the service contract templates, which are designed by Arrowhead, were not yet available at the time this thesis was written. Accordingly, there could be no example contract be established.
 
 
-A possible architecture resulting from the service of this use case is depicted in figure \ref{fig:error-detection-service}. 
+\section{Possible implementation}
+
+As a result of the first four phases, which are concerned with the conceptual development, the contract is issued. Subsequently follows the actual implementation of the service by a developer, who was (most likely) not included in the preceding design phases. Therefore, the contract must provide all the necessary information for the implementation process, leaving no ambiguities or open questions.
+
+It is then up to the developer to decide how the service is implemented, e.g. which programming language or approach to use. The outcome is a certain architecture, which can be based on arbitrary technologies.
+
+A possible architecture resulting from the service of this use case is a triple modular redundancy approach (cf. section \ref{sec:error-detection-service}), as depicted in figure \ref{fig:example-service-architecture}. 
 
 
 \begin{figure}[ht]

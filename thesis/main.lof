@@ -16,13 +16,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{40}{figure.caption.35}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{44}{figure.caption.36}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example hierarchy of safety services in a vehicle.\relax }}{45}{figure.caption.37}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{46}{figure.caption.38}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}.\relax }}{47}{figure.caption.39}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{48}{figure.caption.40}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Resulting architecture of the \emph {Error detection service}.\relax }}{49}{figure.caption.41}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{50}{figure.caption.42}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{44}{figure.caption.37}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}. The time windows is the result of $T2 - T1$.\relax }}{46}{figure.caption.38}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{46}{figure.caption.39}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{49}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{55}{figure.caption.43}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{54}{figure.caption.41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
