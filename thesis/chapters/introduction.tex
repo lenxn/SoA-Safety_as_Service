@@ -1,18 +1,7 @@
 \label{ch:introduction}
-- about soa in embedded systems
-- related projects (epsilon soa, sira)
-
-Due to the very different comprehension of certain terms by different people from different fields of research 
-The first part of my work during the internship was the creation of a glossary describing certain given terms
-... in order to unify the understanding of these terms and create a basis for discussions ans researches.
-
-- The glossary was later taken as standard for this tasks ...
-- and deals with the terms: \emph{service}, \emph{system}, \emph{system of systems}, \emph{architecture}, \emph{service-oriented architecture}, \emph{configuration}, \emph{static reconfiguration}, \emph{dynamic reconfiguration}, \emph{inter-core communication}, \emph{intra-core communication} and \emph{binding}.
-The most important parts of this glossary will be covered within this chapter.
-
-- disambiguity safety and security
-- what is safety and fault tolerance
-
+This thesis deals with the investigation of the applicability of the service oriented architecture paradigm for safety-critical embedded systems. This has not yet been tested in within this context, but it proves to be a promising approach with a lot of benefits and advantages. Accordingly, there have been various projects dedicated to investigation of the applicability of SoA for embedded systems. Those include SIRENA, SOCRATES, OASiS, MORE, RUNES and $\varepsilon$SOA \cite{scholz} \cite{sommer} \cite{buckl}. Some of these project feature interesting and ... concepts and ideas, but unfortunately none of them is related to the automotive industry or safety-critical systems.
+\\
+\\
 Two terms which often appear together and appear very much alike are \emph{safety} and \emph{security}. Nevertheless, they have a completely different meaning in technical systems.
 
 The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{autosar_glossary} \cite{iso26262:1} and is concerned with correct operation of the equipment in a specific system. Therefore, it is concerned with things like \emph{error detection}, \emph{fault prevention}, \emph{failure migration}, \emph{diagnosis} and similar.
@@ -20,25 +9,23 @@ The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{aut
 \emph{Security}\index{security} is concerned with preventing unauthorized access, or unexpected input. AUTOSAR defines the term as \emph{``Protection of data, software entities or resources from accidental or malicious acts''} \cite{autosar_glossary}. With the advance of software and interconnection in vehicles, \emph{security} becomes more and more of an issue, because all the functionality in a car, even highly critical like an automatic brake system or a collision warning system will be approachable through a network. Especially, if the vehicle gets connected to any proprietary network like the Internet. With the advance of the service oriented architecture paradigm for automotive, it is planed to run remote diagnosis and firmware updates over the air. This is an obvious weak point and an exploit of this can affect the operation of the vehicle and the safety of the driver \cite{nilsson2008}.
 
 Although, \emph{safety} and \emph{security} are separate disciplines, for automotive the functionalities cannot be classified into safety or security relevant functionality, but has always aspects of both disciplines at the same time \cite{nilsson2008}. Nevertheless, this thesis is mostly representing the \emph{safety} oriented point of view.
-
-
-
+\\
+\\
 One of the most important sources and ... for this thesis was the \mbox{ISO 26262} standard. Emerging from the \mbox{IEC 61508} standard, the \emph{ISO 26262} standard is an international functional safety standard for series production passenger cars with a maximum weight of 3 500kg. It is the state of the art for vehicles and does not set any requirements in terms of performance of equipment, but is only concerned with possible malfunctions. In total the standard features ten parts, but of special interest have been \textbf{part 1}, defines all the related terms and vocabulary, \textbf{part 3} which deals with the \textbf{concept phase} and \textbf{chapter 4} for the development at system level \cite{iso26262:1} \cite{iso26262:3} \cite{iso26262:4}.
 
 Concerning service oriented architectures the standard does not issue any regulations and related terms like \emph{service}, \emph{SoA} do not even appear within the document. In general, the \mbox{ISO 26262} only provides certain requirements, which have to be fulfilled, but does not prescribe how they have to be achieved \cite{iso26262:course1}.
 
 Another important source of information was AUTOSAR. The AUTOSAR is ambiguous, for it can denote either the technical product (AUTomotive Open System ARchitecture), or the related development partnership \cite{autosar_rs_main}. This partnership was founded in 2003, with its members covering more than 80\% of the production of cars worldwide \cite{kirschke_biller2011} \cite{schmerler2012}. The standard aims at establishing an industry standard for automotive software architecture, which allows different partners, as well as suppliers and manufacturers, to collaborate without any obstacles in terms of languages or methodologies. Therefore it defines \emph{software architecture}, \emph{software development methodology} and \emph{standardised application interfaces}. By promoting the decoupling of hardware and software it gives way to software reuse on different hardware platforms \cite{kirschke_biller2011} \cite{schmerler2012}. This is in compliance with the service oriented architecture principles and many of the related terms, which are explained within this document include references to AUTOSAR.
-
+\\
+\\
 The remains of chapter \ref{ch:introduction} contains a definition of the most important terms related to SoA (with respect to automotive) with an extensive description of each term. Those terms are \emph{system}, \emph{component}, \emph{service}, \emph{architecture}, \emph{service oriented architecture}, \emph{dependability} and \emph{functional safety}. Each of these sections starts with definitions from different sources. The relevant points of those are united in a ``self-created'' definition, marked by a box. Subsequently follows some additional information related to the specific term.
 
 
 
+
+
 \section{System}
-
 \label{ch:system}
-This chapter explores various definitions of the term system, as well as related hierarchies and terminology. Because of its reappearance in later chapters, the term \emph{embedded system} is also covered.
-
-\subsection{Definitions}
 
 \begin{description}
 
@@ -220,9 +207,6 @@ In the following some definitions from different relevant resources are presente
  \end{description}
 
 
-\subsubsection{Definition for the EMC2 project}
-
-
 \begin{myquote}
 A component is a logical and technical separable hardware or software unit that is capable of performing a specific computation.
 
@@ -270,7 +254,7 @@ The \emph{Technology Dependent Interface} enables a look inside the component an
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.4]{component_interfaces.png}
-\caption{The interfaces of a component, with respect to the \textbf{GENESYS architecture} \cite[p.40]{genesys}}
+\caption{The interfaces of a component, with respect to the GENESYS architecture \cite[p.40]{genesys}}
 \label{fig:component_interfaces}
 \end{figure}
 
@@ -291,8 +275,6 @@ When this kind of communication is performed the \emph{client-component} request
 The \emph{Sender-Receiver} approach is a bit different. The task of the sender is to distribute his information to one or more receivers, without ever getting a response in form of data or control flow. In fact he does not even know the number or identity of the receivers. Those have to decide on themselves, how to deal with the received data (cf. figure \ref{fig:autosar_sender-receiver}) \cite{autosar_intro}.
 \end{description}
 
-The different ports and their properties are visualized in figure \ref{fig:autosar_ports}. 
-
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.4]{autosar_client-server.png}
@@ -307,12 +289,6 @@ The different ports and their properties are visualized in figure \ref{fig:autos
 \label{fig:autosar_sender-receiver}
 \end{figure}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.3]{autosar_ports.png}
-\caption{Illustration of the different ports at a single component \cite{autosar_intro}.}
-\label{fig:autosar_ports}
-\end{figure}
 
 
 
@@ -368,9 +344,6 @@ There are two quotes by AUTOSAR. The first one deals with service in general, wh
 
 \end{description}
 
-A term, which appears in in connection with services, and frequently leads to misunderstandings is \emph{business function}, with some sources setting it on a level with service. In order to avoid any difficulties in terms of understanding the term \emph{business function} should generally be avoided.
-
-\subsubsection{Definition for the EMC2 project}
 The presented quotes show various different approaches and options, emphasising the various different understandings.
 
 The following definition is a collection of the relevant aspects from various sources and should serve as unified knowledge base for the scope of the EMC2 project.
@@ -383,7 +356,7 @@ The following definition is a collection of the relevant aspects from various so
 	In order to be applied in a service oriented architecture, a service must comply with certain key concepts.
 \end{myquote}
 
-The terms \emph{service provider} and \emph{service consumer} are described in detail in chapter \ref{ch:soa}. The required key concepts are the subject of the next section.
+The terms \emph{service provider} and \emph{service consumer} are described in detail in section \ref{ch:soa}. The required key concepts are the subject of the next section.
 
 \subsection{Key concepts of a service}
 \label{sec:service-concepts}
@@ -478,7 +451,7 @@ As stated in \ref{sec:service-concepts}, a service may dispose of some state dat
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{service_structure.png}
+\includegraphics[scale=1.0]{service_structure.png}
 \caption{Structure of a service with the relations of the particular artifacts \cite[p.45]{krafzig}.}
 \label{fig:service}
 \end{figure}
