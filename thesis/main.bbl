@@ -43,12 +43,6 @@ F.~Blomstedt, L.~Ferreira, and et~al.
 \bibitem{converge}
 Architecture of the car2x systems network.
 
-\bibitem{erl2011}
-Thomas Erl, Stephen~G Bennett, Benjamin Carlyle, Clive Gee, Robert Laird,
-  Anne~Thomas Manes, Robert Moores, and Andre Tost.
-\newblock {\em SOA Governance}.
-\newblock Pearson Education, 2011.
-
 \bibitem{elattar2007}
 Ashraf~M El-Attar and Gamal Fahmy.
 \newblock An improved watchdog timer to enhance imaging system reliability in
@@ -56,19 +50,41 @@ Ashraf~M El-Attar and Gamal Fahmy.
 \newblock In {\em Signal Processing and Information Technology, 2007 IEEE
   International Symposium on}, pages 1100--1104. IEEE, 2007.
 
-\bibitem{ISO_15288}
-Systems and software engineering - system life cycle processes, 2015.
+\bibitem{autosar_glossary}
+AUTOSAR.
+\newblock Glossary, autosar release 4.2.1, 2014.
 
 \bibitem{iso26262:1}
 Iso 26262 road vehicles - functional safety - part 1: Vocabulary, 2011.
 
+\bibitem{nilsson2008}
+Dennis~K Nilsson, Phu~H Phung, and Ulf~E Larson.
+\newblock Vehicle ecu classification based on safety-security characteristics.
+\newblock 2008.
+
+\bibitem{iso26262:3}
+Iso 26262 road vehicles - functional safety - part 3: Concept phase, 2011.
+
+\bibitem{iso26262:4}
+Iso 26262 road vehicles - functional safety - part 4: Product development at
+  the system level, 2011.
+
+\bibitem{autosar_rs_main}
+AUTOSAR.
+\newblock Main requirements, autosar release 4.2.1, 2014.
+
+\bibitem{kirschke_biller2011}
+Kirschke-Biller Frank.
+\newblock autosar - a worldwide standard: Current developments, roll-out and
+  outlook, 2011.
+
+\bibitem{schmerler2012}
+Schmerler Stefan.
+\newblock Autosar - shaping the future of a global standard, 2012.
+
 \bibitem{arrowhead_inpr}
 Jerker Delsing.
 \newblock Deliverable d1.2 of work package 1, 2015.
-
-\bibitem{autosar_glossary}
-AUTOSAR.
-\newblock Glossary, autosar release 4.2.1, 2014.
 
 \bibitem{rodrigues2011}
 Douglas Rodrigues, Rayner15 de~Melo~Pires, J{\'u}lio~C{\'e}zar Estrella,
@@ -124,6 +140,12 @@ Jim~Q Ning.
 \newblock In {\em Assessment of Software Tools and Technologies, 1997.,
   Proceedings Fifth International Symposium on}, pages 34--43. IEEE, 1997.
 
+\bibitem{erl2011}
+Thomas Erl, Stephen~G Bennett, Benjamin Carlyle, Clive Gee, Robert Laird,
+  Anne~Thomas Manes, Robert Moores, and Andre Tost.
+\newblock {\em SOA Governance}.
+\newblock Pearson Education, 2011.
+
 \bibitem{erl2008}
 Thomas Erl.
 \newblock {\em Soa: principles of service design}, volume~1.
@@ -155,12 +177,6 @@ N.~Josuttis.
 \newblock {\em SOA in Practice}.
 \newblock O'Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol, CA
   95472, 2007.
-
-\bibitem{sei2}
-Software~Engineering Institute.
-\newblock Defining software architectures.
-\newblock \url{http://www/sei.cmu.edu/architecture/}.
-\newblock Visited: May 2015.
 
 \bibitem{sommer}
 Stephan Sommer, Christian Buckl, Gerd Kainz, Andreas Scholz, Irina Gaponova,

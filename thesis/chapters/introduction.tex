@@ -9,15 +9,25 @@ The first part of my work during the internship was the creation of a glossary d
 - The glossary was later taken as standard for this tasks ...
 - and deals with the terms: \emph{service}, \emph{system}, \emph{system of systems}, \emph{architecture}, \emph{service-oriented architecture}, \emph{configuration}, \emph{static reconfiguration}, \emph{dynamic reconfiguration}, \emph{inter-core communication}, \emph{intra-core communication} and \emph{binding}.
 The most important parts of this glossary will be covered within this chapter.
-- furthermore a database with the used literature was created in order to provide the necessary references for the glossary and provide a ... where to find further information for the employees. 
 
 - disambiguity safety and security
 - what is safety and fault tolerance
 
-\section{Related instances}
-\subsection{ISO 262662 international standard}
-\subsection{MISRA}
-\subsection{AUTOSAR}
+Two terms which often appear together and appear very much alike are \emph{safety} and \emph{security}. Nevertheless, they have a completely different meaning in technical systems.
+
+The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{autosar_glossary} \cite{iso26262:1} and is concerned with correct operation of the equipment in a specific system. Therefore, it is concerned with things like \emph{error detection}, \emph{fault prevention}, \emph{failure migration}, \emph{diagnosis} and similar.
+
+\emph{Security}\index{security} is concerned with preventing unauthorized access, or unexpected input. AUTOSAR defines the term as \emph{``Protection of data, software entities or resources from accidental or malicious acts''} \cite{autosar_glossary}. With the advance of software and interconnection in vehicles, \emph{security} becomes more and more of an issue, because all the functionality in a car, even highly critical like an automatic brake system or a collision warning system will be approachable through a network. Especially, if the vehicle gets connected to any proprietary network like the Internet. With the advance of the service oriented architecture paradigm for automotive, it is planed to run remote diagnosis and firmware updates over the air. This is an obvious weak point and an exploit of this can affect the operation of the vehicle and the safety of the driver \cite{nilsson2008}.
+
+Although, \emph{safety} and \emph{security} are separate disciplines, for automotive the functionalities cannot be classified into safety or security relevant functionality, but has always aspects of both disciplines at the same time \cite{nilsson2008}. Nevertheless, this thesis is mostly representing the \emph{safety} oriented point of view.
+
+
+
+One of the most important sources and ... for this thesis was the \mbox{ISO 26262} standard. Emerging from the \mbox{IEC 61508} standard, the \emph{ISO 26262} standard is an international functional safety standard for series production passenger cars with a maximum weight of 3 500kg. It is the state of the art for vehicles and does not set any requirements in terms of performance of equipment, but is only concerned with possible malfunctions. In total the standard features ten parts, but of special interest have been \textbf{part 1}, defines all the related terms and vocabulary, \textbf{part 3} which deals with the \textbf{concept phase} and \textbf{chapter 4} for the development at system level \cite{iso26262:1} \cite{iso26262:3} \cite{iso26262:4}.
+
+Concerning service oriented architectures the standard does not issue any regulations and related terms like \emph{service}, \emph{SoA} do not even appear within the document. In general, the \mbox{ISO 26262} only provides certain requirements, which have to be fulfilled, but does not prescribe how they have to be achieved \cite{iso26262:course1}.
+
+Another important source of information was AUTOSAR. The AUTOSAR is ambiguous, for it can denote either the technical product (AUTomotive Open System ARchitecture), or the related development partnership \cite{autosar_rs_main}. This partnership was founded in 2003, with its members covering more than 80\% of the production of cars worldwide \cite{kirschke_biller2011} \cite{schmerler2012}. The standard aims at establishing an industry standard for automotive software architecture, which allows different partners, as well as suppliers and manufacturers, to collaborate without any obstacles in terms of languages or methodologies. Therefore it defines \emph{software architecture}, \emph{software development methodology} and \emph{standardised application interfaces}. By promoting the decoupling of hardware and software it gives way to software reuse on different hardware platforms \cite{kirschke_biller2011} \cite{schmerler2012}. This is in compliance with the service oriented architecture principles and many of the related terms, which are explained within this document include references to AUTOSAR.
 
 The remains of chapter \ref{ch:introduction} contains a definition of the most important terms related to SoA (with respect to automotive) with an extensive description of each term. Those terms are \emph{system}, \emph{component}, \emph{service}, \emph{architecture}, \emph{service oriented architecture}, \emph{dependability} and \emph{functional safety}. Each of these sections starts with definitions from different sources. The relevant points of those are united in a ``self-created'' definition, marked by a box. Subsequently follows some additional information related to the specific term.
 
