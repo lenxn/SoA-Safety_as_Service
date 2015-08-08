@@ -3,7 +3,7 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces The hierarchy of the integration levels of the system ``vehicle'' with examples\relax }}{6}{figure.caption.11}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Relation of System, SoS and Service to one another \cite {arrowhead:presentation}.\relax }}{7}{figure.caption.13}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Implementation example of an ARROWHEAD framework \cite {arrowhead:presentation}.\relax }}{8}{figure.caption.14}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The interfaces of a component, with respect to the \textbf {GENESYS architecture} \cite [p.40]{genesys}\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The interfaces of a component, with respect to the GENESYS architecture \cite [p.40]{genesys}\relax }}{12}{figure.caption.16}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Illustration of the client-server communication \cite {autosar_intro}.\relax }}{13}{figure.caption.18}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{13}{figure.caption.19}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Structure of a service with the relations of the particular artifacts \cite [p.45]{krafzig}.\relax }}{19}{figure.caption.20}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  31 JUL 2015 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  8 AUG 2015 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -885,17 +885,22 @@ l.43 \chapter
              *{Preface} [1
 
  <./images/signature.png>] (./chapters/preface.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--13
-
- []
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 3.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 14--45
+Underfull \hbox (badness 10000) in paragraph at lines 3--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--45
 
  []
 
@@ -910,21 +915,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 6.
  [4
 
-]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 41.
-
-[5])
+] [5])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
  [6] (./chapters/abstract.tex) [7
 
-] (./chapters/kurzfassung.tex) [8
-
 ]
-(./main.lof)
+(./chapters/kurzfassung.tex
+Overfull \hbox (1.52998pt too wide) in paragraph at lines 1--2
+\OT1/cmss/m/n/12 grund der weit-ge-hen-den Ver-net-zung dieser. Der Bere-ich de
+r funk-tionalen Sicher-heit besch^^?aftigt
+ []
+
+) [8
+
+] (./main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -1217,10 +1223,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
  17750 strings out of 493105
- 297391 string characters out of 6137072
- 362559 words of memory out of 5000000
+ 297380 string characters out of 6137072
+ 362556 words of memory out of 5000000
  20809 multiletter control sequences out of 15000+600000
- 12990 words of font info for 45 fonts, out of 8000000 for 9000
+ 12696 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,17n,45p,10389b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
@@ -1235,7 +1241,7 @@ ic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt12.pfb>
-Output written on main.pdf (73 pages, 2300670 bytes).
+Output written on main.pdf (73 pages, 2303100 bytes).
 PDF statistics:
  1802 PDF objects out of 2073 (max. 8388607)
  1435 compressed objects within 15 object streams
