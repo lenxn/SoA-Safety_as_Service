@@ -138,39 +138,16 @@ During operation, they are in a certain state and waiting for input. When provid
 
 
 \section{Component}
-
 \label{ch:component}
 
-For the EMC2 project it is crucial to achieve a clear distinction between the term \emph{component} and \emph{service} (cf. chapter \ref{ch:service}). Due to the historic development of \emph{service oriented architecture} (cf. chapter \ref{ch:soa}), as successor of the \emph{component based software engineering}, those terms have often been put on a level, giving rise to confusion. 
+The term component often appears in connection with SoA and frequently leads to confusion when it is put on a level with service (cf. chapter \ref{ch:service}). This ambiguity is a result of the historic development of the service oriented architecture as successor of the component based software engineering (CBSE).
 
-Another issue is the term \emph{software component}, which leads to the question, whether components are pure software elements.
-
-In the following some definitions from different relevant resources are presented and discussed, with the aim to eliminate those ambiguities.
-
-\subsection{Definitions}
-
-\begin{description}
-	\item [GENESYS reference architecture] .
-	Obermaisser and Kopetz state that a component is a software or hardware unit that performs a specified computation within a given period of time \cite[p.38]{genesys} and communicates with other components by means of specific \emph{interfaces} (cf. section \ref{sec:component_interfaces}). Like systems, components are hierarchical and therefore dependent on the point of view - from a different viewpoint a quantity of components may be seen as a single component. With respect to this definition all entities in figure \ref{fig:integration_levels} (\emph{System}, \emph{Sensor}, \emph{AURIX}, etc.) can be denoted as components.
-
-	\item [ISO26262] .
-	The ISO 26262 standard supports this concept by its definition of a component as a \emph{``non-system level element that is logically and technically separable and is comprised of more than one hardware part or one or more software units''} \cite{iso26262:1}.
-
-	\item [Szyperski].
-	Szyperski features a definition with emphasis on the software oriented point of view: \emph{``Software components are binary units of independent production, acquisition, and deployment that interact to form a functioning system''} \cite[p.xxi]{szyperski}.
-
-	\item [AUTOSAR].
-	\begin{quote}
-	\emph{``Software-Components are architectural elements that provide and/or require interfaces and are connected to each other through the Virtual Function Bus to fulfill architectural responsibilities''} \cite{autosar_glossary}.
-	\end{quote}
-
-	AUTOSAR defines a \emph{Software Component} as encapsulation for parts of the automotive functionality, but it dictates no specific ``granularity'', meaning that an AUTOSAR software component might be either a \emph{``a small, reusable piece of functionality (such as a filter) or a larger block encapsulating an entire sybsystem. \cite{autosar}''}
-
-	\item [ARCITURA].
-	Arcitura\textsuperscript{TM} Education Inc. is a global provider of progressive, vendor-neutral training and certification programs and has conducted a lot of research related to SoA.
-	\emph{``A component is a unit of logic that exists as a standalone software program as part of a distributed computing architecture''} \cite{arcitura}.
- \end{description}
-
+Obermaisser and Kopetz state that a component is a software or hardware unit that performs a specified computation within a given period of time \cite[p.38]{genesys} and communicates with other components by means of specific \emph{interfaces} (cf. section \ref{sec:component_interfaces}). Like systems, components are hierarchical and therefore dependent on the point of view - from a different viewpoint a quantity of components may be seen as a single component. The ISO 26262 standard is in accordance with this definition and describes components as ``non-system level element that is logically and technically separable and is comprised of more than one hardware part or one or more software units'' \cite{iso26262:1}.
+AUTOSAR, in contrast, refers to component explicitly as a part of software:	
+\begin{quote}
+``Software-Components are architectural elements that provide and/or require interfaces and are connected to each other through the Virtual Function Bus to fulfill architectural responsibilities'' \cite{autosar_glossary}.
+\end{quote}
+Hence, a software component is an encapsulation for parts of the automotive functionality, but there is no specific granularity dictated, meaning that an AUTOSAR software component might be either a ``small, reusable piece of functionality (such as a filter) or a larger block encapsulating an entire subsystem'' \cite{autosar}.
 
 \begin{myquote}
 A component is a logical and technical separable hardware or software unit that is capable of performing a specific computation.
@@ -178,24 +155,16 @@ A component is a logical and technical separable hardware or software unit that 
 It offers an abstraction that simplifies the understanding of complex systems. Therefore they have to be hierarchical, meaning that components can be composed to other, larger, components.
 \end{myquote}
 
-As suggested by this definition the term component should be used for both, software hardware. If not denoted specifically as \emph{software component} or \emph{hardware component}, the term can be referred to both throughout this glossary.
-
-A component can be seen as \emph{black box}, meaning that the more or less complex internal structure is invisible or not of concern for the user. Therefore, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unaffected \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}.
-
-As a self-contained subsystem, it can be developed and tested independently, and latter be used as building block for systems or higher level components. In other words, the components are the basic building blocks of a system \cite{ning}. 
+As suggested by this definition the term component may be used for both, software hardware. 
+A component can be seen as black box, meaning that the more or less complex internal structure is invisible or not of concern for the user. Thus, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unchanged \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}. As a self-contained subsystem, it can be developed and tested independently, and latter be used as building block for systems or higher level components. In other words, the components are the basic building blocks of a system \cite{ning}. 
 
 Nevertheless, not everything is a component. According to Sametinger, an algorithm in a book is not a component, but it has to be implemented by means of an arbitrary programming language and equipped with well-defined interfaces in order to become a component \cite[p.2-3]{sametinger}.
 
 
 \subsection{Component Interfaces}
 \label{sec:component_interfaces}
+The interfaces are necessary for any interaction with other components.
 
-
-The interfaces are necessary for any interaction with other components. In the following two different approaches for describing these interfaces are presented. The first one is from the \textbf{GENESYS project} and features a quite implementation oriented point of view. The second definition, by \textbf{AUTOSAR}, is more abstract and better adjusted to the service oriented architecture paradigm.
-
-
-
-\subsubsection{Interfaces by GENESYS}
 Following the definition from Obermaisser and Kopetz, each component may dispose of up to four interfaces for communication with other entities. The \emph{Linking Interface}, the \emph{Local Interfaces} and the \emph{Technology Independent-} or \emph{Technology Dependent Interface}. They are illustrated in figure \ref{fig:component_interfaces} \cite[p.40-41]{genesys}.
 
 \begin{description}
@@ -223,18 +192,11 @@ The \emph{Technology Dependent Interface} enables a look inside the component an
 \label{fig:component_interfaces}
 \end{figure}
 
-
-\subsubsection{Interfaces by AUTOSAR}
-
-AUOSAR follows a slightly more abstract approach concerning the interfaces of a component. According to their definition, a component may dispose of a number of \emph{ports}. A port belongs to one component only and is the interface a component uses to communicate with other components.
-
-Within this context, the term \emph{interface} specifies a kind of contract or specification, on which services can be called at this port, and the format of the data emitted at this port.
-
-There are four different types of interfaces, belonging to the two different communication patterns \textbf{Client-Server} and \textbf{Sender-Receiver}: \cite{autosar_intro}
+Compared to this rather implementation oriented definition by GENESYS, the approach by AUTOSAR is much more abstract. According to their definition, a component may dispose of a number of ports. A port belongs to one component only and is the interface a component uses to communicate with other components. Within this context, the term interface specifies a kind of contract or specification, on which services can be called at this port, and the format of the data emitted at this port. There are four different types of interfaces, belonging to the two different communication patterns \textbf{Client-Server} and \textbf{Sender-Receiver} \cite{autosar_intro}:
 
 \begin{description}
 \item [Client-Server Communication].
-When this kind of communication is performed the \emph{client-component} requests the a specific service from the \emph{server-component} and sends necessary parameters. The server then processes the incoming request and returns a response. A single component can be a server and a client at the same time \cite{autosar_intro}. A schematic illustration of this type of communication is pictured in figure \ref{fig:autosar_client-server}, where SW-C denotes \emph{software component}.
+When this kind of communication is performed the \emph{client-component} requests a specific service from the \emph{server-component} and sends necessary parameters. The server then processes the incoming request and returns a response. A single component can be a server and a client at the same time \cite{autosar_intro}. A schematic illustration of this type of communication is pictured in figure \ref{fig:autosar_client-server}, where SW-C denotes \emph{software component}.
 
 \item [Sender-Receiver Communication].
 The \emph{Sender-Receiver} approach is a bit different. The task of the sender is to distribute his information to one or more receivers, without ever getting a response in form of data or control flow. In fact he does not even know the number or identity of the receivers. Those have to decide on themselves, how to deal with the received data (cf. figure \ref{fig:autosar_sender-receiver}) \cite{autosar_intro}.
