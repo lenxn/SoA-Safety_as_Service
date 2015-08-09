@@ -1,35 +1,33 @@
 \contentsline {chapter}{Abstract}{vii}{chapter*.5}
 \contentsline {chapter}{Kurzfassung}{viii}{chapter*.6}
-\contentsline {chapter}{List of Figures}{x}{chapter*.7}
-\contentsline {chapter}{List of Abbreviations}{xi}{chapter*.8}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.7}
+\contentsline {chapter}{List of Abbreviations}{x}{chapter*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}System}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}System Element}{3}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}System of Systems}{3}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}System Layers}{4}{subsection.1.1.3}
-\contentsline {subsubsection}{System Layers by GENESYS}{5}{section*.10}
-\contentsline {subsubsection}{System Layers by ARROWHEAD}{6}{section*.12}
 \contentsline {subsection}{\numberline {1.1.4}Embedded System}{7}{subsection.1.1.4}
 \contentsline {section}{\numberline {1.2}Component}{8}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Definitions}{9}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Component Interfaces}{10}{subsection.1.2.2}
-\contentsline {subsubsection}{Interfaces by GENESYS}{10}{section*.15}
-\contentsline {subsubsection}{Interfaces by AUTOSAR}{12}{section*.17}
+\contentsline {subsection}{\numberline {1.2.1}Definitions}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Component Interfaces}{9}{subsection.1.2.2}
+\contentsline {subsubsection}{Interfaces by GENESYS}{10}{section*.13}
+\contentsline {subsubsection}{Interfaces by AUTOSAR}{11}{section*.15}
 \contentsline {section}{\numberline {1.3}Service}{13}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Definitions}{13}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Key concepts of a service}{15}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Structure of a Service}{18}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.3}Structure of a Service}{17}{subsection.1.3.3}
 \contentsline {subsection}{\numberline {1.3.4}Services at different layers of implementation}{19}{subsection.1.3.4}
-\contentsline {subsubsection}{Chip Layer}{20}{section*.21}
-\contentsline {subsubsection}{Device Layer}{20}{section*.22}
-\contentsline {subsubsection}{System Layer}{20}{section*.23}
-\contentsline {section}{\numberline {1.4}Architecture}{21}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Definitions}{21}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Placement of Architecture}{24}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Service oriented architecture}{25}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Historic Development}{27}{subsection.1.5.1}
+\contentsline {subsubsection}{Chip Layer}{19}{section*.19}
+\contentsline {subsubsection}{Device Layer}{19}{section*.20}
+\contentsline {subsubsection}{System Layer}{20}{section*.21}
+\contentsline {section}{\numberline {1.4}Architecture}{20}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Definitions}{22}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Placement of Architecture}{23}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Service oriented architecture}{24}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Historic Development}{26}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Structure of a SoA}{27}{subsection.1.5.2}
-\contentsline {subsection}{\numberline {1.5.3}Service Composition}{29}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.3}Service Composition}{28}{subsection.1.5.3}
 \contentsline {section}{\numberline {1.6}Dependability}{30}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}Reliability}{30}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}Availability}{30}{subsection.1.6.2}
@@ -39,31 +37,31 @@
 \contentsline {subsection}{\numberline {1.7.3}Safety related terminology}{32}{subsection.1.7.3}
 \contentsline {subsection}{\numberline {1.7.4}Fault tolerance}{34}{subsection.1.7.4}
 \contentsline {section}{\numberline {1.8}Design of \emph {fault tolerant} Systems}{34}{section.1.8}
-\contentsline {chapter}{\numberline {2}Methods}{37}{chapter.2}
-\contentsline {section}{\numberline {2.1}SoA in Embedded Systems (Embedded SoA)}{37}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Drawbacks in embedded systems}{38}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Embedded SoA}{39}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}SoA in automotive}{40}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Location of the service repository}{41}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Service Contract}{42}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Safety services}{42}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Relation of Safety and security services}{43}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Failure detection service}{43}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Error Detection/Masking Service}{47}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Memory Protection}{47}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Requirements Validation Service}{48}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Allocation of safety services to system lifecycle phases}{48}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Service development process (use case scenario)}{48}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Service investigation/planning}{49}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Service inventory analysis}{50}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}service oriented analysis}{50}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}service oriented design}{51}{subsection.2.4.4}
-\contentsline {chapter}{\numberline {3}Results}{52}{chapter.3}
-\contentsline {section}{\numberline {3.1}Service investigation/ planning}{52}{section.3.1}
-\contentsline {section}{\numberline {3.2}Service inventory analysis}{53}{section.3.2}
-\contentsline {section}{\numberline {3.3}Service oriented analysis}{53}{section.3.3}
-\contentsline {section}{\numberline {3.4}Service oriented design}{54}{section.3.4}
-\contentsline {section}{\numberline {3.5}Possible implementation}{54}{section.3.5}
-\contentsline {chapter}{\numberline {4}Discussion}{55}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{56}{chapter.5}
-\contentsline {chapter}{References}{61}{chapter*.38}
+\contentsline {chapter}{\numberline {2}Methods}{36}{chapter.2}
+\contentsline {section}{\numberline {2.1}SoA in Embedded Systems (Embedded SoA)}{36}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Drawbacks in embedded systems}{37}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Embedded SoA}{38}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}SoA in automotive}{39}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Location of the service repository}{40}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Service Contract}{41}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Safety services}{41}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Relation of Safety and security services}{42}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Failure detection service}{42}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Error Detection/Masking Service}{46}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Memory Protection}{46}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Requirements Validation Service}{47}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Allocation of safety services to system lifecycle phases}{47}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Service development process (use case scenario)}{47}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Service investigation/planning}{48}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Service inventory analysis}{49}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}service oriented analysis}{49}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}service oriented design}{50}{subsection.2.4.4}
+\contentsline {chapter}{\numberline {3}Results}{51}{chapter.3}
+\contentsline {section}{\numberline {3.1}Service investigation/ planning}{51}{section.3.1}
+\contentsline {section}{\numberline {3.2}Service inventory analysis}{52}{section.3.2}
+\contentsline {section}{\numberline {3.3}Service oriented analysis}{52}{section.3.3}
+\contentsline {section}{\numberline {3.4}Service oriented design}{53}{section.3.4}
+\contentsline {section}{\numberline {3.5}Possible implementation}{53}{section.3.5}
+\contentsline {chapter}{\numberline {4}Discussion}{54}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{55}{chapter.5}
+\contentsline {chapter}{References}{60}{chapter*.36}

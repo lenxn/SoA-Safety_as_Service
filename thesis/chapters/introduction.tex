@@ -17,24 +17,13 @@ The remain of chapter \ref{ch:introduction} contains a definition of the most im
 
 \section{System}
 \label{ch:system}
+Obermaisser and Kopetz describe in their GENESYS reference architecture a system as ``an entity that is capable of interacting with its environment and is sensitive to the progression of time'' \cite[p.7]{genesys}. The environment is thereby a system itself, which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
 
-\begin{description}
+In the \mbox{ISO 26262} standard, a system is referred to as a ``set of elements that relates at least a sensor, a controller and an actuator with one another'' \cite{iso26262:1}. This definition is obviously referring explicitly to automotive, because in other industry sectors a system does not necessarily contain actuators.
 
-\item [GENESYS architecture].
-Definition of system according to Obermaisser and Kopetz: \emph{``an entity that is capable of interacting with its environment and is sensitive to the progression of time''} \cite[p.7]{genesys}.
-The \emph{environment} is a system itself, which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
+According to AUTOSAR, a system is ``an integrated composite that consists of one or more of the processes, hardware, software, facilities and people, that provides a capability to satisfy a stated need or objective'' \cite{autosar_glossary}.
 
-\item [ISO 26262].
-The ISO 26262 standard defines a system as a \emph{``set of elements that relates at least a sensor, a controller and an actuator with one another''} \cite{iso26262:1}. This definitions is already a bit more specific with a focus on the automotive industry.
-
-\item [AUTOSAR].
-According to AUTOSAR, a system is \emph{``an integrated composite that consists of one or more of the processes, hardware, software, facilities and people, that provides a capability to satisfy a stated need or objective''} \cite{autosar_glossary}.
-
-There is no indication that system have any internal structure, or that services are exchanged inside of them, which is the case according to the other sources. In this definition the is more like a component (cf. \emph{``It may also be referred to as Component or Device''} \cite{arrowhead_inpr}).
-\end{description}
-
-
-As result of extensive investigation the following definition emerged:
+Other typical characteristics are the presence of some kind of internal structure and the hierarchical composition. Those are included in the resulting definition below.
 
 \begin{myquote}
 A system is a hierarchical composed, time sensitive element, which interacts with the environment by processing input and providing output in turn.
@@ -42,48 +31,35 @@ A system is a hierarchical composed, time sensitive element, which interacts wit
 It is concerned with satisfying a specific need or purpose and disposes of a, more or less complex, internal structure, which may include hardware, software and data.
 \end{myquote}
 
-For the scope of this thesis, the overall system is assumed to be a vehicle, if not stated otherwise. The environment consists therefore of other vehicles or the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one; for example entities like roads, weather conditions and the like.
+For the scope of this thesis, the overall system is assumed to be a vehicle, if not stated otherwise. The environment consists therefore of other vehicles and the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one.
 
 
 
 \subsection{System Element}
 \label{sec:system_element}
-\begin{quote}
-\emph{``element - system or part of system including components hardware, software, hardware parts, and software units''}, \cite{iso26262:1}
-\end{quote}
-This definition of \emph{element} is taken from the ISO 26262 standard. It is a very generic term and thus it is not advisable to define it for any entities at a specific layer or with a specific characteristic. Instead, according to the quote, it can be more or less any entity of a system, since a system itself is defined as ``set of elements'' \cite{iso26262:1}.
+In the \mbox{ISO 26262} standard system elements are described as ``system or part of system including components hardware, software, hardware parts, and software units'' \cite{iso26262:1}. It is a very generic term and does not refer to any entities at a specific layer or with a specific characteristic. Instead, it can be more or less any entity of a system, since a system itself is defined as set of elements \cite{iso26262:1}. Figure \ref{fig:26262_disambiguation} pictures the relations to other terms and should serve as naming convention throughout this thesis.
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.5]{26262_disambiguation_system_etc.pdf}
 
-\caption{Relation of \emph{system}, \emph{component} and \emph{element} according to ISO 26262 \cite{iso26262:course1}. Throughout this thesis the naming convention according to this scheme is applied.}
+\caption{Relation of \emph{system}, \emph{component} and \emph{element} according to ISO 26262 \cite{iso26262:course1}.}
 \label{fig:26262_disambiguation}
 \end{figure}
 
 
 \subsection{System of Systems}
-Systems are hierarchical and can be composed or decomposed into sets of interacting constituting systems. Often this is referred to by the term \emph{System of Systems (SoS)} \cite[p.7]{genesys}. Thus, the SoS is in general the level above a given system and is therefore dependent on the definition of the related systems. With respect to our previous example of a system vehicle, a SoS could be for example the traffic of Graz, with many vehicles participating.
+Systems are hierarchical and can be composed or decomposed into sets of interacting constituting systems. Often this is referred to by the term \emph{System of Systems (SoS)} \cite[p.7]{genesys}. Thus, the SoS is in general the level above a given system and is therefore dependent on the definition of the related systems. SoSs may be geographically distributed and can become parts of other, bigger SoSs, when collaborating with other SoSs.
 
-This is in accordance with the definition of system by Arrowhead: \emph{``collaborating, compliant systems become system-of-systems and SoSs can be parts of other, bigger SoSs in turn''} \cite{arrowhead_inpr}. 
-
-System of systems features the following five characteristics:
-\begin{itemize}
-\item operational independence of its systems,
-\item management independence of the systems,
-\item evolutionary development,
-\item emergent behaviour, and
-\item geographic distribution \cite{arrowhead_inpr}.
-\end{itemize}
-Concerning this definition, it has to be stated that \emph{geographic distribution} it not necessarily always the case when operating with embedded systems.
+For a system vehicle, a SoS could be for example the traffic of a city, with many vehicles participating.
 
 
 \subsection{System Layers}
 \label{ch:system_layers}
-The parts of a system can be divided into different layers of implementation, for this kind of abstraction makes it easier for human beings to comprehend the overall relations. Unfortunately each field of research features its own way of fractionising systems and most of the approaches are hardly hardly compatible or even contradicting. The following, a segmentation from the GENESYS architecture, revealing a quite hardware and embedded systems oriented point of view, and a more abstract view from the ARROWHEAD project, are investigated in more detail.
-
-\subsubsection{System Layers by GENESYS}
-The GENESYS architecture by Obermaisser and Kopetz distinguish between three different layers, denoted \emph{chip-level}, \emph{device-level} and \emph{system-level} \cite[p.44]{genesys}. An example of the hardware elements at different levels by means of a system vehicle can be seen in figure \ref{fig:integration_levels}.
+The parts of a system can be divided into different layers of implementation. This kind of abstraction enables the comprehension of the overall relations. Unfortunately each field of research features its own, sometimes even contradicting, way of fractionising systems.
+\\
+\\
+The GENESYS architecture by Obermaisser and Kopetz distinguishes between three different layers, denoted \emph{chip-level}, \emph{device-level} and \emph{system-level} \cite[p.44]{genesys}. An example of the hardware elements at different levels by means of a system vehicle can be seen in figure \ref{fig:integration_levels}.
 \begin{description}
 \item [System Level] .
 The system level consists of \emph{Devices}, which are themselves logically self-contained apparatus. With respect to a system vehicle this could be for example an ECU, a sensor, an actuator or the like \cite[p.45]{genesys}.
@@ -93,14 +69,12 @@ The devices at the system level, contain a certain internal structures themselve
 According to the implementation layers in the GENESYS architecture, the chip level is the lowest level of implementation. In case of an MPSoC (Multiprocessor System-on-Chip) this level contains the single IP Cores of the chip \cite[p.46]{genesys}
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{system_levels.pdf}
-\caption{The hierarchy of the integration levels of the system ``vehicle'' with examples}
+\caption{The hierarchy of the implementation layers of the system vehicle with examples.}
 \label{fig:integration_levels}
 \end{figure}
-
-\subsubsection{System Layers by ARROWHEAD}
 
 The Arrowhead Framework provides an hierarchy by means of documentation documents, which are spitted in the three levels \emph{system-of-systems}, \emph{system} and \emph{service} \cite{arrowhead_inpr}. Their involved documents and relations are pictured in figure \ref{fig:sys-arrowhead}.
 
@@ -110,7 +84,7 @@ The Arrowhead Framework provides an hierarchy by means of documentation document
 \item [Service]. The service level contains the four documents \emph{Service Description (SD)}, \emph{Interface Design Description (IDD)}, \emph{Communication Profile (CP)} and \emph{Semantic Profile (SP)}. The service description is referred to in \ref{sec:service_structure}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.4]{arrowhead-documentation-relationship.png}
 \caption{Relation of System, SoS and Service to one another \cite{arrowhead:presentation}.}
@@ -129,33 +103,33 @@ The II service enables the listing of the services in the \emph{service reposito
 This is the core service for the system of systems composition and features logging and monitoring abilities \cite{arrowhead:presentation}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.8]{arrowhead-framework.pdf}
 \caption{Implementation example of an ARROWHEAD framework \cite{arrowhead:presentation}.}
 \label{fig:arrowhead-framework}
 \end{figure}
 
+When comparing these two approaches by GENESYS and ARROWHEAD, it becomes obvious that the latter has a quite abstract point of view, which is bias towards SoA, while the approach by GENESYS is much more hardware oriented.
+
+
+
 \subsection{Embedded System}
 \label{sec:embedded_system}
 
-\emph{Embedded systems} are computational modules integrated to physical devices and equipment. The have a predefined set of tasks and requirements and are capable of processing information \cite{rodrigues2011} \cite[p.xiii]{marwedel}. 
+Embedded systems (ES) are computational modules integrated to physical devices and equipment. The have a predefined set of tasks and requirements and are capable of processing information \cite{rodrigues2011} \cite[p.xiii]{marwedel}. Compared to general-purpose computation systems they usually dispose of less processing resources and come with narrower operation ranges, but at the same time they feature a high efficiency by optimally managing the available resources \cite[p.283]{alippi} \cite[p.5]{marwedel}. Also, their presence is usually quite unobtrusive, because instead of mouse and keyboard the user interface consists of typical input devices like buttons, steering wheel, or pedals.
 
-Compared to general-purpose computation systems they usually dispose of less processing resources and come with narrower operation ranges, but at the same time they feature a high efficiency by optimally managing the available resources \cite[p.283]{alippi} \cite[p.5]{marwedel}. Also, their presence is usually quite unobtrusive, because instead of mice and keyboard the user interface consists of typical input devices like buttons, steering wheel, or pedals.
+ESs are reactive systems, what means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. 
 
-Embedded systems are \emph{reactive systems}, what means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. 
-
-During operation, embedded systems are in a certain state, waiting for input. When provided with that, they perform computations and generate an output, which is handed back to the environment \cite[p.9]{marwedel}.
-
-Embedded systems in safety-critical applications have to care about the issues \emph{time constraints}, \emph{dependability} and \emph{efficiency requirements}.
+During operation, they are in a certain state and waiting for input. When provided with that, they perform computations and generate an output, which is handed back to the environment \cite[p.9]{marwedel}. ESs in safety-critical applications have to care about the issues \emph{time constraints}, \emph{dependability} and \emph{efficiency requirements}.
 
 \begin{description}
 	\item [Time constraints].
-	One challenge of Embedded Systems is the meeting of so called \emph{time constraints}, which basically means the conduction of a computation within a specified time \cite[p.8-9]{marwedel} \cite{rodrigues2011}. Kopetz states \emph{``A time-constraint is called hard if not meeting that constraint could result in a catastrophe''} \cite{kopetz}.
+	One challenge of Embedded Systems is the meeting of so called \emph{time constraints}, which basically means the conduction of a computation within a specified time \cite[p.8-9]{marwedel} \cite{rodrigues2011}. Kopetz states ``A time-constraint is called hard if not meeting that constraint could result in a catastrophe'' \cite{kopetz}.
 	\item [Dependability].
-	Embedded systems, operating in safety-critical environment, like nuclear power plants, cars, trains or aircraft, must be \emph{dependable}, for they are directly connected to the environment and have immediate impact on it. The Dependability is split up in further aspects - in detail \emph{Reliability} (cf. section \ref{sec:reliability}), \emph{Maintainability}, \emph{Availability} (cf. section \ref{sec:availability}), \emph{Safety} (cf. chapter \ref{ch:functional_safety}) and \emph{Security} \cite[p.4-5]{marwedel}.
+	Embedded systems, operating in safety-critical environment, like nuclear power plants, cars, trains or aircraft, must be \emph{dependable}, for they are directly connected to the environment and have immediate impact on it. The Dependability is split up in further aspects. In detail, those are \emph{Reliability} (cf. section \ref{sec:reliability}), \emph{Maintainability}, \emph{Availability} (cf. section \ref{sec:availability}), \emph{Safety} (cf. chapter \ref{ch:functional_safety}) and \emph{Security} \cite[p.4-5]{marwedel}.
 	\item [Efficiency requirements].
-	Efficiency is a key concept of embedded systems and is concerned with providing a maximum computation performance while minimizing the required energy. The efficiency is measured in ``operations per Joule'' and has been been increasing almost exponentially during the last twenty years.
+	Efficiency is a key concept of embedded systems and is concerned with providing a maximum computation performance while minimizing the required energy. The efficiency is measured in ``operations per Joule'' and has been been increasing almost exponentially during the last twenty years \cite{marwedel}.
 \end{description}
 
 
@@ -242,7 +216,7 @@ The \emph{TII} is the instrument for configuring and reconfiguring a component, 
 The \emph{Technology Dependent Interface} enables a look inside the component and allows to inspect internal variables and processes. Thus, it is reserved for people who bring a deep understanding of the components internals and is of no relevance for the user of the LIF services \cite[p.40-41]{genesys}. 
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.4]{component_interfaces.png}
 \caption{The interfaces of a component, with respect to the GENESYS architecture \cite[p.40]{genesys}}
@@ -266,14 +240,14 @@ When this kind of communication is performed the \emph{client-component} request
 The \emph{Sender-Receiver} approach is a bit different. The task of the sender is to distribute his information to one or more receivers, without ever getting a response in form of data or control flow. In fact he does not even know the number or identity of the receivers. Those have to decide on themselves, how to deal with the received data (cf. figure \ref{fig:autosar_sender-receiver}) \cite{autosar_intro}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.4]{autosar_client-server.png}
 \caption{Illustration of the client-server communication \cite{autosar_intro}.}
 \label{fig:autosar_client-server}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.4]{autosar_sender-receiver.png}
 \caption{Illustration of the sender-receiver communication \cite{autosar_intro}.}
@@ -440,7 +414,7 @@ The \emph{implementation} is represented by programs, configuration data and dat
 As stated in \ref{sec:service-concepts}, a service may dispose of some state data for the time of its application. However, this is no necessary requirement for a service and the amount of stored data should be kept as low as possible \cite[p.44]{krafzig}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=1.0]{service_structure.png}
 \caption{Structure of a service with the relations of the particular artifacts \cite[p.45]{krafzig}.}
@@ -477,7 +451,7 @@ The highest layer is the \emph{system layer}, containing the most advanced servi
 System services emerge by binding together services of lower layers. An example for a system service could be a passive safety service for breaking or searing, which bases on an acceleration measurement service and other device services.
 
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{service_levels.pdf}
 \caption{Examples of hardware parts at different levels \cite{avl}}
@@ -608,7 +582,7 @@ The placement of \emph{architecture} in relation to other entities like system o
 	\emph{Purposes} are one kind of \emph{system concerns}, which are issued by the stakeholders \cite{ISO_42010}.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.35]{architecture_ontology.png}
 \caption{Relations of architecture to other entities \cite{ISO_42010}}
@@ -678,7 +652,7 @@ The service-oriented architecture (the term first appeared in 1996 \cite[p.7]{ro
 
 
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{software_reuse.pdf}
 \caption{Development of software reuse from the 1960 to present \cite{clements}.}
@@ -715,14 +689,14 @@ Erl, Bennett et al. mention this additional term in connection with SoA. Accordi
 The term enterprise in this definition appears a bit bizarre and is a result of the research area related with this source. For the scope of EMC2 project the boundary is defined as the vehicle. Thus, the service inventory includes all services which could be provided by the vehicle. The difference to the service repository is that the service do not need to be available, or even implemented, but it is a static list of possible services.
 \end{description}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.6]{soa-architecture.pdf}
 \caption{Relation of \emph{service provider}, \emph{service consumer} and \emph{service repository} \cite{arrowhead} \cite{converge}}
 \label{fig:soa_overview}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.8]{soa_process.pdf}
 \caption{Chronology of how a service is used in a SoA \cite{converge}.}
