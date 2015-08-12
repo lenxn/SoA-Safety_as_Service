@@ -227,53 +227,28 @@ The \emph{Sender-Receiver} approach is a bit different. The task of the sender i
 
 \section{Service}
 \label{ch:service} 
-The perception of the term \emph{service} is quite wide spread and influenced by a persons experience and environment (e.g. related research area, industries, etc.). Unsurprisingly, this lead to numerous different definitions, supporting various, even contradicting statements.
+The perception of the term \emph{service} is quite wide spread and influenced by a persons experience and environment (e.g. related research area, etc.). Unsurprisingly, numerous different perceptions emerged, supporting various even contradicting views.
 
-Accordingly, definitions from several different sources from various fields of research are investigated in the following. The, apparently, most important characteristics, stated in those, have then been concatenated in a rather generic definition, which should be suitable for, more or less, anyone.
-
-\subsection{Definitions}
-
-\begin{description}
-\item [GENESYS Reference Architecture].
-The definition by Obermaisser and Kopetz:
+The perhaps most generic definition of service is given by Arcitura:
 \begin{quote}
-\emph{``A service is what a system delivers to its environment according to the specification. Through its service, a system can support the environment, i.e., other systems that use the service''} \cite[p.8]{genesys}.
+``Each service is assigned its own distinct context and is comprised of a set of capabilities related to this context. Therefore, a service can be considered a container of capabilities associated with a common purpose (or functional context)'' \cite{arcitura}.
 \end{quote}
-This definition deals with the terms service from a system point of view. The concepts of \emph{system} and \emph{environment} are referred to in chapter \ref{ch:system}. 
+The key information in this quote is that a service may offer multiple capabilities.
 
-\item [Arcitura].
+By Arrowhead a service is referred to as a part of a SoA:
 \begin{quote}
-\emph{``Each service is assigned its own distinct context and is comprised of a set of capabilities related to this context. Therefore, a service can be considered a container of capabilities associated with a common purpose (or functional context)''} \cite{arcitura}.
+``A service is the core building block of SOA, and is basically a software application performing some task, with a formal interface described using a standard description framework.'' \cite{arrowhead}
 \end{quote}
 
-\item [Erl, Bennett et al.] . 
+The definition by Obermaisser and Kopetz describes a service by means of its surrounding environment:
 \begin{quote}
-\emph{``A service is a unit of logic to which service-orientation has been applied to a meaningful extent. It is the application of service-orientation design principles that distinguishes a unit of logic as a service compared to units of logic that may exist solely as objects, components, Web services, REST services, and/or cloud-based services''} \cite[p.27]{erl2011}.
-
-The Representational State Transfer (REST) is a software architecture style, consisting of guidelines and best practices for building scalable web services.
+``A service is what a system delivers to its environment according to the specification. Through its service, a system can support the environment, i.e., other systems that use the service'' \cite[p.8]{genesys}.
 \end{quote}
-
-\item [Arrowhead].
+What the specification of a service may look like is referred to in \ref{sec:service_structure}. While it is indicated that a service interacts somehow with its environment. By bringing in the concept of interfaces, AUTOSAR gives an answer to the question how and where this interaction is conducted:
 \begin{quote}
-\emph{``A service is the core building block of SOA, and is basically a software application performing some task, with a formal interface described using a standard description framework.''} \cite{arrowhead}
+``A service is a type of operation that has a published specification of interface and behaviour, involving a contract between the provider of the capability and the potential clients'' \cite{autosar_glossary}.
 \end{quote}
-An important concept, which comes with this quote is, that service have certain interfaces (cf. section \ref{sec:service_structure}).
-
-\item [AUTOSAR].
-There are two quotes by AUTOSAR. The first one deals with service in general, while the second describes an \emph{AUTOSAR service}, the kind of service that could be applied in an AUTOSAR system.
-\begin{quote}
-\emph{``A service is a type of operation that has a published specification of interface and behaviour, involving a contract between the provider of the capability and the potential clients''} \cite{autosar_glossary}.
-\end{quote}
-
-\begin{quote}
-\emph{``An AUTOSAR Service is a logical entity of the basic software offering general functionality to be used by various software components. The functionality is accessed via standardized AUTOSAR Interfaces''} \cite{autosar_glossary}.
-\end{quote}
-
-\end{description}
-
-The presented quotes show various different approaches and options, emphasising the various different understandings.
-
-The following definition is a collection of the relevant aspects from various sources and should serve as unified knowledge base for the scope of the EMC2 project.
+The terms \emph{contract}, \emph{provider} and \emph{client}, which also appear in the definition below are investigated in detail in section \ref{sec:structure_of_soa}.
 
 \begin{myquote}
 	As part of a system, a service is an independent logical unit with at least one capability and well defined interfaces, which have to be fully described by the service contract.
@@ -283,15 +258,15 @@ The following definition is a collection of the relevant aspects from various so
 	In order to be applied in a service oriented architecture, a service must comply with certain key concepts.
 \end{myquote}
 
-The terms \emph{service provider} and \emph{service consumer} are described in detail in section \ref{ch:soa}. The required key concepts are the subject of the next section.
+
 
 \subsection{Key concepts of a service}
 \label{sec:service-concepts}
-Erl, Bennett et al. \cite[p.27]{erl2011} state eight specific characteristics any service should posses. Those have been altered and extended with some attributes from other sources, resulting in the following listing with a total of nine characteristics. In some occasions there have been different nominations of equal characteristics. In this cases all alternative labels are stated.
+Erl, Bennett et al. \cite[p.27]{erl2011} state eight specific characteristics any service should posses. Those have been altered and extended with some attributes from other sources, resulting in the following listing with a total of nine characteristics. In some occasions there have been different nominations of equal characteristics. In those cases all alternative naming are stated as well.
 
 \begin{description}
 \item [Opacity/ Encapsulation/ Abstraction] .
-According to Erl, \emph{abstraction} means to \emph{``hide information about a program not absolutely required for others to effectively use that program''} \cite[ch.8.1.]{erl2008}.
+According to Erl, abstraction means to ``hide information about a program not absolutely required for others to effectively use that program'' \cite[ch.8.1.]{erl2008}.
 Services hide an internal logic, which could be implemented by means of any suitable programming language or operating system. This allows the logic and implementation of the service to evolve over time, while still providing the functionality as it was originally published \cite[ch.8.1]{erl2008}.
 
 From the service consumer's point of view the service appears as a black box, which does not impart anything of the underlying implementation or how the returned information is generated \cite{opengroup} \cite{breivold} \cite{arrowhead} \cite[p.27]{erl2011}.
@@ -299,28 +274,28 @@ From the service consumer's point of view the service appears as a black box, wh
 This black box encapsulation disables any modification of the service by the user and is often referred to as \emph{service interface level abstraction} \cite{breivold}.
 
 \item [Reusability].
-The idea of software \emph{reuse} exists since the early days of software engineering. In SoAs it is the key concept of a service and a necessary basis for many of the other concepts would not even be possible without it \cite[ch.9.1.]{erl2008} \cite[p.27]{erl2011}.
+The idea of software reuse is present since the early days of software engineering. In SoAs it is the key concept of a service and a necessary basis, for many of the other concepts would not even be possible without it \cite[ch.9.1.]{erl2008} \cite[p.27]{erl2011}.
 
-Basically, this design principle aims at making a service applicable for more than just one specific use case. Usually, this means that the programming logic becomes more generic, allowing a wider range of application.
+This design principle aims at making a service applicable for more than just one specific use case. Usually, it results in a more generic programming logic, which allows a wider range of application.
 
-At this point, it should be noted, that the terms \emph{reusability} and \emph{reuse} are not equal. The former is the design principle, while the latter denotes the result which should be achieved by applying the concept of reusability.
+It should be noted, that the terms reusability and reuse are not equal. The former is the design principle, while the latter denotes the result which should be achieved by applying the concept of reusability.
 
 \item [Composability]. 
-Service are building blocks and thus existing services can be used in order to compose other, possibly more advanced, services through \emph{service orchestration} or \emph{service choreography} (cf. section \ref{sec:service-composition}). 
+Service are building blocks and thus existing services can be used in order to compose other, possibly more advanced, services through service orchestration or service choreography. 
 
 With orchestration, one service acts as a coordinator between all services involved, in contrast to choreography, where all composed services work independently with each other in a completely distributed manner \cite{opengroup} \cite{arrowhead} \cite{breivold} \cite[p.27]{erl2011}.
 
-In SoAs (cf. section \ref{ch:soa}) the composing may take place at runtime \cite{breivold}.
+In SoAs the composing may take place at runtime \cite{breivold}.
 
 \item [Loose coupling].
-If two or more artifacts are somehow connected within a technical context, this is referred to by the term \emph{coupling}. It indicates that two or more of ``something'' exists and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
+If two or more artifacts are somehow connected within a technical context, this is referred to by the term coupling. It indicates that two or more of ``something'' exist and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
 
-SoAs should feature a \emph{loose coupling}, which means that dependencies should be reduced as far as possible \cite{erl2008}. This is achieved by using standardised interfaces, what offers the service providers great flexibility in choosing design and deployment environment for offering their services \cite{breivold} \cite{arrowhead}. Well defined interfaces also allows a simple exchange of components by components from different vendors \cite{scholz}.
+SoAs should feature a loose coupling, which means that dependencies should be reduced as far as possible \cite{erl2008}. This is achieved by using standardised interfaces, what offers the service providers great flexibility in choosing design and deployment environment for offering their services \cite{breivold} \cite{arrowhead}. Well defined interfaces also allows a simple exchange of components by components from different vendors \cite{scholz}.
 
-An example for this concept are web browsers. The service, a web browser provides to the end user, could be described as ``interpret the HTML files and illustrate them in a user friendly way''. No matter which web browser is used, the end result will stay almost unaffected, thanks to the well specified applied protocols.
+An example for this concept are web browsers. The service a web browser provides to the end user could be described as ``interpret the HTML files and illustrate them in a user friendly way''. No matter which web browser is used, the end result will stay almost unaffected thanks to the well specified applied protocols.
 
 \item [Discoverability]. 
-The concept of \emph{discoverability} comes with certain requirements:
+The concept of discoverability comes with certain requirements:
 	\begin{itemize}
 	\item services have to constantly communicate the meta information they want to make public and all alternations,
 	\item this information should be centrally stored and maintained in consistent format and
@@ -334,9 +309,9 @@ The discoverability of a service is not only critical during the runtime of a So
 Service provider have to provide their clients with all the relevant information in form of a service description. This includes syntax, semantic and behaviour \cite{breivold}.
 
 \item [Statelessness].
-A \emph{state} is referred to as the general condition of something. In computational systems a state can be represented by temporary data, describing the state. SoA services are frequently required to hold a certain amount of \emph{state information} through the lifespan of a service composition in order to fulfill their functionality \cite[ch.11]{erl2008}. 
+A state is referred to as the general condition of something. In computational systems a state can be represented by temporary data describing the state. SoA services are frequently required to hold a certain amount of state information through the lifespan of a service composition in order to fulfil their functionality \cite[ch.11]{erl2008}. 
 
-Nevertheless, services can also be stateless and in order to optimize reusability services should aim at minimizing their state information and their holding time for messages \cite{breivold} \cite[p.27]{erl2011}.
+Nevertheless, services can also be stateless and in order to optimise reusability services should aim at minimizing their state information and their holding time for messages \cite{breivold} \cite[p.27]{erl2011}.
 
 \item [Technology neutrality].
 Services should be independent from used technology in order to allow different platforms to use them \cite{breivold}. 
@@ -344,7 +319,7 @@ Services should be independent from used technology in order to allow different 
 This concept is questionable in connection with automotive, because in a car most of the implemented technology is given by certain standards and cannot be changed easily.
 
 \item [Standardised Service Contract].
-According to \cite{erl2011}, \emph{``Service within the same service inventory are in compliance with the same contract design standards''} \cite[p.27]{erl2011}. In other words, the service contract should be created by means of a given templates. The term \emph{service inventory} is referred to in \ref{sec:structure_of_soa}.
+According to Erl, ``Services within the same service inventory are in compliance with the same contract design standards'' \cite[p.27]{erl2011}. In other words, the service contract should be created by means of a given templates. The term \emph{service inventory} is referred to in \ref{sec:structure_of_soa}.
 \end{description}
 
 
@@ -355,22 +330,21 @@ Concerning the structure, Krafzig describes a service as it can be seen in figur
 
 \begin{description}
 \item [Service contract]. 
-``SOA Principles of Service Design'' by Erl provides the following definition:
 \begin{quote}
 \emph{``A contract for a service (or a service contract) establishes the terms of engagement, providing technical constraints and requirements as well as any semantic information the service owner wishes to make public''} 
 \cite[ch.6.1]{erl2008}.
 \end{quote}
-The service contract is, more or less, the core part of every service, for it is the complete specification of the service between a provider and a consumer. It provides all the meta information concerning functionality, capabilities, expected \emph{behaviour}, constraints, service owner, access rights, functional and non functional qualities and information about intended performance and scalability of the service \cite[p.44]{krafzig} \cite[p.26]{josuttis} \cite{breivold}.
+The service contract is, more or less, the core part of every service, for it is the complete specification of the service between a provider and a consumer. It provides all the meta information concerning functionality, capabilities, expected behaviour, constraints, service owner, access rights, functional and non functional qualities and information about intended performance and scalability of the service \cite[p.44]{krafzig} \cite[p.26]{josuttis} \cite{breivold}.
 
-Physically, it is represented by one or more \emph{service description documents}, which should be human- and machine readable at the same time. This is the reason, why web services are usually represented by WSDL documents \cite[p.43]{erl2011}. There is no dedicated language standard concerning automotive yet, but a XML based language would be an appropriate choice.
+Physically, it is represented by one or more \emph{service description documents}, which should be human- and machine readable at the same time. This is the reason, why web services are usually represented by WSDL documents \cite[p.43]{erl2011}. There is no dedicated language standard for automotive yet, but a XML based language would be an appropriate choice.
 
 Erl \cite{erl2008} distinguishes between technical and non-technical service description documents. If a \emph{consumer} connects to a \emph{provider}, for example a database, the technical contract could contain information like the database protocol and the query syntax or language, while the non-technical contract could contain related meta information like required safety measures or the physical location of the database \cite[ch.6.1]{erl2008}.
 
 \item [Interface]. 
-The \emph{interface} is described in the \emph{service contract} and specifies the access points and the functionality of the service to the customers, which are connected via a network \cite[p.44]{krafzig} \cite{breivold}. A service may dispose of multiple interfaces.
+The interface is described in the service contract and specifies the access points and the functionality of the service to the customers, which are connected via a network. A service may dispose of multiple interfaces \cite[p.44]{krafzig} \cite{breivold}.
 
 \item [Implementation]. 
-The \emph{implementation} is represented by programs, configuration data and databases, which are necessary to provide the functionality specified in the contract. The term business logic in figure \ref{fig:service} is a bit misleading. This should be seen as the algorithms encapsulated in the implementation \cite[p.44]{krafzig}.
+The implementation is realised by programmes, configuration data and databases, which are necessary to provide the functionality specified in the contract. The term business logic in figure \ref{fig:service} is a bit misleading. This should be seen as the algorithms encapsulated in the implementation \cite[p.44]{krafzig}.
 
 \item [Data].
 As stated in \ref{sec:service-concepts}, a service may dispose of some state data for the time of its application. However, this is no necessary requirement for a service and the amount of stored data should be kept as low as possible \cite[p.44]{krafzig}.
@@ -386,31 +360,29 @@ As stated in \ref{sec:service-concepts}, a service may dispose of some state dat
 
 
 
-
 \subsection{Services at different layers of implementation}
 \label{ch:service_layers}
-For the assignment of services to different system layers serve the layers defined in section \ref{ch:system_layers} by \cite{genesys}: \emph{system-level}, \emph{device-level} and \emph{chip-level}. In connection with segmentation, the terms ``level'' and ``layer'' are used equally by various sources. To prevent confusion, the term \emph{layer} is applied throughout this glossary.
-
-Figure \ref{fig:service_levels} features an example of which hardware parts may belong to which integration layer with respect to the considered system vehicle. In accordance with that, table \ref{tab:services} gives an example of which services may be provided by the particular elements.
+The system layers specified in \ref{ch:system_layers} serve as basis for the assignment of services to different levels of implementation.
 
 \subsubsection{Chip Layer}
-The \emph{chip layer} is the lowest layer of implementation and contains very generic services which are used by higher layers in order to create more advanced services. In various sources this layer is referred to as the \emph{core-}, or \emph{platform layer}, which is why the services at this layer are denoted as \emph{core services} \cite[p.44]{genesys}.
+The chip layer is the lowest layer of implementation and contains very generic services which are used by higher layers in order to create more advanced services. In various sources this layer is referred to as the core-, or platform layer. In accordance with that the services at this layer are denoted core services \cite[p.44]{genesys}.
 
 Typical examples for services located at this level are message based 
-\emph{communication services} for the interaction of \emph{system elements} (cf. section \ref{sec:system_element}), \emph{global time base services} or mechanisms to compose the overall system out of the independently developed components. Such mechanisms include fault isolation services and clock synchronization services \cite[p.7-12]{genesys}.
-
-In other words, it provides a platform, where recurring problems can be dealt with once and for all.
+communication services for the interaction of system elements, global time base services or mechanisms to compose the overall system out of the independently developed components. Such mechanisms include fault isolation services and clock synchronization services \cite[p.7-12]{genesys}. In other words, the chip layer provides a platform where recurring problems can be dealt with once and for all.
 
 \subsubsection{Device Layer}
-The \emph{device layer} contains more advanced hardware parts. With respect to figure \ref{fig:service_levels} these might be sensors, actuators, ADCs (Analog-to-digital converters), AURIX chips, the CAN bus (Controller area network) or a WDT (Watchdog Timer). Since there is no consistent denomination for the services located at this layer, they are referred to as \emph{device services within this glossary}.
+The device layer contains more advanced hardware parts. With respect to figure \ref{fig:service_levels} these might be sensors, actuators, ADCs (Analog-to-digital converters), AURIX chips, the CAN bus (Controller area network) or a WDT (Watchdog Timer). Since there is no consistent denomination for the services located at this layer, they are referred to as \emph{device services} within this thesis.
 
-They make use of the underlying \emph{core services} and other services at the device layer in order to provide their intended functionality. 
+Device services make use of the underlying core services and other services at the device layer in order to provide their intended functionality. 
 An acceleration sensor, for example, could make use of an ADC, which in turn operates with a platform service for the time, for generating periodic sampling points.
 
 \subsubsection{System Layer}
-The highest layer is the \emph{system layer}, containing the most advanced services, which are usually provided to the end user. Like it is the case with the \emph{device services} there exists no uniform denomination throughout literature. Therefore they are denoted \emph{system services}.
+The highest layer is the system layer, containing the most advanced services, which are usually provided to the end user. Same as with the device services, there is no uniform denomination for services at this layer throughout literature. Thus, they are denoted \emph{system services}.
 
 System services emerge by binding together services of lower layers. An example for a system service could be a passive safety service for breaking or searing, which bases on an acceleration measurement service and other device services.
+\\
+\\
+Figure \ref{fig:service_levels} features an example of which hardware parts may belong to which integration layer with respect to the considered system vehicle. 
 
 
 \begin{figure}[!htbp]
@@ -419,48 +391,6 @@ System services emerge by binding together services of lower layers. An example 
 \caption{Examples of hardware parts at different levels \cite{avl}}
 \label{fig:service_levels}
 \end{figure}
-
-\begin{table}
-\begin{threeparttable}[b]
-\caption{Example of which services could operate at different levels}
-\label{tab:services}
-	\begin{tabular}{ p{4cm} p{3cm} p{8cm} }
-	\hline
-	\multicolumn{1}{|c|}{\textbf{Integration Level}} & 
-		\multicolumn{1}{|c|}{\textbf{ID}} & 
-		\multicolumn{1}{|c|}{\textbf{Description}} \\ 
-	\hline
-	\multirow{3}{*}{System Level Services} & Powertrain & Enable the vehicle  to drive. \\
-		\cline{2-3}
-		& Vehicle & Passive safety service. \\
-		\cline{2-3}
-		& HMI & Services for user input and output. \\ \hline
-	\multirow{6}{*}{Device Level Services} & Sensor & Acceleration measurement service. \\
-		\cline{2-3}
-		& Actuator & Providing a certain degree of acceleration, when triggered. \\
-		\cline{2-3}
-		& ECU\tnote{1} & Control of an electronic subsystem. \\
-		\cline{2-3}
-		& ADC\tnote{2} & Transform an analog signal to a discrete-time, digital signal. \\
-		\cline{2-3}
-		& CAN\tnote{3} & Enable communication between devices. \\
-		\cline{2-3}
-		& WDT\tnote{4} & Detect and recover from malfunction. \\ \hline
-	\multirow{3}{*}{Chip Level Service} && Basic time services, \\
-		& Chip 0-2 & component execution services, \\
-		&& basic communication services. \\ \hline
-	\end{tabular}
-	\begin{tablenotes}
-		\item [1] According to AUTOSAR an ECU is a \emph{``microcontroller plus peripherals and the according software/configuration. Therefore, each microcontroller requires its own ECU Configuration''}.
-		\item [2] An \emph{ADC} (Analog-to-digital converter) is a device for transforming a continuous analog signal into a time sampled discrete digital signal. - \url{http://en.wikipedia.org/wiki/Analog-to-digital_converter}
-		\item [3] The \emph{CAN} (controller area network) bus is a vehicle bus standard that allows devices to communicate with each others by means of a message-based protocol. - \url{http://en.wikipedia.org/wiki/CAN\_bus}
-		\item [4] The \emph{Watch Dog Timer} is an electronic timer for detecting computer malfunctions and recovering. It is usually applied for embedded systems, where humans cannot easily configure the internal logic. - \url{http:en/wikipedia.org/wiki/Watchdog\_timer}
-	\end{tablenotes}
-\end{threeparttable}
-\end{table}
-
-
-
 
 
 
@@ -828,7 +758,7 @@ There are two different classifications of errors. They can be divided into soft
 	\end{description}
 
 \item [Failure] .
-\emph{Failure} denotes that an element is not able to provide it's functionality any longer. This happens usually due to errors in the element or the environment, which are in turn caused by various faults \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
+\emph{Failure} denotes that an element is not able to provide its functionality any longer. This happens usually due to errors in the element or the environment, which are in turn caused by various faults \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
 
 The averaged frequency of occurrence of a failure is denoted by \emph{failure rate}, which is counted in hours of operation until a serious fault - e.g. 10e5 to 10e9 hours of operation \cite{rodrigues2011}.
 

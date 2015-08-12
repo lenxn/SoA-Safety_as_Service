@@ -7,19 +7,19 @@
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Illustration of the client-server communication \cite {autosar_intro}.\relax }}{11}{figure.caption.14}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{12}{figure.caption.15}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Structure of a service with the relations of the particular artifacts \cite [p.45]{krafzig}.\relax }}{17}{figure.caption.16}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Examples of hardware parts at different levels \cite {avl}\relax }}{19}{figure.caption.20}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Relations of architecture to other entities \cite {ISO_42010}\relax }}{23}{figure.caption.23}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Development of software reuse from the 1960 to present \cite {clements}.\relax }}{25}{figure.caption.24}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Relation of \emph {service provider}, \emph {service consumer} and \emph {service repository} \cite {arrowhead} \cite {converge}\relax }}{27}{figure.caption.25}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Chronology of how a service is used in a SoA \cite {converge}.\relax }}{28}{figure.caption.26}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Examples of hardware parts at different levels \cite {avl}\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Relations of architecture to other entities \cite {ISO_42010}\relax }}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Development of software reuse from the 1960 to present \cite {clements}.\relax }}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Relation of \emph {service provider}, \emph {service consumer} and \emph {service repository} \cite {arrowhead} \cite {converge}\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Chronology of how a service is used in a SoA \cite {converge}.\relax }}{27}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{38}{figure.caption.27}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{42}{figure.caption.28}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{42}{figure.caption.29}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}. The time windows is the result of $T2 - T1$.\relax }}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{44}{figure.caption.31}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{47}{figure.caption.32}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{40}{figure.caption.26}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{40}{figure.caption.27}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}. The time windows is the result of $T2 - T1$.\relax }}{42}{figure.caption.28}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{42}{figure.caption.29}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{45}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{52}{figure.caption.33}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{50}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
