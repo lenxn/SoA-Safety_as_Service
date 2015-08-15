@@ -288,7 +288,7 @@ With orchestration, one service acts as a coordinator between all services invol
 In SoAs the composing may take place at runtime \cite{breivold}.
 
 \item [Loose coupling].
-If two or more artifacts are somehow connected within a technical context, this is referred to by the term coupling. It indicates that two or more of ``something'' exist and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
+If two or more artefacts are somehow connected within a technical context, this is referred to by the term coupling. It indicates that two or more of ``something'' exist and is a measurement of the strength of their relationship, which is given by the amount of dependencies \cite{erl2008}.
 
 SoAs should feature a loose coupling, which means that dependencies should be reduced as far as possible \cite{erl2008}. This is achieved by using standardised interfaces, what offers the service providers great flexibility in choosing design and deployment environment for offering their services \cite{breivold} \cite{arrowhead}. Well defined interfaces also allows a simple exchange of components by components from different vendors \cite{scholz}.
 
@@ -301,7 +301,7 @@ The concept of discoverability comes with certain requirements:
 	\item this information should be centrally stored and maintained in consistent format and
 	\item the meta information must be accessible and searchable by those who want to use this resource \cite[ch.12.]{erl2008}.
 	\end{itemize}
-The artifact that stores the service information in SoAs is the \emph{service repository} (cf. section \ref{sec:structure_of_soa}).
+The artefact that stores the service information in SoAs is the \emph{service repository} (cf. section \ref{sec:structure_of_soa}).
 
 The discoverability of a service is not only critical during the runtime of a SoA, but also during the development process, where it provides answer to the question whether a certain functionality already exists or has to be built. Thereby redundancies are reduced or prevented altogether \cite[ch.12]{erl2008} \cite{arrowhead} \cite{breivold} \cite[p.27]{erl2011}.
 
@@ -326,7 +326,7 @@ According to Erl, ``Services within the same service inventory are in compliance
 
 \subsection{Structure of a Service}
 \label{sec:service_structure}
-Concerning the structure, Krafzig describes a service as it can be seen in figure \ref{fig:service} with the artifacts \emph{service contract}, \emph{interface}, \emph{implementation}, \emph{business logic} and \emph{data} \cite[p.44]{krafzig}.
+Concerning the structure, Krafzig describes a service as it can be seen in figure \ref{fig:service} with the artefacts \emph{service contract}, \emph{interface}, \emph{implementation}, \emph{business logic} and \emph{data} \cite[p.44]{krafzig}.
 
 \begin{description}
 \item [Service contract]. 
@@ -353,7 +353,7 @@ As stated in \ref{sec:service-concepts}, a service may dispose of some state dat
 \begin{figure}[!htbp]
 \centering
 \includegraphics[scale=1.0]{service_structure.png}
-\caption{Structure of a service with the relations of the particular artifacts \cite[p.45]{krafzig}.}
+\caption{Structure of a service with the relations of the particular artefacts \cite[p.45]{krafzig}.}
 \label{fig:service}
 \end{figure}
 
@@ -404,40 +404,26 @@ Figure \ref{fig:service_levels} features an example of which hardware parts may 
 
 \label{ch:architecture}
 
-The term \emph{architecture} is very generic and related to various different domains, e.g. \emph{hardware architecture}, \emph{software architecture}, \emph{system architecture} or \emph{enterprise architecture}. 
+The term architecture is very generic and has various different domains, like \emph{hardware architecture}, \emph{software architecture}, \emph{system architecture} or \emph{enterprise architecture}. In general architecture is concerned with how the components of a system can be arranged and interrelated in order to assemble an overall system \cite{ISO_42010} \cite{ning}. 
 
-In general, independent from any considered domain, architecture is concerned with how the components of a system can be arranged and interrelated in order to assemble an overall system \cite{ISO_42010} \cite{ning}. 
+Within the \mbox{ISO/IEC/IEEE 42010} standard the term architecture is referred to by ``fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution'' \cite{ISO_42010}. The \emph{fundamental concepts} are thereby system element (cf. section \ref{sec:system_element}), the relations inside the system, the relations to the environment and the principles of design and evolution.
 
 
-
-\subsection{Definitions}
-The following definitions of architecture, are domain independent or can be referred to multiple domains.
-
-\begin{description}
-\item [ISO/IEEE 42010].
-The ISO/IEC/IEEE standard defines requirements for the description of system, software and enterprise architectures. Within the standard, the term architecture is referred to by \emph{``fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution''} \cite{ISO_42010}. What is ``fundamental'' is described in more detail as:
 	\begin{description}
 		\item [elements]. (cf. section \ref{sec:system_element})
 		\item [relationships]. This denotes the relationships inside the system as well as the relationships to its environment
 		\item [principles of design and evolution].
 	\end{description}
-This definition applies for any kind of architecture, but the emphases on the fundamental concepts (elements, relationships, principles of design and evolution) vary with respect to the considered domain. The \emph{software architecture} usually focuses very much on the elements, while the \emph{enterprise architecture} is more concerned with the principles \cite{ISO_42010}.
+This definition applies for any kind of architecture, but the emphases on these concepts vary with respect to the considered domain. The software architecture usually focuses very much on the system elements, while the enterprise architecture is more concerned with the principles \cite{ISO_42010}.
 
-\item [Rodrigues, Melo Pires et al.].
-Rodrigues, Melo Pires et al. feature the following description in their document ``Using SOA in Critical-Embedded Systems'' from 2011:
-\emph{``Architecture is a structure that identifies, defines and organizes components. The relationship and principles of design of the components, functions and the interface established between subsystems can also be defined by architecture''} \cite{rodrigues2011}.
-
-\item [AUTOSAR].
+This is in compliance with the definition by AUTOSAR:
 \begin{quote}
-\emph{``The fundamental organization of a system embodied in its components, their static and dynamic relationships to each other, and to the environment, and the principles guiding its design and evolution''} \cite{autosar_glossary}.
+``The fundamental organization of a system embodied in its components, their static and dynamic relationships to each other, and to the environment, and the principles guiding its design and evolution'' \cite{autosar_glossary}.
 \end{quote}
-\end{description}
- 
 
+In \cite{rodrigues2011} it is stated that the ``relationship and principles of design of the components, functions and the interface established between subsystems can also be defined by architecture''} \cite{rodrigues2011}.
 
-Although EMC2 project is mostly concerned with system- and software architecture, the definition presented below is compatible with all kinds of architecture design, for they share the same basic principles.
-
-It also supports the concept that a system consists of one or more components, as pictured in figure \ref{fig:26262_disambiguation}.
+The definition presented below is compatible with all kinds of architecture design, for they share the same basic principles.
 
 \begin{myquote}
 An architecture is a systematic description of the structure of a system by means of its involved components and their relations to each other, and specifies also the connections and interactions of a system to its environment.
@@ -446,32 +432,32 @@ At the same time, architecture is also responsible for determining the principle
 \end{myquote}
 
 
-\subsection{Placement of Architecture}
-The placement of \emph{architecture} in relation to other entities like system or environment (cf. chapter \ref{ch:system}) is illustrated in figure \ref{fig:architecture_ontology}. 
+\subsection{Demarcation from related terms}
+The placement of architecture in relation to other entities like system or environment (cf. chapter \ref{ch:system}) is illustrated in figure \ref{fig:architecture_ontology}. 
 
 \begin{description}
 \item [Architecture description].
-	Many sources mix up the definitions of \emph{architecture} and \emph{architecture description}, what is a recurring source of confusion. In contrast to the actual architecture of a system, the term \emph{architecture description} denotes the artifacts which document this architecture \cite{ISO_42010}. Their relation is also pictured in figure \ref{fig:architecture_ontology}.
+	Many sources mix up the definitions of architecture and architecture description, what is a recurring source of confusion. In contrast to the actual architecture of a system, the term architecture description denotes the artefacts which document the respective architecture \cite{ISO_42010}. Their relation is also pictured in figure \ref{fig:architecture_ontology}.
 
-	According to the ISO/IEC/IEEE 42010 standard, the \emph{architecture description} is used to express the architecture of a system of interest by means of the following elements:
+	According to the \mbox{ISO/IEC/IEEE 42010} standard, the architecture description is used to express the architecture of a system of interest by means of the following elements:
 	\begin{itemize}
 	\item Specification of the purposes of the system,
 	\item Suitability for achieving these purposes,
 	\item Feasibility of construction and applicability,
 	\item Maintainability,
 	\item Evolvability and
-	\item Association of these concerns with the \emph{stakeholders} having these concerns \cite{ISO_42010}.
+	\item Association of these concerns with the stakeholders having these concerns \cite{ISO_42010}.
 	\end{itemize}
 	One and the same architecture can be described by several different architecture descriptions, and at the same time an architecture description can also characterise multiple architectures \cite{ISO_42010}.
 
 \item [Stakeholder].
-	The \emph{stakeholders} are all people, which are somehow related to the system and have any interest in the system. Those include users, operators, owners, developers, maintainers and others \cite{ISO_42010}.
+	The stakeholders are all people, which are somehow related to the system and have any interest in the system. Those include users, operators, owners, developers, maintainers and others \cite{ISO_42010}.
 
 \item [System concern].
-	A specific \emph{system concern} can be held by one more more stakeholders and can appear in various different forms, e.g. expectations, responsibilities, requirements, assumptions, dependencies and more \cite{ISO_42010}. 
+	A specific system concern can be held by one more more stakeholders and can appear in various different forms, e.g. expectations, responsibilities, requirements, assumptions, dependencies and more \cite{ISO_42010}. 
 
 \item [Purpose].
-	\emph{Purposes} are one kind of \emph{system concerns}, which are issued by the stakeholders \cite{ISO_42010}.
+	Purposes are one kind of system concerns, which are issued by the stakeholders \cite{ISO_42010}.
 \end{description}
 
 \begin{figure}[!htbp]
