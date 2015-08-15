@@ -479,15 +479,16 @@ The placement of architecture in relation to other entities like system or envir
 \section{Service oriented architecture}
 \label{ch:soa}
 
-The term \emph{service oriented architecture} has been widely used for marketing and praising new products. Unfortunately, this resulted in various misinterpretations of the term, because some vendors suggested that a SoA is something that can be bought or installed on an existing system, missing the point that SoA is not a product, but a set of design paradigms that can be applied on architectures.
+The term service oriented architecture has been widely used for marketing and praising new products. This resulted in various misinterpretations of the term, because some vendors suggested that a SoA is something that can be bought or installed on an existing system, missing the point that SoA is not a product, but a set of design paradigms that can be applied on architectures.
 
-The driving factor for the application of this design paradigm are certain benefits that come with the modularization of software. Those are not only reduction of development costs, but, with respect to embedded systems, also a saving in hardware components \cite{sommer}. Furthermore it increases flexibility, scalability and fault tolerance, enabling the system to run, even if parts are erroneous or down \cite[p.33]{rosen} \cite[p.17-18]{josuttis}.
-
-The following definitions reveal the wide range of different views and understandings.
+The driving factor for the application of this design paradigm are certain benefits that come with the modularization of software. Those are not only reduction of development costs, but, with respect to embedded systems also a saving in hardware components \cite{sommer}. Furthermore, it increases flexibility, scalability and fault tolerance, enabling a system to run, even if parts are erroneous or down \cite[p.33]{rosen} \cite[p.17-18]{josuttis}.
+\\
+\\
+Different authors and companies explain the term from different viewpoints and with different focuses.
 
 \begin{description}
-	\item [Oasis].
-	OASIS is a nonprofit consortium that drives the development, convergence and adoption of open standards for the global information society.
+	\item [OASIS].
+	OASIS is a non-profit consortium that drives the development, convergence and adoption of open standards for the global information society.
 	\begin{quote}
 	\emph{``A paradigm for organizing distributed capabilities that may be under the control of different ownership domains. It provides a uniform means to offer, discover, interact with and use capabilities to produce desired effects consistent with measurable preconditions and expectations''} \cite{oasis2006}.
 	\end{quote}
@@ -508,8 +509,7 @@ The following definitions reveal the wide range of different views and understan
 	\end{quote}
 \end{description}
 
-
-The EMC2 project aims at implementing the SoA design paradigm into safety critical embedded systems, which comes with various additional challenges. Thus, the definition below was created with regard to embedded systems. However, it is quite generic and fits also for SoAs in web applications.
+The definition below emerged as result of extensive investigations in this research area. In contrast to all the other definitions, which are somehow biased due to their relation to a certain area of industry, this one is quite generic and may be used for any kind of SoA. In case of embedded- or safety-critical systems, there are of course additional characteristics which are crucial.
 
 \begin{myquote}
 	The service oriented architecture is no actual design, which can be simply implemented or installed, but a collection of design principles for distributed systems.
@@ -521,51 +521,48 @@ The EMC2 project aims at implementing the SoA design paradigm into safety critic
 
 As stated, SoA is no specific implementation but a set of rules to achieve a certain target state. The final implementation can therefore consist of multiple technologies, products, Application Programmers Interfaces (APIs) and supporting infrastructures \cite[p.29]{erl2011}. This enables an unproblematical exchange of components by components of other vendors, as long as the provided services remain unaffected.
 
-A SoA is not just a simple collection of services, but offers also \emph{composition mechanisms} (cf. section \ref{sec:service-composition}) for services, enabling the creation of agile, higher-level services with a more sophisticated functionality, without having to build everything from scratch. \cite[p.12]{josuttis}.
+A SoA is not just a simple collection of services, but offers also composition mechanisms for services. Those enable the creation of agile, higher-level services with a more sophisticated functionality, without having to build everything from scratch. \cite[p.12]{josuttis}.
 
 
 
 \subsection{Historic Development}
-The service-oriented architecture (the term first appeared in 1996 \cite[p.7]{rosen}) emerged from the CBSE and was, so to say, an improvement, for it allowed the components to be wider distributed and looser coupled. However, since both approaches feature certain advantages, both of them have been developed in parallel ever since, resulting in many similarities, but also many differences \cite{breivold}. The advance of the software reuse concepts from 1960 to nowadays is illustrated in figure \ref{fig:software_reuse}.
-
+The term \emph{service oriented architecture} first appeared in 1996 \cite[p.7]{rosen}. It emerged from the CBSE (cf. figure \ref{fig:software_reuse}) and was more or less an improvement, for it allowed the components to be wider distributed and looser coupled. However, since both approaches feature certain advantages, both of them have been developed in parallel ever since, resulting in many similarities, but also many differences \cite{breivold}. 
 
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{software_reuse.pdf}
-\caption{Development of software reuse from the 1960 to present \cite{clements}.}
+\caption{Development of software reuse concepts from the 1960 to present \cite{clements}.}
 \label{fig:software_reuse}
 \end{figure}
 
 
 \subsection{Structure of a SoA}
 \label{sec:structure_of_soa}
-The four main artefacts of a SoA are \emph{service provider}, \emph{service consumer}, \emph{service repository} and the \emph{service contract} \cite{arrowhead} \cite{breivold} \cite{rodrigues2011}. There are also alternative terms for those, which are mentioned here, but throughout this document and the related documents, the previously stated terms will be used.
-
-The relations of the terms is illustrated in figure \ref{fig:soa_overview}.
+The four main artefacts of a SoA are service provider, service consumer, service repository and the service contract \cite{arrowhead} \cite{breivold} \cite{rodrigues2011}. There are also alternative terms for those, which are mentioned here, but throughout this thesis the previously stated terms will be used.
 
 \begin{description}
-\item [Service provider/ service owner]. 
-The task of the \emph{service provider} is to provide a service and its functionality. Additionally he should formulate the service description in form of a contract (cf. section \ref{sec:service_structure}), which is then handed over to the \emph{service repository} in order to make the service discoverable \cite{breivold}.
+\item [Service provider/ Service Owner]. 
+The task of the service provider is to provide a service and its functionality. Additionally, he should formulate the service description in form of a contract, which is then handed over to the service repository in order to make the service discoverable \cite{breivold}.
 
-\item [Service Repository/ Service Registry].
-In some sources this entity is referred to as \emph{service registry} or \emph{service directory}.
+\item [Service Repository/ Service Registry/ Service Directory].
+The service repository is, more or less, a database of services, which may be distributed. It disposes of certain publishing mechanisms in order to make services discoverable by the . Therefore it contains all the information from the (of every version of the service), as well as meta information like physical location, provider information, technical constraints, security issues and of course the link to the registered service. \cite[p.60-61]{krafzig} \cite{breivold} \cite{converge}.
 
-The \emph{service repository} is, more or less, a database of services, which may be distributed. It disposes of certain publishing mechanisms in order to make services discoverable by the \emph{service consumers}. Therefore it contains all the information from the \emph{service contract} (of every version of the service), as well as additional information like physical location, provider information, technical constraints, security issues and of course the link to the registered service. \cite[p.60-61]{krafzig} \cite{breivold} \cite{converge}.
-
-Services can be added to, or taken from, the \emph{service repository} dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
+Services can be added to, or taken from, the service repository dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
 
 \item [Service Consumer/ Service Client/ Service Requester] .
-The \emph{service consumer} (or \emph{service client}, \emph{service requester}) is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the \emph{service repository} for specific services by the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the \emph{service consumer} creates a dynamic binding with the \emph{service provider} in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
+The service consumer is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the service repository for specific services by the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the service consumer creates a dynamic binding with the service provider in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
 
 \item [Service Contract] .
-The \emph{service contract} is described in detail in section \ref{sec:service_structure}. It is handed over to the \emph{service repository} from the \emph{service provider}.
+The service contract is described in detail in section \ref{sec:service_structure}. It is handed over to the service repository from the service provider.
 
 \item [Service Inventory] .
-Erl, Bennett et al. mention this additional term in connection with SoA. According to their definition, \emph{``A service inventory is an independently standardized and governed collection of complementary services within a boundary that represents an enterprise or a meaningful segment of an enterprise''} \cite[p.41]{erl2011}. 
+Erl, Bennett et al. mention this additional term in connection with SoA. According to their definition, ``A service inventory is an independently standardized and governed collection of complementary services within a boundary that represents an enterprise or a meaningful segment of an enterprise'' \cite[p.41]{erl2011}. 
 
-The term enterprise in this definition appears a bit bizarre and is a result of the research area related with this source. For the scope of EMC2 project the boundary is defined as the vehicle. Thus, the service inventory includes all services which could be provided by the vehicle. The difference to the service repository is that the service do not need to be available, or even implemented, but it is a static list of possible services.
+The term enterprise in this definition appears a bit bizarre and is a result of the research area related with this source. For the scope of this thesis the boundary is defined as the vehicle. Thus, the service inventory includes all services which could be provided by the vehicle. The difference to the service repository is that the service does not need to be available, or even implemented. Instead, it is a static list of developed or conceived services.
 \end{description}
+
+The relations of the various artefacts are depicted in figure \ref{fig:soa_overview}.
 
 \begin{figure}[!htbp]
 \centering
@@ -582,22 +579,6 @@ The term enterprise in this definition appears a bit bizarre and is a result of 
 \end{figure}
 
 
-
-
-
-
-\subsection{Service Composition}
-\label{sec:service-composition}
-\emph{Service composition} is the key concept of any SoA and denotes the generation of (more) capable services from existing services. In \cite{erl2011} it is stated that \emph{``at least two participating services plus one composition initiator need to be present''} \cite[p.40]{erl2011}. In other words, the resulting service of a service composition requires at least two underlying services. Otherwise it would be just a point-to-point exchange \cite[p.40]{erl2011}.
-
-There are two different methods for composing services, which are denoted \emph{service orchestration} and \emph{service choreography}.
-
-\begin{description}
-	\item [Service Orchestration] .
-	With this method of aggregating services, the new service has control over the other services \cite{josuttis}.
-	\item [Service Choreography] .
-	In contrast to service orchestration, non of the related services has control over the others. Instead, there are certain rules and policies, which regulate the collaboration \cite{josuttis}.
-\end{description}
 
 
 
