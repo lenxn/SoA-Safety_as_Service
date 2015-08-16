@@ -387,7 +387,7 @@ Figure \ref{fig:service_levels} features an example of which hardware parts may 
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=\textwidth]{service_levels.pdf}
+\includegraphics[scale=0.6]{service-levels.pdf}
 \caption{Examples of hardware parts at different levels \cite{avl}}
 \label{fig:service_levels}
 \end{figure}
@@ -421,7 +421,7 @@ This is in compliance with the definition by AUTOSAR:
 ``The fundamental organization of a system embodied in its components, their static and dynamic relationships to each other, and to the environment, and the principles guiding its design and evolution'' \cite{autosar_glossary}.
 \end{quote}
 
-In \cite{rodrigues2011} it is stated that the ``relationship and principles of design of the components, functions and the interface established between subsystems can also be defined by architecture''} \cite{rodrigues2011}.
+In \cite{rodrigues2011} it is stated that the ``relationship and principles of design of the components, functions and the interface established between subsystems can also be defined by architecture'' \cite{rodrigues2011}.
 
 The definition presented below is compatible with all kinds of architecture design, for they share the same basic principles.
 
@@ -590,34 +590,26 @@ The relations of the various artefacts are depicted in figure \ref{fig:soa_overv
 
 \section{Dependability}
 
-The terms \emph{Availability} and \emph{Reliability}, which can be found at any level of implementation, are closely tied and usually come together. Often, they are also coupled with the term \emph{Maintenance}, which also plays an important role in the design of any system \cite[p.116]{genesys} \cite{lessner}.
+The terms availability and reliability, which can be found at any level of implementation, are closely tied and usually come together. Often, they are also coupled with the term maintenance, which also plays an important role in the design of any system \cite[p.116]{genesys} \cite{lessner}.
 
 \subsection{Reliability}
-
 \label{sec:reliability}
 
-\emph{Reliability} denotes the time an entity need to fail while its operating. In other words it is ``the probability of the failure-free operation of a system for a specific period of time in a specific environment'' \cite[p.116]{genesys}. Nelson describes this also in a very comprehensible way as ``Reliability, $R(t)$, is the conditional probability that a system can perform its designed function at time $t$, given that it was operable at time $t=0$'' \cite{nelson}.
+Reliability denotes the time an element needs to fail while its operating. In other words it is ``the probability of the failure-free operation of a system for a specific period of time in a specific environment'' \cite[p.116]{genesys}. Nelson describes it more technically as ``Reliability, $R(t)$, is the conditional probability that a system can perform its designed function at time $t$, given that it was operable at time $t=0$'' \cite{nelson}.
 
-When it comes to services, \emph{Reliability} can also include the ability to recover state information after an interruption and continue the service as it has never been interrupted \cite{genesys}.
-
-Obviously the reliability of higher level entities is based on the reliability of its sub entities.
+In terms of services, the reliability can be enhanced by the ability to recover state information after an interruption and continue the service as it has never been interrupted \cite{genesys}. The reliability of higher level elements is of course limited by the reliability of its sub elements.
 
 
 \subsection{Availability}
 
 \label{sec:availability}
-The definition of \emph{availability} by various sources slightly differs.
+The definition of availability is ambiguous. The \mbox{ISO 26262} standard defines the availability as the ``capability of a product to be in a state to execute the function required under given conditions, at a certain time or a given period, supposing the required external resources are available'' \cite{iso26262:1}. Obermaisser and Kopetz, however, describe it as the ``probability of a software service or system being available when needed'' \cite[p.116]{genesys}, which is very similar to the definition found in \cite{lessner} and \cite{nelson}.
 
-The ISO 26262 standard defines the availability as the \emph{``capability of a product to be in a state to execute the function required under given conditions, at a certain time or a given period, supposing the required external resources are available''} \cite{iso26262:1}. Obermaisser and Kopetz, however, describe it as the \emph{``probability of a software service or system being available when needed''} \cite[p.116]{genesys}, which is very similar to the definition found in \cite{lessner} and \cite{nelson}.
+The difference here is that the prior denotes availability as the availability of an element at this very moment, while the latter defines it as a probability of an element to be operational and ready to use.
 
-The difference between the definitions is obviously that the first one denotes \emph{Availability} as the availability of an entity at this very moment, while the other one defines it as a probability of an entity to be operational and ready to use.
-\\
-\\
-For the purpose of this project the term should be referred to as the \emph{probability} of a system of being operational at a given time.
+Two important terms which come in connection with availability are MTTF (Mean Time To Failure), the expected time until the system fails, and MTTR (Mean Time To Repair), the necessary time to restore a failed system to normal operation. The availability $A$ can then be expressed as $A = MTTF/(MTTF + MTTR)$ \cite{nelson}. 
 
-Two important terms which come in connection with availability are \emph{MTTF} (Mean Time To Failure), the expected time until the system fails, and \emph{MTTR} (Mean Time To Repair), the necessary time to restore a failed system to normal operation. The availability $A$ can then be expressed as $A = MTTF/(MTTF + MTTR)$ \cite{nelson}. 
-
-Thus, the availability characteristics of a system are represented by its reliability and maintainability. Accordingly, even highly reliable entities can have a poor availability if the repair time of its sub entities takes very long \cite{lessner}. The availability can be improved by the application of dedicated \emph{fault tolerance} mechanisms (cf. section \ref{ch:fault_tolerance}) \cite{nelson}.
+The availability characteristics of a system are represented by its reliability and maintainability. Accordingly, even highly reliable entities can have a poor availability if the repair time of its sub entities takes very long \cite{lessner}. The availability can be improved by the application of dedicated \emph{fault tolerance mechanisms} (cf. section \ref{ch:fault_tolerance}) \cite{nelson}.
 
 
 
@@ -636,47 +628,12 @@ Thus, the availability characteristics of a system are represented by its reliab
 \section{Functional safety}
 \label{ch:functional_safety}
 
+The term safety denotes the absence of an unreasonable risk \cite{iso26262:1}. Systems which operate with people and could endanger those in case of a malfunction have certain safety requirements in addition to functional requirements. Those safety requirements are issued by dedicated standards like the \mbox{ISO 26262} standard. In accordance with that the \mbox{ISO 26262} standard describes functional safety as the ``absence of unreasonable risk due to hazards caused by malfunctioning behaviour of E/E systems'' \cite{iso26262:1}. Risk, in turn, is defined as the product of the \emph{probability of occurrence} and the \emph{severity of harm} \cite{iso26262:1}.
 
-\subsection{Definition of safety}
-
-\begin{description}
-\item [Zeilinger, Sevcik et al. (2009)].
-\begin{quote}
-\emph{``The term safety describes the ability of a system not to cause environmentally harming effects, due to loss of mission critical information''} 
-\cite[p.1]{zeilinger2009}.
-\end{quote}
-
-\item [ISO 26262]. 
-\begin{quote}
-\emph{``absence of unreasonable risk''} \cite{iso26262:1}.
-\end{quote}
-
-\item [AUTOSAR].
-AUTOSAR has adopted the definition of the ISO standard:
-\emph{``Absence of unreasonable risk''} \cite{autosar_glossary}.
-\end{description}
-
-\subsection{Definition of functional safety}
-
-\begin{description}
-\item [Zhang, Lia and Qin (2010)].
-\emph{``Functional Safety processes are necessary to fulfill certain safety requirements (non functional requirements) in addition to functional requirements.''} \cite{zhang}.
-
-This definition is not entirely wrong, but its important to note that in automotive \emph{normal functions} cannot be separated from \emph{safety function} and accordingly their respective requirements are also interrelated \cite{iso26262:course1}.
-
-\item [ISO 26262].
-\emph{Functional safety} means the \emph{``absence of unreasonable risk due to hazards caused by malfunctioning behaviour of E/E systems''} \cite{iso26262:1}. An unreasonable \emph{risk} is thereby a risk judged to be \emph{``unacceptable according to valid societal moral concepts''} \cite{iso26262:1}.
-
-Risk, in turn, is defined as the product of the \emph{probability of occurrence} and the \emph{severity of harm} \cite{iso26262:1}.
-\end{description}
-
-The definition by the ISO standard seems quite promising and should be used as foundation for the scope of this project.
-
-As mentioned in the introduction, the term \emph{functional safety} only addresses the absence of risk due to equipment malfunction. It does not care about possible risks due to malicious events caused by other people, or just inappropriate operation of the user.
+In contrast to security, functional safety only addresses the absence of risk due to equipment malfunction. It does not care about possible risks due to malicious events caused by other people, or just inappropriate operation of the user.
 
 
-\subsection{Safety related terminology}
-
+\subsection{Disambiguation safety and security}
 Two terms which often appear together and appear very much alike are \emph{safety} and \emph{security}. Nevertheless, they have a completely different meaning in technical systems.
 
 The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{autosar_glossary} \cite{iso26262:1} and is concerned with correct operation of the equipment in a specific system. Therefore, it is concerned with things like \emph{error detection}, \emph{fault prevention}, \emph{failure migration}, \emph{diagnosis} and similar.
@@ -686,34 +643,33 @@ The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{aut
 Although, \emph{safety} and \emph{security} are separate disciplines, for automotive the functionalities cannot be classified into safety or security relevant functionality, but has always aspects of both disciplines at the same time \cite{nilsson2008}. Nevertheless, this thesis is mostly representing the \emph{safety} oriented point of view.
 
 
+\subsection{Safety related terminology}
 \label{sec:fault,error,failure}
-\emph{Fault}, \emph{error} and \emph{failure} are terms with are often mixed up and used in the same context, since they seem to be very similar in their meaning. Nevertheless, they stand for different things and its important to be aware of their disambiguation.
+\emph{Fault}, \emph{error} and \emph{failure} are terms with are often mixed up and used in the same context, since they seem to be very similar in their meaning. Nevertheless, they stand for different things and their disambiguation is crucial.
 
 
 \begin{description}
 \item [Fault] .
-In ISO 26262 standard a \emph{fault} is listed as an \emph{``abnormal condition that can cause an element or an item to fail''} \cite{iso26262:1} \cite{autosar_glossary}. 
+In \mbox{ISO 26262} standard a \emph{fault} is listed as an ``abnormal condition that can cause an element or an item to fail'' \cite{iso26262:1} \cite{autosar_glossary}. 
 
-Faults come in different forms. An \emph{intermittent faults} occurs from time to time and disappears without any repair measures taken place. This is typical for hardware components which are worn out and almost breaking down. \emph{Transient faults}, on the other hand, appear once, and do not recur afterwards. This is for example the case if there is some electromagnetic interference. \emph{Permanent faults} naturally remain until the faulty component is exchanged or repaired \cite{iso26262:1}.
+Faults come in different forms. An \emph{intermittent fault} occurs from time to time and disappears without any repair measures taken place. This is typical for hardware components which are worn out and almost breaking down. \emph{Transient faults}, on the other hand, appear once, and do not recur afterwards. This is for example the case if there is some electromagnetic interference. \emph{Permanent faults} naturally remain until the faulty component is exchanged or repaired \cite{iso26262:1}.
 
-A term related to \emph{fault}, is \emph{fault coverage}. It denotes ``the number of the faults detected as a percentage of the total number of faults affecting the system'' \cite{elattar2007}.
+A term related to fault, is \emph{fault coverage}. It denotes ``the number of the faults detected as a percentage of the total number of faults affecting the system'' \cite{elattar2007}.
 
 
 \item [Error] .
-An \emph{error} is the deviation of a computed, observed or measured value or condition and the expected, theoretically correct value. An error occurs as consequence of unexpected operating conditions or a fault.
-Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
+An error is the deviation of a computed, observed or measured value or condition and the expected, theoretically correct value. An error occurs as consequence of unexpected operating conditions or a fault.
+Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}. If the error exceeds a certain threshold it can cause a failure \cite{autosar_glossary}.
 
-If the \emph{error} exceeds a certain threshold it can cause a \emph{failure} \cite{autosar_glossary}.
-
-There are two different classifications of errors. They can be divided into soft- and hard errors or data- and control flow errors \cite{israr2014} \cite{elattar2007}.
+There are two different classifications of errors. They can be divided into \emph{soft-} and \emph{hard errors} or \emph{data-} and \emph{control flow errors} \cite{israr2014} \cite{elattar2007}.
 	\begin{description}
 	\item [Soft Error] .
-	\emph{Soft errors} occur when a temporary extra charge is induced into the electric circuit, usually due to cosmic radiation. This causes a flip of the data state in a memory element \cite{israr2014} \cite{elattar2007}.
+	Soft errors occur when a temporary extra charge is induced into the electric circuit. Usually it is due to cosmic radiation and causes a flip of the data state in a memory element \cite{israr2014} \cite{elattar2007}.
 
 	This kind of error will become even more severe in the future, due to the decreasing size of electronic logic, as well as their increasing complexity \cite{elattar2007}.
 
 	\item [Hard Error] .
-	In contrast to \emph{soft errors}, \emph{hard errors} are caused by a constant property change of an electric component. This could happen either because of a change in the input temperature, or input voltage \cite{israr2014}.
+	In contrast to soft errors, hard errors are caused by a constant property change of an electric component. This could happen either because of a change in the input temperature, or input voltage \cite{israr2014}.
 	\end{description}
 
 	\begin{description}
@@ -721,33 +677,30 @@ There are two different classifications of errors. They can be divided into soft
 	This error means a change of the data stored any memory location or register \cite{elattar2007}.
 
 	\item [Control Flow Error] .
-	A \emph{control flow error} leads to wrong execution sequence of instructions. This is the case, when the memory storing the address of the next execution instruction is changed \cite{elattar2007}.
+	A control flow error leads to wrong execution sequence of instructions. This is the case, when the memory storing the address of the next execution instruction is changed \cite{elattar2007}.
 	\end{description}
 
 \item [Failure] .
 \emph{Failure} denotes that an element is not able to provide its functionality any longer. This happens usually due to errors in the element or the environment, which are in turn caused by various faults \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}.
 
-The averaged frequency of occurrence of a failure is denoted by \emph{failure rate}, which is counted in hours of operation until a serious fault - e.g. 10e5 to 10e9 hours of operation \cite{rodrigues2011}.
+The averaged frequency of occurrence of a failure is denoted \emph{failure rate}. It is counted in \emph{hours of operation until a serious fault} - e.g. 10e5 to 10e9 hours of operation \cite{rodrigues2011}.
 
 Another term which frequently comes up in connection with failure, is \emph{failure mode}. This denotes, depending on the consulted source, either the manner in which the component fails \cite{international2006analysis}, or the manner by which a occurred fault is observed \cite{mil1980}.
 \end{description}
 
 
-\subsection{Fault tolerance}
 
+
+\section{Fault tolerance}
 \label{ch:fault_tolerance}
 
 The key concept of a \emph{fault tolerant} design is to enable a system to provide its intended functionality in the presence of a given number of faults \cite{nelson}.
 
-The \emph{fault tolerance} mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not lead directly to the violation of the safety goal(s), which maintain the system in a safe state \cite{iso26262:1}.
+Thus, the fault tolerance mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not lead directly to the violation of the safety goals, which maintain the system in a safe state \cite{iso26262:1}. Possible fault include not only internal faults like design-faults or hardware wear-outs, but also external ones. For example misuse by the user or cosmic radiation. Fault tolerance mechanisms have become indispensable for advanced electric systems, because due to the billions of transistors present and the various circumstances circumstances, which can lead to faults, faultless systems remain an utopian dream \cite{genesys}.
 
-Electric system suffer from numerous different possible faults, which increase with the complexity of the system. They include not only internal faults like design-faults or hardware wear-outs, but also external ones - for example misuse by the user or cosmic radiation.
 
-Due to the billions of transistors present in advanced electric systems and the various circumstances that lead to faults, faultless systems remain an utopian dream \cite{genesys}.
 
-Thus, the \emph{fault tolerance} mechanisms are not actually concerned with the prevention of faults, but assure that a fault does not lead directly to the violation of the safety goal(s), which maintain the system in a safe state \cite{iso26262:1}.
-
-\section{Design of \emph{fault tolerant} Systems}
+\section{Design of fault tolerant Systems}
 The prerequisite for designing a fault tolerant system is a so called \emph{fault hypothesis}, which is an assumption regarding the type and frequency of faults the system is supposed to handle.
 
 These can include
@@ -756,7 +709,3 @@ These can include
 \item \emph{Delay and disruption error} - This is relevant for all networking systems.
 \item \emph{Transient faults} - This means a possible corruption of Flip-Flops or memory cells with the progression of time.
 \end{itemize}
-
-A way to deal with all these scenarios \emph{ECRs} (Error Containment Regions) are required. An error which occurs within this specific subsystem will not propagate outside the subsystem without being detected. 
-
-Another possibility is redundancy, where multiple subsystems are responsible for the same task and are able to detect faults by comparing their results and validating them by means of dedicated voting mechanisms \cite{genesys}.
