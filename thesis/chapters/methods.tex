@@ -1,13 +1,9 @@
 \label{ch:methods}
+This chapter is dedicated to the deepening and extending of some of the terms given in chapter \ref{ch:introduction} and investigates them with respect to automotive. The chapter is structured into four main section, entitled \emph{SoA in embedded systems (Embedded SoA)}, \emph{SoA in automotive}, \emph{safety services} and \emph{service development process}. 
 
-This chapter is structured in the four main section, entitled \emph{SoA in embedded systems (Embedded SoA)}, \emph{SoA in automotive}, \emph{safety services} and \emph{service development process}. 
+The first section deals extensively with the application of the service oriented design paradigm in embedded system and highlights the challenges this approach has to face when it has to face certain safety requirements. Moreover, the differences to ``conventional SoAs'' as web application is investigated in detail. In the second section various examples of services, relevant for functional safety are described in detail, and their intended functionality, as well as possible implementations in terms of architecture is presented. The final part consists of a simplified use case, dealing with the design of an \emph{error detection service} with respect to the design phases \emph{service investigation/ planning}, \emph{service inventory analysis}, \emph{service oriented analysis} and \emph{service oriented design}.
 
-The first section deals extensively with the possible application of the service oriented design paradigm in embedded system and deals with the challenges this approach has to face when approached with safety-critical requirements. Moreover, the differences to conventional SoAs, as Web application is investigated in detail. 
-The second section presents various examples of services, which are relevant for \emph{functional safety} in detail and presents their intended functionality, as well as possible implementations in terms of an architecture.
-
-The final part consists of a simplified use case, dealing with the design of an error detection service with respect to the design phases \emph{service investigation/ planning}, \emph{service inventory analysis}, \emph{service oriented analysis} and \emph{service oriented design}.
-
-Most of the findings and concepts in this chapter are (not yet) covered in literature, but is the result of numerous meetings and discussions at VIRTUAL VEHICLE during May to July 2015.
+Most of the findings and concepts in this chapter are (not yet) covered in literature, but are the result of numerous meetings and discussions at \textbf{VIRTUAL VEHICLE Research Center} during April to July 2015.
 
 
 
@@ -20,40 +16,36 @@ Most of the findings and concepts in this chapter are (not yet) covered in liter
 \section{SoA in Embedded Systems (Embedded SoA)}
 \label{sec:soa-in-embedded-systems}
 
-The service oriented design paradigm was originally designed for the application in the web, which offered ideal prerequisites for this kind of architectural style: An underlying network for interconnection is already present and \emph{time constraints} are no concern, for delays are unlikely to cause a disaster. Thus, it is no surprise that web services are the application area, where SoA has scored the highest market penetration \cite{rodrigues2011} \cite{buckl}.
+The service oriented design paradigm was originally designed for the application on the Internet, which offered ideal prerequisites for this kind of architectural style: An underlying network for interconnection is already present and time constraints are no concern, for delays are unlikely to cause a disaster. Thus, it is no surprise that web services are the application area, where SoA has scored the highest market penetration \cite{rodrigues2011} \cite{buckl}.
 
 
 \subsection{Drawbacks in embedded systems}
-In contrast to web services, \emph{embedded systems} consist of numerous interconnected nodes, with diverse measurement-, steering-, or computation capabilities. They have to face additional challenges like \emph{limited resources}, \emph{different complexity of hardware}, \emph{time constraints}, etc. \cite{scholz} \cite{sommer}. 
-
-The most crucial of those obstacles are investigated in more detail in the following.
+In contrast to web services, ESs consist of numerous interconnected nodes, with diverse measurement-, steering-, or computation capabilities. Accordingly, they have to face additional challenges like \emph{limited resources}, \emph{different complexity of hardware}, \emph{time constraints}, and others \cite{scholz} \cite{sommer}: 
 
 \begin{description}
 \item [Limited resources].
-One obvious major drawback of embedded systems are the quite limited resources, which are designed for highly specialized purposes and lack computation power as well as storage size \cite{rodrigues2011} \cite{scholz} \cite{sommer}.
+One obvious major drawback of ESs are the quite limited resources, which are designed for highly specialized purposes and lack computation power as well as storage size \cite{rodrigues2011} \cite{scholz} \cite{sommer}.
 
 \item [Different levels of complexity].
-The complexity of hardware varies greatly. The applied components may include very primitive sensors, with few capabilities and very advanced nodes like MPSoCs, at the same time \cite{scholz} \cite{sommer}.
-
-In other words, there are high level \emph{information systems services}, as well as low level generic \emph{embedded system services}. It is the task of SoA to deal with the connection and integration of them \cite{rodrigues2011}. This task gets aggrevated if SoAs in embedded systems are connected to high level SoAs like web applications.
+The complexity of hardware in ESs varies greatly. The implemented components may include very primitive sensors with few capabilities, but also very advanced nodes like MPSoCs \cite{scholz} \cite{sommer}. In other words, there are high level \emph{information systems services}, as well as low level generic \emph{embedded system services}. A SoA has to deal with the connection and integration of them \cite{rodrigues2011}. This task gets aggravated if SoAs in ESs become interconnected with high level SoAs like web applications.
 
 \item [Event- and data-driven].
-In contrast to web services, an embedded system disposes of a network with (many) sensors. Thus, the ad-hoc \emph{request-response} message pattern, which is common for web services, cannot be simple addopted for the event- and data driven embedded systems \cite{sommer}
+In contrast to web services, an ES disposes of a network with (many) sensors. Thus, the ad-hoc \emph{request-response} message pattern, which is common for web services, cannot be simple adopted for the \emph{event- and data driven} ES \cite{sommer}.
 
-Instead, the communication in those works mainly by the \emph{fire and forget} scheme: A sensor measures some data and publishes it to all connected services, which have to decide on themselves, whether the received data is relevant, and how to process the received information \cite{sommer}.
+Instead, the communication in those is conducted mainly by a \emph{fire and forget} scheme: A sensor measures some data and publishes it to all connected services, which have to decide on themselves, whether the received data is relevant and how to process the received information \cite{sommer}.
 
 \item [Lifespan of services].
-Another difference to web services is the lifespan of services. While web services are used to work only a limited number of hours (or even minutes), the services in embedded systems could have application times of multiple years, or even lasting for the lifespan of the system \cite{buckl}.
+Another difference to web services is the lifespan of services. While web services are used to work only a limited number of hours (or even just minutes), the services in embedded systems could have application times of multiple years, or may even last for the lifespan of the system \cite{buckl}.
 
 \item [Dynamic character]. 
-The components of a SoA show dynamic characteristics: \emph{``new nodes may enter the network, existing nodes may fail and network characteristics can change over time, especially if wireless communication media are used''} \cite{sommer}. This can become an issue, for conventional embedded systems dispose of a predefined set of components, which are determined when the system is assembled.
+The components of a SoA show dynamic characteristics: ``new nodes may enter the network, existing nodes may fail and network characteristics can change over time, especially if wireless communication media are used'' \cite{sommer}. This could become an issue, because in today's vehicles the set of implemented components is determined at assembly time and they may have difficulties when faced with other components from outside the vehicle's network.
 
 \item [Time constraints].
-Embedded systems are \emph{time-critical}, meaning that computation must be conducted within a given time window in order to allow the correct operation of the system. Especially, in a safety-critical system like a vehicle, which is used to operate at high velocities, a violation of those time constraints could cause serious incidents.
+ESs are \emph{time-critical}, meaning that computation must be conducted within a given time window in order to allow the correct operation of the system. Especially, in a safety-critical system like a vehicle, which is used to operate at high velocities, a violation of those time constraints could cause serious incidents.
 \end{description}
 
 
-These obstacles are the reason why web services and safety-critical embedded systems are often considered as non-related areas \cite{rodrigues2011}. Nevertheless, the application of the service oriented architecture style in embedded systems offers numerous benefits: 
+These obstacles are the reason why web services and safety-critical embedded systems are often considered as non-related areas \cite{rodrigues2011}. Nevertheless, Sommer et al. mention various benefits which come with the application of the service oriented architecture style in ESs: 
 \begin{itemize}
 \item Decoupling configuration from environment, 
 \item Improvement of reusability,
@@ -63,12 +55,12 @@ These obstacles are the reason why web services and safety-critical embedded sys
 \item More interactive interfaces between devices and information system \cite{buckl}.
 \end{itemize}
 
-To sum up, the SoA paradigm offers a promising approach to overcome many of embedded systems related drawbacks \cite{buckl} \cite{sommer}. Accordingly, there have been various projects dedicated to investigation of the applicability of SoA for embedded systems. Those include SIRENA, SOCRATES, OASiS, MORE, RUNES and $\varepsilon$SOA. 
+To sum up, the SoA paradigm has to overcome many of embedded systems related drawbacks if applied in ESs. But at the same time it offers numerous advantages and possibilities, which are just not possible with current systems. Hence, there have been various projects dedicated to the investigation of the applicability of SoA for ESs, including SIRENA, SOCRATES, OASiS, MORE, RUNES and $\varepsilon$SOA \cite{buckl} \cite{sommer}. 
 
 
 
 \subsection{Embedded SoA}
-There is no unified denomination for SoAs in embedded systems throughout literature. Thus, it is referred to by the term \emph{Embedded SoA (abbreviated as ESoA)} within this document.
+There is no unified denomination for SoAs in embedded systems throughout literature. Thus, it is referred to by the term \emph{Embedded SoA} (abbreviated as ESoA) within this thesis.
 
 The following definition is the result of our findings:
 \begin{myquote}
@@ -77,9 +69,9 @@ The Embedded SoA works at a lower, very hardware oriented level, with a predefin
 The conventional SoA is located above the embedded SoA and connected through various interfaces.
 \end{myquote}
 
-With respect to the example of a vehicle, the ESoA operates on elements like a power-train, various devices (sensors, actuators, controllers, etc.), while the SoA level contains the vehicle as overall system, but also other vehicles, which can be referred to as the \emph{System of Systems}.
+With respect to the example of a vehicle, the ESoA operates on elements like a PT, various devices (sensors, actuators, controllers, etc.), while the SoA level contains the vehicle as overall system. With other vehicles and environmental components it may form a SoS.
 
-Regarding the ISO 26262 standard, the ESoA can be related to \textbf{Part 3: Concept phase}, and the SoA to \textbf{Part 4: Product development at the system level}.
+Regarding the ISO 26262 standard, the requirements for ESoA can be related to \textbf{Part 3: Concept phase}, and the SoA to \textbf{Part 4: Product development at the system level}.
 
 
 \begin{figure}[!htbp]
