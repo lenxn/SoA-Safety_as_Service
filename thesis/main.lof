@@ -14,12 +14,11 @@
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Chronology of how a service is used in a SoA \cite {converge}.\relax }}{26}{figure.caption.24}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of service oriented architecture to service oriented architecture in embedded systems.\relax }}{35}{figure.caption.25}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{38}{figure.caption.26}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{39}{figure.caption.27}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}. The time windows is the result of $T2 - T1$.\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}. The time windows is the result of $T2 - T1$.\relax }}{40}{figure.caption.28}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic illustration of the working process of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Allocation of the safety service to the different system lifecycle phases.\relax }}{44}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of the example service (error detection service).\relax }}{49}{figure.caption.31}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Possible architectural implementation of the example service.\relax }}{48}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

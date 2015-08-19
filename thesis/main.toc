@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {1.7.1}Disambiguation safety and security}{28}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Safety related terminology}{29}{subsection.1.7.2}
 \contentsline {section}{\numberline {1.8}Fault tolerance}{30}{section.1.8}
-\contentsline {section}{\numberline {1.9}Design of fault tolerant Systems}{30}{section.1.9}
+\contentsline {subsection}{\numberline {1.8.1}Design of fault tolerant Systems}{30}{subsection.1.8.1}
 \contentsline {chapter}{\numberline {2}Methods}{32}{chapter.2}
 \contentsline {section}{\numberline {2.1}SoA in Embedded Systems (Embedded SoA)}{32}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Drawbacks in embedded systems}{33}{subsection.2.1.1}
@@ -39,22 +39,21 @@
 \contentsline {subsection}{\numberline {2.2.2}Service Contract}{37}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Safety services}{37}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Relation of Safety and security services}{38}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Failure detection service}{38}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Error Detection/Masking Service}{42}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.2}Failure detection service}{39}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Error Detection/Masking Service}{41}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Memory Protection}{42}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Requirements Validation Service}{43}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Allocation of safety services to system lifecycle phases}{43}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Service development process (use case scenario)}{43}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Service investigation/planning}{44}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Service inventory analysis}{45}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}service oriented analysis}{45}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}service oriented design}{46}{subsection.2.4.4}
-\contentsline {chapter}{\numberline {3}Results}{47}{chapter.3}
-\contentsline {section}{\numberline {3.1}Service investigation/ planning}{47}{section.3.1}
-\contentsline {section}{\numberline {3.2}Service inventory analysis}{48}{section.3.2}
-\contentsline {section}{\numberline {3.3}Service oriented analysis}{48}{section.3.3}
-\contentsline {section}{\numberline {3.4}Service oriented design}{49}{section.3.4}
-\contentsline {section}{\numberline {3.5}Possible implementation}{49}{section.3.5}
-\contentsline {chapter}{\numberline {4}Discussion}{50}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{51}{chapter.5}
-\contentsline {chapter}{References}{56}{chapter*.32}
+\contentsline {section}{\numberline {2.4}Service development process}{43}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Service investigation/planning}{43}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Service inventory analysis}{44}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}service oriented analysis}{44}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}service oriented design}{45}{subsection.2.4.4}
+\contentsline {chapter}{\numberline {3}Results}{46}{chapter.3}
+\contentsline {section}{\numberline {3.1}Service investigation/ planning}{46}{section.3.1}
+\contentsline {section}{\numberline {3.2}Service inventory analysis}{47}{section.3.2}
+\contentsline {section}{\numberline {3.3}Service oriented analysis}{47}{section.3.3}
+\contentsline {section}{\numberline {3.4}Service oriented design}{48}{section.3.4}
+\contentsline {section}{\numberline {3.5}Possible implementation}{48}{section.3.5}
+\contentsline {chapter}{\numberline {4}Discussion}{49}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{50}{chapter.5}
+\contentsline {chapter}{References}{55}{chapter*.31}
