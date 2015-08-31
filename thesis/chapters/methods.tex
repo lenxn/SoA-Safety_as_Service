@@ -23,24 +23,24 @@ The service oriented design paradigm was originally designed for the application
 In contrast to web services, ESs consist of numerous interconnected nodes, with diverse measurement-, steering-, or computation capabilities. Accordingly, they have to face additional challenges like \emph{limited resources}, \emph{different complexity of hardware}, \emph{time constraints}, and others \cite{scholz} \cite{sommer}: 
 
 \begin{description}
-\item [Limited resources].
+\item [Limited resources.]
 One obvious major drawback of ESs are the quite limited resources, which are designed for highly specialized purposes and lack computation power as well as storage size \cite{rodrigues2011} \cite{scholz} \cite{sommer}.
 
-\item [Different levels of complexity].
+\item [Different levels of complexity.]
 The complexity of hardware in ESs varies greatly. The implemented components may include very primitive sensors with few capabilities, but also very advanced nodes like MPSoCs \cite{scholz} \cite{sommer}. In other words, there are high level \emph{information systems services}, as well as low level generic \emph{embedded system services}. A SoA has to deal with the connection and integration of them \cite{rodrigues2011}. This task gets aggravated if SoAs in ESs become interconnected with high level SoAs like web applications.
 
-\item [Event- and data-driven].
+\item [Event- and data-driven.]
 In contrast to web services, an ES disposes of a network with (many) sensors. Thus, the ad-hoc \emph{request-response} message pattern, which is common for web services, cannot be simple adopted for the \emph{event- and data driven} ES \cite{sommer}.
 
 Instead, the communication in those is conducted mainly by a \emph{fire and forget} scheme: A sensor measures some data and publishes it to all connected services, which have to decide on themselves, whether the received data is relevant and how to process the received information \cite{sommer}.
 
-\item [Lifespan of services].
+\item [Lifespan of services.]
 Another difference to web services is the lifespan of services. While web services are used to work only a limited number of hours (or even just minutes), the services in embedded systems could have application times of multiple years, or may even last for the lifespan of the system \cite{buckl}.
 
-\item [Dynamic character]. 
+\item [Dynamic character.] 
 The components of a SoA show dynamic characteristics: ``new nodes may enter the network, existing nodes may fail and network characteristics can change over time, especially if wireless communication media are used'' \cite{sommer}. This could become an issue, because in today's vehicles the set of implemented components is determined at assembly time and they may have difficulties when faced with other components from outside the vehicle's network.
 
-\item [Time constraints].
+\item [Time constraints.]
 ESs are \emph{time-critical}, meaning that computation must be conducted within a given time window in order to allow the correct operation of the system. Especially, in a safety-critical system like a vehicle, which is used to operate at high velocities, a violation of those time constraints could cause serious incidents.
 \end{description}
 
@@ -87,7 +87,7 @@ Regarding the \mbox{ISO 26262 standard}, the requirements for ESoA can be relate
 
 
 
-\section{SoA in automotive}
+\section{SoA in Automotive}
 \label{sec:soa-in-automotive}
 
 This chapter is dedicated to the investigation of the applicability of the SoA concepts for automotive.
@@ -101,7 +101,7 @@ However, there are some obstacles which prohibit the application of the SoA para
 To sum up, it might take some time before the design paradigm will be used for the lower, hardware-oriented layers. Instead, it would be a promising approach for higher layers like SoS. The vehicle as system could offer certain services to its environment and the other way round. A good example, which has been already mentioned, are traffic lights. If the the traffic lights in Germany use another service as the ones in Austria, a SoA could enable the dynamical binding of the new service, when a vehicle approaches the border.
 
 
-\subsection{Location of the service repository}
+\subsection{Location of the Service Repository}
 The description of the term service repository is covered in \ref{sec:structure_of_soa}. Nevertheless, questions arose concerning its location and actual implementation with respect to automotive. This section covers the findings concerning this matter.
 \\
 \\
@@ -138,7 +138,7 @@ Functional safety is directly related to availability (cf. section \ref{sec:avai
 
 In the following sections, the interference and connection of safety and security services is analysed, before the functional principles of a few selected safety services is presented in detail.
 
-\subsection{Relation of Safety and security services}
+\subsection{Relation of Safety and Security Services}
 
 In vehicles it is not really possible to distinguish safety functions from ``normal'' functions, because a malfunction in any functionality could lead to a disaster \cite{iso26262:course2}. Accordingly, all services are also considered to be safety-critical.
 
@@ -156,7 +156,7 @@ Most of those safety- and security services cannot be assigned entirely to one d
 
 
 
-\subsection{Failure detection service}
+\subsection{Failure Detection Service}
 
 A Fault Detection Service (FDS) is a service which is capable of detecting faults, and eventually, depending on its implementation, also \emph{control flow errors}. Control flow errors are errors, which lead to a wrong execution sequence of the instructions of a service.
 Technically, the FDS can be implemented as simple timer circuit with a specified threshold time. If this limit is reached, it changes its state for triggering further actions, like restarting a component or activating another safety service [7].
@@ -177,13 +177,13 @@ As suggested by the name, the WDT is based on a timer, which gets reset every ti
 
 
 \begin{description}
-\item [Standard Watchdog Timer] .
+\item [Standard Watchdog Timer.]
 With this basic setup, the service mirrored by the WDT periodically sends a simple heartbeat signal, indicating that the service is alive and active. This signal resets the timer. It a predefined amount of time elapsed, without an incoming signal, it is assumed that a fault has occurred and the WDT changes its state \cite{elattar2007}.
 
 In terms of \emph{control flow errors} in a service, the heartbeat signal may, or many not, be sent too late. In the latter case, the WDT is capable of detecting the error \cite{elattar2007}. 
 The probability of noticing such an error is higher, the closer the threshold time is to the time between the heartbeat signals.
 
-\item [Windowed Watchdog Timer] .
+\item [Windowed Watchdog Timer.]
 The \emph{Windowed Watchdog Timer} is an improvement of the standard version, which is capable of detecting most of the \emph{control flow errors}. This is enabled by the application of two timers instead of one. With two timers the WDT is able to specify a time window, during which the heartbeat signal from the observed service must be received. The WDT is triggered if it receives a signal outside the window, or the timer reaches its threshold \cite{elattar2007}. This is illustrated in figure \ref{fig:windowed-watchdog-timer} with the $time$ on the x-axis and the Timers labeled $T1$ and $T2$.
 
 In case of an \emph{control flow error} this signal is a bit ahead or past in time. The error detection coverage increases with narrowing the time window \cite{elattar2007}.  
@@ -197,7 +197,7 @@ The advantage of this design is clearly that it allows the detection of more err
 \label{fig:windowed-watchdog-timer}
 \end{figure}
 
-\item [Sequenced Watchdog Timer] . 
+\item [Sequenced Watchdog Timer.] 
 This design is a further improvement of the \emph{Windowed Watchdog Timer} and bases on the same principle. In contrast, to the other designs, the signal sent from the mirrored service carries a sequenced parameter. Only if the signal arrives in time and within the specified time window, this parameter is evaluated and compared to a parameter inside the WDT. If those match the sequence variable in the WDT is incremented and the timer reseted, starting the cycle over again \cite{elattar2007}.
 The whole proce ss is illustrated in figure \ref{fig:sequenced-watchdog-timer}.
 
@@ -255,7 +255,7 @@ A service like this is surprisingly nowhere mentioned throughout literature, but
 
 
 
-\section{Service development process}
+\section{Service Development Process}
 \label{sec:service-development-process}
 
 The development stages considered in this section are an adoption of the development stages, provided by Erl et al. in \cite[p.116]{erl2011}. In detail, the first four stages are the object of investigation. The stages are renamed to fit for the development of a single service instead of an overall SoA and are denominated:
@@ -267,7 +267,7 @@ The development stages considered in this section are an adoption of the develop
 \end{itemize}
 
 
-\subsection{Service investigation/planning}
+\subsection{Service Investigation/Planning}
 This initial phase is concerned with the initial layout of the service. It is the phase where necessary requirements are listed and explored. There are several questions which need to be answered during this stage:
 \begin{itemize}
 \item What is the scope of the service?
@@ -279,7 +279,7 @@ This initial phase is concerned with the initial layout of the service. It is th
 
 
 
-\subsection{Service inventory analysis}
+\subsection{Service Inventory Analysis}
 
 During the service inventory analysis the service inventory (cf. section \ref{sec:structure_of_soa}) is searched for services which are required in order to build up the desired service. This simplifies the development, because much of the required functionality is already provided by other services and at the same time this step is responsible for preventing redundancies.
 
@@ -291,17 +291,17 @@ The outcome of the service inventory analysis phase is a so called \emph{service
 During the service oriented analysis phase the service candidate is reviewed and checked with respect to \emph{naming} and \emph{normalisation}.
 
 \begin{description}
-	\item [Service naming] .
+	\item [Service naming.]
 	The naming of the service candidate must be in accordance with other, existing services \cite[p.206]{erl2011}.
 
 	In terms of automotive, the naming is governed by certain standards, like AUTOSAR, which proposes naming conventions in \textbf{SW-C and System Modelling Guide} \cite{autosar_system_modelling}.
 
 	A unified naming convention is quite helpful, when dealing with standardised interfaces and provides a possibility to include relevant meta data into the name \cite{rehner2013}.
 
-	\item [Service normalisation] .
+	\item [Service normalisation.]
 	Services within the same service inventory shall not have overlapping boundaries. In other words, redundant logic should generally be avoided, for it would violate the concept of a service oriented architecture. Accordingly, the services are forced to use existing services if those offer the required functionality \cite[p.207]{erl2011}.
 
-	\item [Service Candidate Review] .
+	\item [Service Candidate Review.]
 	The final phase of this stage is a review by the related developers. A possible outcome of this review is the approval of changes or extensions to the service candidate \cite[p.210]{erl2011}.
 
 	In order to ensure an unbiased outcome, this review could be conducted by ``external'' people, which have not been included into the development process up to this step, but still have a thorough knowledge of the SoA principles. Those people might think of a quite different approach for the very same problem and could raise new questions concerning the proposed design and composition.
@@ -312,7 +312,7 @@ During the service oriented analysis phase the service candidate is reviewed and
 
 
 
-\subsection{service oriented design}
+\subsection{Service Oriented Design}
 
 Erl et al. describe this phase as:
 \begin{quote}

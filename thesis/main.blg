@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: chapters/mybib.bib
 Warning--empty journal in nilsson2008
-You've used 56 entries,
+You've used 53 entries,
             1791 wiz_defined-function locations,
-            688 strings with 12055 characters,
-and the built_in function-call counts, 10969 in all, are:
-= -- 940
-> -- 452
-< -- 13
-+ -- 179
-- -- 123
-* -- 469
-:= -- 1564
-add.period$ -- 156
-call.type$ -- 56
-change.case$ -- 44
+            673 strings with 11533 characters,
+and the built_in function-call counts, 10232 in all, are:
+= -- 873
+> -- 416
+< -- 12
++ -- 166
+- -- 113
+* -- 431
+:= -- 1456
+add.period$ -- 146
+call.type$ -- 53
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 561
-empty$ -- 1258
-format.name$ -- 123
-if$ -- 2643
+cite$ -- 54
+duplicate$ -- 524
+empty$ -- 1183
+format.name$ -- 113
+if$ -- 2465
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 45
-newline$ -- 257
-num.names$ -- 46
-pop$ -- 345
+int.to.str$ -- 53
+missing$ -- 42
+newline$ -- 243
+num.names$ -- 43
+pop$ -- 327
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 325
+skip$ -- 305
 stack$ -- 0
-substring$ -- 396
-swap$ -- 170
-text.length$ -- 13
+substring$ -- 364
+swap$ -- 158
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 84
-width$ -- 58
-write$ -- 534
+while$ -- 78
+width$ -- 55
+write$ -- 503
 (There was 1 warning)
