@@ -1,6 +1,6 @@
 .DS_Store
 .~*
-*.log
-*.aux
 thesis/*.log
+thesis/*.aux
+thesis/main.log
 thesis/*.aux
