@@ -63,7 +63,7 @@ According to the implementation layers in the GENESYS architecture, the chip lev
 \label{fig:integration_levels}
 \end{figure}
 
-The Arrowhead Framework provides an hierarchy by means of documentation documents, which are spitted in the three levels \emph{system-of-systems}, \emph{system} and \emph{service} \cite{arrowhead_inpr}. Their involved documents and relations are pictured in figure \ref{fig:sys-arrowhead}.
+The Arrowhead Framework provides an hierarchy by means of documentation documents, which are spitted in the three levels \emph{system-of-systems}, \emph{system} and \emph{service} \cite{
 
 \begin{description}
 \item [System-of-systems]. The levels features the two documents \emph{SoS Description (SoSD)} and \emph{SoS Design Description (SoSDD)}. They differ in the amount of information they are revealing. While the first represents only an abstract view, the second also reveals the implementation of the SoS and its technologies \cite{arrowhead_inpr}.
@@ -88,6 +88,7 @@ This service is responsible for providing secure information exchange through au
 The II service enables the listing of the services in the \emph{service repository} (cf. section \ref{sec:structure_of_soa}) and their discoverability \cite{arrowhead:presentation}.
 \item [System Management (SM)] .
 This is the core service for the system of systems composition and features logging and monitoring abilities \cite{arrowhead:presentation}.
+ 
 \end{description}
 
 \begin{figure}[!htbp]
@@ -202,12 +203,6 @@ The \emph{Sender-Receiver} approach is a bit different. The task of the sender i
 \caption{Illustration of the sender-receiver communication \cite{autosar_intro}.}
 \label{fig:autosar_sender-receiver}
 \end{figure}
-
-
-
-
-
-
 
 
 
@@ -360,8 +355,12 @@ communication services for the interaction of system elements, global time base 
 \subsubsection{Device Layer}
 The device layer contains more advanced hardware parts. With respect to figure \ref{fig:service_levels} these might be sensors, actuators, ADCs (Analog-to-digital converters), AURIX chips, the CAN bus (Controller area network) or a WDT (Watchdog Timer). Since there is no consistent denomination for the services located at this layer, they are referred to as \emph{device services} within this thesis.
 
+<<<<<<< HEAD
 Device services make use of the underlying core services and other services at the device layer in order to provide their intended functionality. 
 An acceleration sensor, for example, could make use of an ADC, which in turn operates with a platform service for the time, for generating periodic sampling points.
+=======
+\subsection{Relation of Safety and Security Services}
+>>>>>>> master
 
 \subsubsection{System Layer}
 The highest layer is the system layer, containing the most advanced services, which are usually provided to the end user. Same as with the device services, there is no uniform denomination for services at this layer throughout literature. Thus, they are denoted \emph{system services}.
@@ -378,8 +377,6 @@ Figure \ref{fig:service_levels} features an example of which hardware parts may 
 \caption{Examples of hardware parts at different levels \cite{avl}}
 \label{fig:service_levels}
 \end{figure}
-
-
 
 
 
@@ -496,8 +493,6 @@ Different authors and companies explain the term from different viewpoints and w
 	\end{quote}
 \end{description}
 
-The definition below emerged as result of extensive investigations in this research area. In contrast to all the other definitions, which are somehow biased due to their relation to a certain area of industry, this one is quite generic and may be used for any kind of SoA. In case of embedded- or safety-critical systems, there are of course additional characteristics which are crucial.
-
 \begin{myquote}
 	The service oriented architecture is no actual design, which can be simply implemented or installed, but a collection of design principles for distributed systems.
 
@@ -509,8 +504,6 @@ The definition below emerged as result of extensive investigations in this resea
 As stated, SoA is no specific implementation but a set of rules to achieve a certain target state. The final implementation can therefore consist of multiple technologies, products, Application Programmers Interfaces (APIs) and supporting infrastructures \cite[p.29]{erl2011}. This enables an unproblematical exchange of components by components of other vendors, as long as the provided services remain unaffected.
 
 A SoA is not just a simple collection of services, but offers also composition mechanisms for services. Those enable the creation of agile, higher-level services with a more sophisticated functionality, without having to build everything from scratch. \cite[p.12]{josuttis}.
-
-
 
 \subsection{Historic Development}
 The term \emph{service oriented architecture} first appeared in 1996 \cite[p.7]{rosen}. It emerged from the CBSE (cf. figure \ref{fig:software_reuse}) and was more or less an improvement, for it allowed the components to be wider distributed and looser coupled. However, since both approaches feature certain advantages, both of them have been developed in parallel ever since, resulting in many similarities, but also many differences \cite{breivold}. 
@@ -573,8 +566,6 @@ The relations of the various artefacts are depicted in figure \ref{fig:soa_overv
 
 
 
-
-
 \section{Dependability}
 
 The terms availability and reliability, which can be found at any level of implementation, are closely tied and usually come together. Often, they are also coupled with the term maintenance, which also plays an important role in the design of any system \cite[p.116]{genesys} \cite{lessner}.
@@ -597,16 +588,6 @@ The difference here is that the prior denotes availability as the availability o
 Two important terms which come in connection with availability are MTTF (Mean Time To Failure), the expected time until the system fails, and MTTR (Mean Time To Repair), the necessary time to restore a failed system to normal operation. The availability $A$ can then be expressed as $A = MTTF/(MTTF + MTTR)$ \cite{nelson}. 
 
 The availability characteristics of a system are represented by its reliability and maintainability. Accordingly, even highly reliable entities can have a poor availability if the repair time of its sub entities takes very long \cite{lessner}. The availability can be improved by the application of dedicated \emph{fault tolerance mechanisms} (cf. section \ref{ch:fault_tolerance}) \cite{nelson}.
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -643,7 +624,6 @@ Faults come in different forms. An \emph{intermittent fault} occurs from time to
 
 A term related to fault, is \emph{fault coverage}. It denotes ``the number of the faults detected as a percentage of the total number of faults affecting the system'' \cite{elattar2007}.
 
-
 \item [Error] .
 An error is the deviation of a computed, observed or measured value or condition and the expected, theoretically correct value. An error occurs as consequence of unexpected operating conditions or a fault.
 Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}. If the error exceeds a certain threshold it can cause a failure \cite{autosar_glossary}.
@@ -677,14 +657,12 @@ Another term which frequently comes up in connection with failure, is \emph{fail
 
 
 
-
 \section{Fault Tolerance}
 \label{ch:fault_tolerance}
 
 The key concept of a \emph{fault tolerant} design is to enable a system to provide its intended functionality in the presence of a given number of faults \cite{nelson}.
 
 Thus, the fault tolerance mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not lead directly to the violation of the safety goals, which maintain the system in a safe state \cite{iso26262:1}. Possible fault include not only internal faults like design-faults or hardware wear-outs, but also external ones. For example misuse by the user or cosmic radiation. Fault tolerance mechanisms have become indispensable for advanced electric systems, because due to the billions of transistors present and the various circumstances circumstances, which can lead to faults, faultless systems remain an utopian dream \cite{genesys}.
-
 
 
 \subsection{Design of fault tolerant Systems}

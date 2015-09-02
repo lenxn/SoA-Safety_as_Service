@@ -343,7 +343,7 @@ It is then up to the developer to decide how the service will be implemented, e.
 
 
 
-\section{Service investigation/ planning}
+\section{Service Investigation/Planning}
 
 
 \begin{description}
@@ -364,7 +364,7 @@ The service should be capable of detecting an error within a given ECR and act a
 
 
 
-\section{Service inventory analysis}
+\section{Service Inventory Analysis}
 
 
 The error detection service will require:
@@ -378,7 +378,7 @@ The error detection service will require:
 During operation, it will also need the redundant service inside the ECR, whose functionality shall be checked for errors. Of course they should feature different implementations on independent hardware components, so that an error could not emerge in multiple services at the same time.
 
 
-\section{Service oriented analysis}
+\section{Service Oriented Analysis}
 
 
 Concerning the naming, the example service should be in accordance with the AUTOSAR naming conventions \cite{autosar_system_modelling}. Accordingly, a suitable candidate would be \textbf{error\_detection}.
@@ -389,12 +389,12 @@ The \emph{service normalisation} and \emph{service candidate review} are not rea
 
 
 
-\section{Service oriented design}
+\section{Service Oriented Design}
 
 Unfortunately, the service contract templates, which are designed by Arrowhead, were not yet available at the time this thesis was written. Accordingly, there could be no example contract be established.
 
 
-\section{Possible implementation}
+\section{Possible Implementation}
 
 A possible architecture resulting from the service of this use case is a triple modular redundancy approach (cf. section \ref{sec:error-detection-service}), as depicted in figure \ref{fig:example-service-architecture}. 
 
