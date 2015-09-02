@@ -2,11 +2,11 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Relation of \emph {system}, \emph {component} and \emph {element} according to ISO 26262 \cite {iso26262:course1}.\relax }}{4}{figure.caption.9}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Hierarchy of the implementation layers of the system vehicle with examples.\relax }}{6}{figure.caption.10}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Relation of System, SoS and Service to one another \cite {arrowhead:presentation}.\relax }}{6}{figure.caption.11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Relation of System, SoS and Service to one another \cite {arrowhead:presentation}.\relax }}{7}{figure.caption.11}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Implementation example of the Arrowhead framework \cite {arrowhead:presentation}.\relax }}{7}{figure.caption.12}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Interfaces of a component, with respect to the GENESYS architecture \cite [p.40]{genesys}\relax }}{11}{figure.caption.13}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Illustration of the client-server communication \cite {autosar_intro}.\relax }}{12}{figure.caption.14}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Illustration of the sender-receiver communication \cite {autosar_intro}.\relax }}{13}{figure.caption.15}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Structure of a service with the relations of the particular artefacts \cite [p.45]{krafzig}.\relax }}{18}{figure.caption.16}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of hardware parts at different levels \cite {avl}\relax }}{19}{figure.caption.20}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Relations of architecture to other entities \cite {ISO_42010}\relax }}{22}{figure.caption.21}
