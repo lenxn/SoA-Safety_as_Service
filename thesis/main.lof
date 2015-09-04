@@ -14,11 +14,11 @@
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Relation of \emph {service provider}, \emph {service consumer} and \emph {service repository} \cite {arrowhead} \cite {converge}\relax }}{26}{figure.caption.23}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Chronology of binding a service in a SoA \cite {converge}.\relax }}{27}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Relation of conventional SoA to SoA in ES.\relax }}{35}{figure.caption.25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Relation of conventional SoA to Embedded SoA.\relax }}{35}{figure.caption.25}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Classification of various services into safety and security services.\relax }}{38}{figure.caption.26}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Example architecture for an \emph {fault detection service}, like a WDT.\relax }}{39}{figure.caption.27}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Schematic design of a windowed watchdog timer \cite {elattar2007}.\relax }}{40}{figure.caption.28}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Schematic illustration of the operational principle of a \emph {Sequenced Watchdog Timer} \cite {elattar2007}.\relax }}{41}{figure.caption.29}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Possible architectural implementation of the example service.\relax }}{47}{figure.caption.30}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Possible architectural implementation of the example service.\relax }}{48}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

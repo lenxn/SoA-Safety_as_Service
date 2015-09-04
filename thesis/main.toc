@@ -33,27 +33,28 @@
 \contentsline {subsection}{\numberline {2.8.1}Design of fault tolerant Systems}{31}{subsection.2.8.1}
 \contentsline {chapter}{\numberline {3}Results}{32}{chapter.3}
 \contentsline {section}{\numberline {3.1}SoA in Embedded Systems (Embedded SoA)}{32}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Drawbacks in embedded systems}{33}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Drawbacks in Embedded Systems}{33}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Embedded SoA}{34}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}SoA in automotive}{35}{section.3.2}
+\contentsline {section}{\numberline {3.2}SoA in Automotive}{35}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Location of the service repository}{36}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Service Contract}{37}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Safety services}{37}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Relation of Safety and security services}{38}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Failure detection service}{39}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Error Detection/Masking Service}{41}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.2}Failure Detection Service}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Error Detection/Masking Service}{42}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Memory Protection}{42}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Requirements Validation Service}{43}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Service development process}{43}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Service investigation/planning}{43}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Service inventory analysis}{44}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.1}Service Investigation/Planning}{44}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Service Inventory Analysis}{44}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}service oriented analysis}{44}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}service oriented design}{45}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Service Investigation/Planning}{46}{section.3.5}
-\contentsline {section}{\numberline {3.6}Service Inventory Analysis}{46}{section.3.6}
-\contentsline {section}{\numberline {3.7}Service Oriented Analysis}{47}{section.3.7}
-\contentsline {section}{\numberline {3.8}Service Oriented Design}{47}{section.3.8}
-\contentsline {section}{\numberline {3.9}Possible Implementation}{47}{section.3.9}
-\contentsline {chapter}{\numberline {4}Discussion}{48}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{49}{chapter.5}
-\contentsline {chapter}{References}{55}{chapter*.31}
+\contentsline {section}{\numberline {3.5}Use Case Scenario}{46}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Service Investigation/Planning}{46}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Service Inventory Analysis}{46}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Service Oriented Analysis}{47}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Service Oriented Design}{47}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Possible Implementation}{47}{subsection.3.5.5}
+\contentsline {chapter}{\numberline {4}Discussion}{49}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{50}{chapter.5}
+\contentsline {chapter}{References}{56}{chapter*.31}
