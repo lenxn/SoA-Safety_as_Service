@@ -515,7 +515,7 @@ The service repository is, more or less, a database of services which may be phy
 Services can be added to, or taken from the service repository dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
 
 \item [Service Consumer/ Service Client/ Service Requester.]
-The service consumer is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the service repository for specific services by means of the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the service consumer creates a dynamic binding with the service provider in order to invoke the service and interact with it \cite{breivold} \cite{converge}. This procedure is depicted in figure \ref{fig:service_cronology}.
+The service consumer is the instance that calls the service and can be either an end-user or another service. He sends a request for searching the service repository for specific services by means of the service interface description. Subsequently, the repository returns a list with suitable services. If an appropriate service is identified the service consumer creates a dynamic binding with the service provider in order to invoke the service and interact with it \cite{breivold}. This procedure is depicted in figure \ref{fig:service_cronology}.
 
 \item [Service Contract.]
 The service contract is described in detail in section \ref{sec:service_structure}. It is handed over to the service repository from the service provider.
@@ -531,14 +531,14 @@ The relations of the various artefacts are depicted in figure \ref{fig:soa_overv
 \begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.6]{soa-architecture.pdf}
-\caption{Relation of \emph{service provider}, \emph{service consumer} and \emph{service repository} \cite{arrowhead} \cite{converge}}.
+\caption{Relation of \emph{service provider}, \emph{service consumer} and \emph{service repository} \cite{arrowhead}}.
 \label{fig:soa_overview}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.8]{soa_process.pdf}
-\caption{Chronology of binding a service in a SoA \cite{converge}.}
+\caption{Chronology of binding a service in a SoA.}
 \label{fig:service_cronology}
 \end{figure}
 
@@ -651,7 +651,7 @@ The key concept of a \emph{fault tolerant} design is to enable a system to provi
 Thus, the fault tolerance mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not directly lead to the violation of the safety goals which maintain the system in a safe state \cite{iso26262:1}. Possible faults include not only internal faults like design-faults or hardware wear-outs, but also external ones; for example misuse by the user or cosmic radiation. Fault tolerance mechanisms have become indispensable for advanced electric systems because due to the billions of transistors present and the various circumstances, which can lead to faults, faultless systems remain an utopian dream \cite{genesys}.
 
 
-\subsection{Design of fault tolerant Systems}
+\subsection{Design of Fault Tolerant Systems}
 The prerequisite for designing a fault tolerant system is a so called \emph{fault hypothesis}, which is an assumption regarding the type and frequency of faults the system is supposed to handle.
 
 These can include
@@ -660,3 +660,17 @@ These can include
 \item \emph{Delay and disruption error} - This is relevant for all networking systems.
 \item \emph{Transient faults} - This means a possible corruption of Flip-Flops or memory cells with the progression of time.
 \end{itemize}
+
+
+\subsection{Fault Tolerance Strategies}
+\label{sec:fault_tolerance_strategies}
+There are various different approaches in order to make a system fault tolerant. They are described in more detail in the following.
+
+\begin{description}
+\item [Error Detection.] The detection of errors is usually done by comparing the results of redundant elements \cite{nelson}.
+\item [Error Masking.] This denotes the dynamic correction of generated errors at runtime and requires multiple redundant systems and voting systems in order to do that \cite{nelson}. An example of an error masking mechanism, which is also provided by the GENESYS architecture, is \emph{TRM} (Triple Modular Redundancy). With this method three independent components execute the same function. The output is then processed by a majority-voting system in order to produce a single output. If any of the three systems fail, the other two are able to correct and mask the fault - From the outside it is not even visible that a fault occurred \cite{wiki_tmr}.
+\item [Error Containment.] Error containment is supposed to prevent the propagation of an error across specified regions. Those are denoted \emph{Error Containment Regions (ECR)}.
+\item [Diagnosis.] This is used for identification of a faulty element, which is responsible for an error \cite{nelson}. This can be conducted by redundant elements whose output is compared by a voting system.
+\item [Repair/ reconfiguration.] Although repair and reconfiguration obviously leads to the elimination of an fault, its affiliation to fault tolerance mechanisms is questionable, as it usually means an interruption of the operating system. However, advanced systems may also dispose of various functions which are able to repair and reconfigure faulty parts at runtime by restarting parts, or other countermeasures.
+\item [Recovery.] Recovery is the return of a system to a state, where it able to operate according to its specification \cite{nelson}.
+\end{description}

@@ -1,7 +1,0 @@
-+ chaper service
-+ section 'Disambiguation safety and security'
-+ Figure components at different implementation levels ( + Beschreibung )
-+ Include FCR and ECR at the end of "Fault tolerance"
-
-+ clean up Bibtex
-+ clean up List of Abbreviations
