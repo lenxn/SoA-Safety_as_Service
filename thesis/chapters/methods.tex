@@ -4,9 +4,9 @@ This chapter contains a definition of the most important terms related to SoA. T
 
 \section{System}
 \label{ch:system}
-Obermaisser and Kopetz describe in their GENESYS reference architecture a system as ``an entity that is capable of interacting with its environment and is sensitive to the progression of time'' \cite[p.7]{genesys}. The environment is thereby a system itself, which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
+In their GENESYS reference architecture Obermaisser and Kopetz describe a system as ``an entity that is capable of interacting with its environment and is sensitive to the progression of time'' \cite[p.7]{genesys}. The environment is thereby a system itself which produces input for other systems and acts according to their outputs. Which elements (cf. section \ref{sec:system_element}) belong to the system, and which to the environment, is a matter of perspective. 
 
-Within the \mbox{ISO 26262} standard, a system is referred to as a ``set of elements that relates at least a sensor, a controller and an actuator with one another'' \cite{iso26262:1}. This definition is obviously referring explicitly to automotive, because in other industry sectors a system does not necessarily contain actuators.
+Within the \mbox{ISO 26262} standard, a system is referred to as a ``set of elements that relates at least a sensor, a controller and an actuator with one another'' \cite{iso26262:1}. This definition obviously explicitly refers to automotive because in other industry sectors a system does not necessarily contain actuators.
 
 \mbox{AUTOSAR}, on the other hand, describes a system as ``an integrated composite that consists of one or more of the processes, hardware, software, facilities and people, that provides a capability to satisfy a stated need or objective'' \cite{autosar_glossary}.
 
@@ -15,10 +15,10 @@ Other typical characteristics are the presence of some kind of internal structur
 \begin{myquote}
 A system is a hierarchical composed, time sensitive element, which interacts with the environment by processing input and providing output in turn.
 
-It is concerned with satisfying a specific need or purpose and disposes of a, more or less complex, internal structure, which may include hardware, software and data.
+It is concerned with satisfying a specific need or purpose and disposes of a more or less complex, internal structure which may include hardware, software and data.
 \end{myquote}
 
-For the scope of this thesis, the overall system is assumed to be a vehicle, if not stated otherwise. The environment consists therefore of other vehicles and the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one.
+For the scope of this thesis, the overall system is assumed to be a vehicle, if not stated otherwise. The environment therefore consists of other vehicles and the surrounding infrastructure. Nevertheless, the entire traffic could also be taken as a system and the environment would then be a different one.
 
 
 
@@ -50,9 +50,9 @@ The GENESYS architecture by Obermaisser and Kopetz distinguishes between three d
 
 \begin{description}
 \item [System Level.]
-The system level consists of devices, which are themselves logically self-contained apparatus. With a vehicle as system this could be for example an ECU, a sensor, an actuator or the like \cite[p.45]{genesys}.
+The system level consists of devices which are themselves logically self-contained apparatus. With a vehicle as system this could be for example an ECU, a sensor, an actuator or the like \cite[p.45]{genesys}.
 \item [Device Level.]
-The devices at the system level, contain a certain internal structures themselves. In terms of embedded systems those are in most cases chips \cite[p.45]{genesys}, like the the AURIX\textsuperscript{TM} chip, which is frequently used in the automotive industry.
+The devices at the system level contain a certain internal structures themselves. In terms of embedded systems those are in most cases chips \cite[p.45]{genesys}, like the the AURIX\textsuperscript{TM} chip, which is frequently used in the automotive industry.
 \item [Chip Level.]
 According to the implementation layers in the GENESYS architecture, the chip level is the lowest level of implementation. In case of an MPSoC (Multiprocessor System-on-Chip) this level contains the single IP Cores of the chip \cite[p.46]{genesys}
 \end{description}
@@ -68,7 +68,7 @@ Another classification of layers is given by the Arrowhead Framework, which prov
 
 \begin{description}
 \item [System-of-systems.] This level features the two documents \emph{SoS Description (SoSD)} and \emph{SoS Design Description (SoSDD)}. They differ in the amount of information they are revealing. While the first represents only an abstract view, the second also reveals the implementation of the SoS and its technologies \cite{arrowhead_inpr}.
-\item [System.] The system level contains with the two documents \emph{System Description (SysD)} and \emph{System Design Description (SysDD)}. Same as at the SoS level the first one features a kind of black box opacity and the second a white box view \cite{arrowhead_inpr}.
+\item [System.] The system level disposes of the two documents \emph{System Description (SysD)} and \emph{System Design Description (SysDD)}. Similarly, to the SoS level the first one features a kind of black box opacity and the second a white box view \cite{arrowhead_inpr}.
 \item [Service.] The service level contains the four documents \emph{Service Description (SD)}, \emph{Interface Design Description (IDD)}, \emph{Communication Profile (CP)} and \emph{Semantic Profile (SP)}. The service description is referred to in section \ref{sec:service_structure}.
 \end{description}
 
@@ -108,7 +108,7 @@ When comparing these two approaches by GENESYS and ARROWHEAD, it becomes obvious
 
 Embedded systems (ES) are computational modules integrated to physical devices and equipment. They have a predefined set of tasks and requirements and are capable of processing information \cite{rodrigues2011} \cite[p.xiii]{marwedel}. Compared to general-purpose computation systems ES usually dispose of less processing resources and come with narrower operation ranges. But at the same time they feature a high efficiency by optimally managing the available resources \cite[p.283]{alippi} \cite[p.5]{marwedel}. Also, their presence is usually quite unobtrusive, because instead of mouse and keyboard the user typical interface consists of input devices like buttons, steering wheels, or pedals.
 
-ESs are reactive systems, what means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. During operation, ESs are in a certain state and waiting for input. When provided with that, they perform computations and generate an output, which is handed back to the environment \cite[p.9]{marwedel}. In safety-critical applications, issues like \emph{time constraints}, \emph{dependability} and \emph{efficiency requirements} also have to be considered.
+ESs are reactive systems, which means that they perform a continuous interaction with the environment. The connection to the physical environment is realised by means of sensors, responsible for collecting information, and actuators for performing the actual reaction \cite[p.8-9]{marwedel}. During operation, ESs are in a certain state and waiting for input. When provided with that, they perform computations and generate an output, which is handed back to the environment \cite[p.9]{marwedel}. In safety-critical applications, issues like \emph{time constraints}, \emph{dependability} and \emph{efficiency requirements} also have to be considered.
 
 \begin{description}
 	\item [Time constraints.]
@@ -116,7 +116,7 @@ ESs are reactive systems, what means that they perform a continuous interaction 
 	\item [Dependability.]
 	ESs, operating in safety-critical environment like nuclear power plants, cars, trains or aircraft, must be \emph{dependable}, for they are directly connected to the environment and have immediate impact on it. The dependability can be split up in further aspects, which are \emph{reliability} (cf. section \ref{sec:reliability}), \emph{maintainability}, \emph{availability} (cf. section \ref{sec:availability}), \emph{safety} (cf. chapter \ref{ch:functional_safety}) and \emph{security} \cite[p.4-5]{marwedel}.
 	\item [Efficiency requirements.]
-	Efficiency is a key concept of ESs and is concerned with providing a maximum computation performance while minimizing the required energy. The efficiency is measured in operations per Joule and has been been increasing almost exponentially during the last twenty years \cite{marwedel}.
+	Efficiency is a key concept of ESs and is concerned with providing a maximum computation performance while minimizing the required energy. The efficiency is measured in operations per Joule and has been been increasing almost exponentially over the last twenty years \cite{marwedel}.
 \end{description}
 
 
@@ -131,7 +131,7 @@ The term component often appears in connection with SoA and frequently leads to 
 
 Obermaisser and Kopetz state that a component is a software or hardware unit that performs a specified computation within a given period of time \cite[p.38]{genesys} and communicates with other components by means of dedicated interfaces (cf. section \ref{sec:component_interfaces}). Like systems, components are hierarchical and therefore dependent on the point of view. Hence, a quantity of components may be seen as a single component from a different point of view. The \mbox{ISO 26262} standard is in accordance with this definition and describes a component as ``non-system level element that is logically and technically separable and is comprised of more than one hardware part or one or more software units'' \cite{iso26262:1}.
 
-In contrast to that, a component is referred to explicitly as a piece of software by \mbox{AUTOSAR}:	
+In contrast to that, a component is explicitly referred to as a piece of software by \mbox{AUTOSAR}:	
 \begin{quote}
 ``Software-Components are architectural elements that provide and/or require interfaces and are connected to each other through the Virtual Function Bus to fulfill architectural responsibilities'' \cite{autosar_glossary}.
 \end{quote}
@@ -144,7 +144,7 @@ A component is a logical and technical separable hardware or software unit that 
 It offers an abstraction that simplifies the understanding of complex systems. Accordingly, components are hierarchical, meaning that they may be composed to other, larger, components.
 \end{myquote}
 
-As suggested by this definition the term component may be used for both, software and hardware. A component can be seen as black box, meaning that the more or less complex internal structure is invisible or not of concern for the user. Hence, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unchanged \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}. As a self-contained subsystem, a component can be developed and tested independently and later be used as building block for systems or higher level components. In other words, the components can be described as the basic building blocks of a system \cite{ning}. 
+As suggested by this definition, the term component may be used for both, software and hardware. A component can be seen as black box, meaning that the more or less complex internal structure is invisible or of no concern for the user. Hence, other components stay unaffected from modifications of this internal structure, given that the behaviour at the \emph{Linking Interface} (cf. section \ref{sec:component_interfaces}) remains unchanged \cite[p.38-39]{genesys} \cite{autosar_intro} \cite{sametinger}. As a self-contained subsystem, a component can be developed and tested independently and later be used as building block for systems or higher level components. In other words, the components can be described as the basic building blocks of a system \cite{ning}. 
 
 Nevertheless, not everything is a component. According to Sametinger \cite[p.2-3]{sametinger}, an algorithm in a book is not a component, but it has to be implemented by means of an arbitrary programming language and equipped with well-defined interfaces in order to become a component.
 
@@ -160,7 +160,7 @@ The LIF is a message based interface and responsible for offering the component'
 The LIFs are always technology agnostic, which means that they do not expose details of the component's implementation or Local Interfaces. Accordingly, the implementation of the component can be modified, without other components noticing, as long as the specification at the LIF remains unchanged \cite[p.9, 40-41]{genesys}.
 
 \item [Local Interface.] 
-The Local Interfaces establish the connection between a component and its local environment, which could consist of sensors, actuators and the like. If the environment is modified, the semantics and timing of the data should stay the same in order to do not violate the specification. A Local Interface could also be mapped to a LIF of a component at the next-higher level. This is known \emph{gateway component} and enables different layers to communicate with each other.
+The Local Interfaces establish the connection between a component and its local environment, which could consist of sensors, actuators and the like. If the environment is modified, the semantics and timing of the data should stay the same in order to not violate the specification. A Local Interface could also be mapped to a LIF of a component at the next-higher level. This is known \emph{gateway component} and enables different layers to communicate with each other.
 
 However, components do not necessarily require local interfaces. Such are denoted \emph{Closed Components} \cite[p.40-41]{genesys}.
 
@@ -250,7 +250,7 @@ Services hide an internal logic, which could be implemented by means of any suit
 From the service consumer's point of view the service appears as a black box, which does not impart anything of the underlying implementation or how the returned information is generated \cite{opengroup} \cite{breivold} \cite{arrowhead} \cite[p.27]{erl2011}. This black box encapsulation disables any modification of the service by the user and is often referred to as \emph{service interface level abstraction} \cite{breivold}.
 
 \item [Reusability.]
-The idea of software reuse is present since the early days of software engineering. In SoAs it is the key concept of a service and a necessary basis, for many of the other concepts would not even be possible without it \cite[ch.9.1.]{erl2008} \cite[p.27]{erl2011}.
+The idea of software reuse has been present since the early days of software engineering. In SoAs it is the key concept of a service and a necessary basis, as many of the other concepts would not even be possible without it \cite[ch.9.1.]{erl2008} \cite[p.27]{erl2011}.
 
 This design principle aims at making a service applicable for more than just one specific use case. Usually, it results in a more generic programming logic, which allows a wider range of application.
 
@@ -310,7 +310,7 @@ Concerning the structure, Krafzig \cite[p.44]{krafzig} describes a service as it
 \emph{``A contract for a service (or a service contract) establishes the terms of engagement, providing technical constraints and requirements as well as any semantic information the service owner wishes to make public''} 
 \cite[ch.6.1]{erl2008}.
 \end{quote}
-The service contract is, more or less, the core part of every service, for it is the complete specification of the service between a provider and a consumer. It provides all the meta information concerning functionality, capabilities, expected behaviour, constraints, service owner, access rights, functional- and non functional qualities and information about intended performance and scalability of the service \cite[p.44]{krafzig} \cite[p.26]{josuttis} \cite{breivold}.
+The service contract is, more or less, the core part of every service, as it is the complete specification of the service between a provider and a consumer. It provides all the meta information concerning functionality, capabilities, expected behaviour, constraints, service owner, access rights, functional- and non functional qualities and information about intended performance and scalability of the service \cite[p.44]{krafzig} \cite[p.26]{josuttis} \cite{breivold}.
 
 Physically, the service contract is represented by one or more \emph{service description documents}, which should be human- and machine readable at the same time. In terms of web services the contract is usually represented by WSDL (Web Service Description Language) documents \cite[p.43]{erl2011}. There is no dedicated language standard for automotive yet, but a XML based language like the WSDL would be an appropriate choice.
 
@@ -336,7 +336,7 @@ As stated in \ref{sec:service-concepts}, a service may dispose of some state dat
 
 
 
-\subsection{Services at different Layers of Implementation}
+\subsection{Services at Different Layers of Implementation}
 \label{ch:service_layers}
 The system layers specified in \ref{ch:system_layers} serve as basis for the assignment of services to different levels of implementation.
 
@@ -380,7 +380,7 @@ The term architecture is very generic and belongs to various different domains, 
 
 Within the \mbox{ISO/IEC/IEEE 42010} standard \cite{ISO_42010} the term architecture is referred to by ``fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution.'' The \emph{fundamental concepts} are thereby the \emph{system elements} (cf. section \ref{sec:system_element}), the \emph{relations inside the system}, the \emph{relations to the environment} and the \emph{principles of design and evolution} \cite{ISO_42010}.
 
-This definition applies for any kind of architecture, but the emphases on these concepts vary with respect to the considered domain. The software architecture usually focuses very much on the system elements, while the enterprise architecture is more concerned with the principles of design and evolution \cite{ISO_42010}.
+This definition applies to any kind of architecture, but the emphases on these concepts vary with respect to the considered domain. The software architecture usually focuses very much on the system elements, while the enterprise architecture is more concerned with the principles of design and evolution \cite{ISO_42010}.
 
 This is in compliance with the definition of architecture by \mbox{AUTOSAR} \cite{autosar_glossary}:
 \begin{quote}
@@ -398,12 +398,12 @@ At the same time, architecture is also responsible for determining the principle
 \end{myquote}
 
 
-\subsection{Demarcation from related terms}
+\subsection{Demarcation from Related Terms}
 The placement of architecture in relation to other entities like system or environment is illustrated in figure \ref{fig:architecture_ontology}. 
 
 \begin{description}
 \item [Architecture description.]
-	Many sources mix up the definitions of \emph{architecture} and \emph{architecture description}, what is a recurring source of confusion. In contrast to the actual architecture of a system, the term architecture description denotes the artefacts which document the respective architecture \cite{ISO_42010}.
+	Many sources mix up the definitions of \emph{architecture} and \emph{architecture description}, which is a recurring source of confusion. In contrast to the actual architecture of a system, the term architecture description denotes the artefacts which document the respective architecture \cite{ISO_42010}.
 
 	According to the \mbox{ISO/IEC/IEEE 42010} standard, the architecture description is used to express the architecture of a system of interest by means of the following elements:
 	\begin{itemize}
@@ -417,10 +417,10 @@ The placement of architecture in relation to other entities like system or envir
 	One and the same architecture can be described by several different architecture descriptions, and at the same time, an architecture description can also characterise multiple architectures \cite{ISO_42010}.
 
 \item [Stakeholder.]
-	The stakeholders are all people, which are somehow related to the system and have any interest in the system. Those include users, operators, owners, developers, maintainers and others \cite{ISO_42010}.
+	The stakeholders are all people which are somehow related to the system and have any interest in the system. Those include users, operators, owners, developers, maintainers and others \cite{ISO_42010}.
 
 \item [System concern.]
-	A specific system concern can be held by one more more stakeholders and can appear in various different forms, e.g. expectations, responsibilities, requirements, assumptions, dependencies and more \cite{ISO_42010}. 
+	A specific system concern can be held by one more stakeholders and can appear in various different forms, e.g. expectations, responsibilities, requirements, assumptions, dependencies and more \cite{ISO_42010}. 
 
 \item [Purpose.]
 	Purposes are one kind of system concerns, which are issued by the stakeholders \cite{ISO_42010}.
@@ -442,7 +442,7 @@ The placement of architecture in relation to other entities like system or envir
 
 
 
-\section{Service oriented Architecture}
+\section{Service Oriented Architecture}
 \label{ch:soa}
 
 The term service oriented architecture has been widely used for marketing and praising new products. This resulted in various misinterpretations of the term, because some vendors suggested that a SoA is something that can be bought or installed on an existing system, missing the point that SoA was not a product, but a set of design paradigms that can be applied on architectures.
@@ -475,7 +475,7 @@ Different authors and companies explain the term from different viewpoints and w
 	\end{quote}
 \end{description}
 
-The definition presented below emerged as result of extensive investigations and reviewing numerous sources. In contrast to all the other definitions, which are somehow biased due to their relation to a certain research area, this one is quite generic and may be used for any kind of SoA. In case of embedded- or safety-critical systems, there are of course additional characteristics which are crucial.
+The definition presented below has emerged as result of extensive investigations and reviewing numerous sources. In contrast to all the other definitions, which are somehow biased due to their relation to a certain research area, this one is quite generic and may be used for any kind of SoA. In case of embedded- or safety-critical systems, there are of course additional characteristics which are crucial.
 
 \begin{myquote}
 	The service oriented architecture is no actual design, which can be simply implemented or installed, but a collection of design principles for distributed systems.
@@ -510,7 +510,7 @@ The four main artefacts of a SoA are \emph{service provider}, \emph{service cons
 The task of the service provider is to provide a service and its functionality. Additionally, he should formulate the service description in form of a contract, which is then handed over to the service repository in order to make the service discoverable \cite{breivold}.
 
 \item [Service Repository/ Service Registry/ Service Directory.]
-The service repository is, more or less, a database of services, which may be physically distributed. It disposes of certain publishing mechanisms in order to make services discoverable by the service consumer. Therefore it contains all the information of every version of the service, as well as meta information like physical location, provider information, technical constraints, security issues, and, of course, the link to the registered service \cite[p.60-61]{krafzig} \cite{breivold} \cite{converge}.
+The service repository is, more or less, a database of services which may be physically distributed. It disposes of certain publishing mechanisms in order to make services discoverable by the service consumer. Therefore it contains all the information of every version of the service, as well as meta information like physical location, provider information, technical constraints, security issues, and, of course, the link to the registered service \cite[p.60-61]{krafzig} \cite{breivold} \cite{converge}.
 
 Services can be added to, or taken from the service repository dynamically. Thus, services need to be already running and ready to use in order to be discovered and composed at runtime.
 
@@ -590,30 +590,30 @@ Two terms which often appear together and appear very much alike are \emph{safet
 
 The term \emph{safety} denotes the ``absence of an unreasonable risk'' \cite{autosar_glossary} \cite{iso26262:1} and is concerned with correct operation of the equipment in a specific system and environment. Therefore, it is concerned with things like \emph{error detection}, \emph{fault prevention}, \emph{failure migration}, \emph{diagnosis} and similar.
 
-\emph{Security}\index{security} is concerned with preventing unauthorized access, or unexpected input. \mbox{AUTOSAR} defines the term as ``Protection of data, software entities or resources from accidental or malicious acts'' \cite{autosar_glossary}. With the advance of software and interconnection in vehicles, security becomes more and more of an issue, because all the functionality in a car, even highly critical ones, like an automatic brake system or a collision warning system, will be approachable through a network. Especially if the vehicle gets connected to any proprietary and publicly accessible network like the Internet. With the advance of the SoA paradigm for automotive, it is planed to run remote diagnosis and firmware updates wireless. This is an obvious weak point and an exploit of this can affect the operation of the vehicle and the safety of the driver \cite{nilsson2008}.
+\emph{Security}\index{security} is concerned with preventing unauthorized access, or unexpected input. \mbox{AUTOSAR} defines the term as ``Protection of data, software entities or resources from accidental or malicious acts'' \cite{autosar_glossary}. With the advance of software and interconnection in vehicles, security becomes more and more of an issue because all the functionality in a car, even highly critical ones like an automatic brake system or a collision warning system, will be approachable through a network. Especially if the vehicle gets connected to any proprietary and publicly accessible network like the Internet. With the advance of the SoA paradigm for automotive, it is planed to run remote diagnosis and firmware updates wireless. This is an obvious weak point and an exploit of this can affect the operation of the vehicle and the safety of the driver \cite{nilsson2008}.
 
-Although, safety and security are separate disciplines, the functionalities of a vehicle cannot be classified into safety or security relevant functionality, but have always aspects of both disciplines at the same time \cite{nilsson2008}. 
+Although safety and security are separate disciplines, the functionalities of a vehicle cannot be classified into safety or security relevant functionality, but always include aspects of both disciplines at the same time \cite{nilsson2008}. 
 
 This thesis is mostly concerned with the safety-oriented point of view.
 
 
-\subsection{Safety related terminology}
+\subsection{Safety Related Terminology}
 \label{sec:fault,error,failure}
-\emph{Fault}, \emph{error} and \emph{failure} are terms with are often mixed up and used in the same context, since they seem to be very similar in their meaning. Nevertheless, their disambiguation is crucial for some of the following sections.
+\emph{Fault}, \emph{error} and \emph{failure} are terms which are often mixed up and used in the same context, since they seem to be very similar in their meaning. Nevertheless, their disambiguation is crucial for some of the following sections.
 
 
 \begin{description}
 \item [Fault.]
 In \mbox{ISO 26262} standard a fault is listed as an ``abnormal condition that can cause an element or an item to fail'' \cite{iso26262:1} \cite{autosar_glossary}. 
 
-Faults come in different forms. An \emph{intermittent fault} occurs from time to time and disappears without any repair measures taken place. This is typical for hardware components which are worn out and almost breaking down. \emph{Transient faults}, on the other hand, appear once, and do not recur afterwards. This is for example the case if there is some electromagnetic interference. \emph{Permanent faults} naturally remain until the faulty component is exchanged or repaired \cite{iso26262:1}.
+Faults come in different forms. An \emph{intermittent fault} occurs from time to time and disappears without any repair measures having taken place. This is typical for hardware components which are worn out and almost breaking down. \emph{Transient faults}, on the other hand, appear once and do not recur afterwards. This is for example the case if there is some electromagnetic interference. \emph{Permanent faults} naturally remain until the faulty component is exchanged or repaired \cite{iso26262:1}.
 
-A term related to fault, is \emph{fault coverage}. It denotes the number of the faults detected as a percentage of the total number of faults affecting the system \cite{elattar2007}.
+A term related to fault is \emph{fault coverage}. It denotes the number of the faults detected as a percentage of the total number of faults affecting the system \cite{elattar2007}.
 
 \item [Error.]
-An error is the deviation of a computed, observed or measured value or condition to the expected, theoretically correct, value. An error occurs as consequence of an unexpected operating condition or a fault. Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}. If the error exceeds a certain threshold it can cause a failure \cite{autosar_glossary}.
+An error is the deviation of a computed, observed or measured value or condition to the expected, theoretically correct value. An error occurs as consequence of an unexpected operating condition or a fault. Nevertheless, a fault does not necessarily lead to an error \cite{iso26262:1} \cite{nelson} \cite{autosar_glossary}. If the error exceeds a certain threshold it can cause a failure \cite{autosar_glossary}.
 
-There are two different classifications of errors, for they can be divided either into \emph{soft-} and \emph{hard errors} or \emph{data-} and \emph{control flow errors} \cite{israr2014} \cite{elattar2007}.
+There are two different classifications of errors, as they can be divided either into \emph{soft-} and \emph{hard errors} or \emph{data-} and \emph{control flow errors} \cite{israr2014} \cite{elattar2007}.
 
 \begin{description}
 \item [Soft Error.]
@@ -627,7 +627,7 @@ In contrast to soft errors, hard errors are caused by a constant property change
 
 \begin{description}
 \item [Data Error.]
-A data error denotes a change of the data stored any memory location or register \cite{elattar2007}.
+A data error denotes a change of the data stored at any memory location or register \cite{elattar2007}.
 
 \item [Control Flow Error.]
 A control flow error leads to wrong execution sequence of instructions. This is the case if the memory storing the address of the next execution instruction is changed \cite{elattar2007}.
@@ -638,7 +638,7 @@ Failure denotes that an element is not able to provide its functionality any lon
 
 The averaged frequency of occurrence of a failure is denoted \emph{failure rate}. It is counted in \emph{hours of operation until a serious fault}, e.g. 10e5 to 10e9 hours of operation \cite{rodrigues2011}.
 
-Another term which frequently comes up in connection with failure, is \emph{failure mode}. This denotes, depending on the consulted source, either the manner in which the component fails \cite{international2006analysis}, or the manner by which a occurred fault is observed \cite{mil1980}.
+Another term which frequently comes up in connection with failure, is \emph{failure mode}. This denotes, depending on the consulted source, either the manner in which the component fails \cite{international2006analysis}, or the manner by which an occurred fault is observed \cite{mil1980}.
 \end{description}
 
 
@@ -648,7 +648,7 @@ Another term which frequently comes up in connection with failure, is \emph{fail
 
 The key concept of a \emph{fault tolerant} design is to enable a system to provide its intended functionality in the presence of a given number of faults \cite{nelson}.
 
-Thus, the fault tolerance mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not lead directly to the violation of the safety goals, which maintain the system in a safe state \cite{iso26262:1}. Possible fault include not only internal faults like design-faults or hardware wear-outs, but also external ones. For example misuse by the user or cosmic radiation. Fault tolerance mechanisms have become indispensable for advanced electric systems, because due to the billions of transistors present and the various circumstances circumstances, which can lead to faults, faultless systems remain an utopian dream \cite{genesys}.
+Thus, the fault tolerance mechanisms are not responsible for preventing the occurrence of faults, but assure that a fault does not directly lead to the violation of the safety goals which maintain the system in a safe state \cite{iso26262:1}. Possible faults include not only internal faults like design-faults or hardware wear-outs, but also external ones; for example misuse by the user or cosmic radiation. Fault tolerance mechanisms have become indispensable for advanced electric systems because due to the billions of transistors present and the various circumstances, which can lead to faults, faultless systems remain an utopian dream \cite{genesys}.
 
 
 \subsection{Design of fault tolerant Systems}

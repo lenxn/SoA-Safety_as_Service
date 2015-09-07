@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  4 SEP 2015 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.7.22)  4 SEP 2015 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1146,7 +1146,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 64F7E373B17119383DCCFEA76AEDAA66;4230.
+(rerunfilecheck)             Checksum: 93659F4C7F174E7A8EAE013E872864D6;4230.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1171,7 +1171,7 @@ ts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (67 pages, 2257695 bytes).
+Output written on main.pdf (67 pages, 2257651 bytes).
 PDF statistics:
  1629 PDF objects out of 1728 (max. 8388607)
  1287 compressed objects within 13 object streams
